@@ -1,10 +1,295 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
+    <link rel="shortcut icon" type="image/png" href="https://animaapp.s3.amazonaws.com/home/favicon.png">
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <meta name="viewport" content="width=1400px, maximum-scale=1.0">
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+      .login{
+        width:100%;min-width:1400px;height:100%;min-height:1726px;position:relative;overflow:hidden;margin:0;background:rgba(255,255,255,1.0)}
+      a{text-decoration:none}
+      div{-webkit-text-size-adjust:none}
+      .login .group9{background:rgba(255,255,255,0.0);top:0;height:244px;width:1424px;position:absolute;margin:0;left:0}
+      .login .group9 .rectangle9{background:rgba(250,250,250,1.0);top:0;height:244px;width:1400px;position:absolute;margin:0;left:0}
+      .login .group9 .rectangle15{background:rgba(117,42,107,1.0);top:194px;height:50px;width:1400px;position:absolute;margin:0;left:0}
+      .login .group9 .oval2{background:rgba(255,255,255,0.0);top:11px;height:78px;width:78px;position:absolute;margin:0;left:1070px}
+      .login .group9 .upmc1{background:rgba(255,255,255,0.0);top:49px;height:63px;width:403px;position:absolute;margin:0;left:499px}
+      .login .group9 .health-medicine-vi{background:rgba(255,255,255,0.0);top:148px;height:auto;width:1331px;position:absolute;margin:0;left:34px;font-family:'HelveticaNeue-Medium',Helvetica,Arial,serif;font-size:22.0px;color:rgba(66,66,66,1.0);text-align:center;letter-spacing:2.2px;line-height:30.0px}
+      .login .group9 .account{background:rgba(255,255,255,0.0);top:35px;height:auto;width:104px;position:absolute;margin:0;left:1129px;font-family:'HelveticaNeue-Medium',Helvetica,Arial,serif;font-size:20.0px;color:rgba(66,66,66,1.0);text-align:center;letter-spacing:2.0px;line-height:25.0px}
+      .login .group9 .cart{background:rgba(255,255,255,0.0);top:35px;height:auto;width:104px;position:absolute;margin:0;left:1322px;font-family:'HelveticaNeue-Medium',Helvetica,Arial,serif;font-size:20.0px;color:rgba(66,66,66,1.0);text-align:left;letter-spacing:2.0px;line-height:25.0px}
+      .login .group9 .iclocalgrocerystore{background:rgba(255,255,255,0.0);top:24px;height:50px;width:50px;position:absolute;margin:0;left:1270px}
+      .login .group9 .iclocalgrocerystore .icon24-px{background:rgba(255,255,255,0.0);top:0;height:50px;width:50px;position:relative;margin:0;left:0}
+      .login .group9 .iclocalgrocerystore .icon24-px .shape{background:rgba(255,255,255,0.0);top:4px;height:42px;width:42px;position:absolute;margin:0;left:2px}
+      .login .group9 .iclocalgrocerystore .icon24-px .image1{background:rgba(255,255,255,0.0);top:0;height:50px;width:50px;position:absolute;margin:0;left:0}
+      .login .group9 .avatar{background:rgba(255,255,255,0.0);top:24px;height:50px;width:50px;position:absolute;margin:0;left:1078px}
+      .login .group5{background:rgba(255,255,255,0.0);top:1442px;height:284px;width:1400px;position:absolute;margin:0;left:0}
+      .login .group5 .view1{background:rgba(117,42,107,1.0);top:0;height:284px;width:1400px;position:absolute;margin:0;left:0}
+      .login .group5 .sortfilterblock{background:rgba(255,255,255,0.0);top:160px;height:9px;width:1300px;position:absolute;margin:0;left:50px}
+      .login .group5 .sortfilterblock .line{background:rgba(255,255,255,0.0);top:0;height:9px;width:1300px;position:relative;margin:0;left:0}
+      .login .group5 .u-pmc-logowhite{background:rgba(255,255,255,0.0);top:209px;height:69px;width:320px;position:absolute;margin:0;left:540px}
+      .login .group5 .uinted-states-upmc{background:rgba(255,255,255,0.0);top:179px;height:auto;width:460px;position:absolute;margin:0;left:22px;font-family:'Arial',Helvetica,Arial,serif;font-weight:600;font-style:normal;font-size:18.0px;color:rgba(250,250,250,0.78);text-align:center;line-height:21.0px}
+      .login .rectangle10{background:rgba(250,250,250,1.0);top:308px;height:1070px;width:1222px;position:absolute;margin:0;left:89px}
+      .login .group{background:rgba(255,255,255,0.0);top:307px;height:1069px;width:608px;position:absolute;margin:0;left:92px}
+      .login .group .forgot-your-password{background:rgba(255,255,255,0.0);top:443px;height:auto;width:267px;position:absolute;margin:0;left:331px;font-family:'BellMTBold',Helvetica,Arial,serif;font-size:20.0px;color:rgba(66,66,66,1.0);text-align:center;letter-spacing:2.53px;line-height:26.0px}
+      .login .group .rectangle{background:rgba(255,255,255,0.0);top:0;height:1069px;width:608px;position:absolute;margin:0;left:0;border-style:solid;border-width:1;border-color:rgba(150,150,150,1.0)}
+      .login .group .line2{background:rgba(255,255,255,0.0);top:111px;height:3px;width:532px;position:absolute;margin:0;left:47px}
+      .login .group .label1{background:rgba(255,255,255,0.0);top:34px;height:auto;width:420px;position:absolute;margin:0;left:94px;font-family:'BellMT',Helvetica,Arial,serif;font-size:36.0px;color:rgba(66,66,66,1.0);text-align:center;letter-spacing:2.53px;line-height:48.0px}
+      .login .group .email{background:rgba(255,255,255,0.0);top:192px;height:auto;width:94px;position:absolute;margin:0;left:48px;font-family:'BellMTBold',Helvetica,Arial,serif;font-size:20.0px;color:rgba(66,66,66,1.0);text-align:center;letter-spacing:2.53px;line-height:26.0px}
+      .login .group .password{background:rgba(255,255,255,0.0);top:318px;height:auto;width:133px;position:absolute;margin:0;left:47px;font-family:'BellMTBold',Helvetica,Arial,serif;font-size:20.0px;color:rgba(66,66,66,1.0);text-align:center;letter-spacing:2.53px;line-height:26.0px}
+      .login .group .rectangle11{background:rgba(255,255,255,1.0);top:248px;height:41px;width:500px;position:absolute;margin:0;left:62px;border-style:solid;border-width:2;border-color:rgba(150,150,150,1.0)}
+      .login .group .rectangle11-copy{background:rgba(255,255,255,1.0);top:374px;height:41px;width:500px;position:absolute;margin:0;left:61px;border-style:solid;border-width:2;border-color:rgba(150,150,150,1.0)}
+      .login .group .group3{background:rgba(255,255,255,0.0);top:532px;height:69px;width:326px;position:absolute;margin:0;left:145px}
+      .login .group .group3 .rectangle2{background:rgba(119,27,97,1.0);top:0;height:69px;width:323px;position:absolute;margin:0;left:0;border-radius:5px;border-style:solid;border-width:1;border-color:rgba(150,150,150,1.0)}
+      .login .group .group3 .label2{background:rgba(255,255,255,0.0);top:9px;height:auto;width:327px;position:absolute;margin:0;left:-0px;font-family:'BellMTBold',Helvetica,Arial,serif;font-size:30.0px;color:rgba(250,250,250,1.0);text-align:center;letter-spacing:2.53px;line-height:40.0px}
+      .login .text{background:rgba(255,255,255,0.0);top:688px;height:30px;width:502px;position:absolute;margin:0;left:164px;font-family:'HelveticaNeue',Helvetica,Arial,serif;font-size:24.0px;color:rgba(74,73,74,1.0);text-align:left;letter-spacing:2.2px;line-height:29.0px;border:0}
+      .login .text::placeholder{color:rgba(74,73,74,0.6)}.login .group2{background:rgba(255,255,255,0.0);top:309px;height:1069px;width:608px;position:absolute;margin:0;left:700px}
+      .login .group2 .group4{background:rgba(255,255,255,0.0);top:963px;height:69px;width:326px;position:absolute;margin:0;left:132px}
+      .login .group2 .group4 .rectangle2-copy{background:rgba(119,27,97,1.0);top:0;height:69px;width:323px;position:absolute;margin:0;left:0;border-radius:5px;border-style:solid;border-width:1;border-color:rgba(150,150,150,1.0)}
+      .login .group2 .group4 .register{background:rgba(255,255,255,0.0);top:9px;height:auto;width:327px;position:absolute;margin:0;left:-0px;font-family:'BellMTBold',Helvetica,Arial,serif;font-size:30.0px;color:rgba(250,250,250,1.0);text-align:center;letter-spacing:2.53px;line-height:40.0px}
+      .login .group2 .i-have-read-and-acce{background:rgba(255,255,255,0.0);top:880px;height:auto;width:533px;position:absolute;margin:0;left:54px;font-family:'BellMT',Helvetica,Arial,serif;font-size:24.0px;color:rgba(66,66,66,1.0);text-align:center;letter-spacing:2.53px;line-height:31.0px}
+      .login .group2 .line2-copy{background:rgba(255,255,255,0.0);top:111px;height:3px;width:532px;position:absolute;margin:0;left:38px}.login .group2 .label3{background:rgba(255,255,255,0.0);top:34px;height:auto;width:420px;position:absolute;margin:0;left:85px;font-family:'BellMT',Helvetica,Arial,serif;font-size:36.0px;color:rgba(66,66,66,1.0);text-align:center;letter-spacing:2.53px;line-height:48.0px}
+      .login .group2 .rectangle-copy{background:rgba(255,255,255,0.0);top:0;height:1069px;width:608px;position:absolute;margin:0;left:0;border-style:solid;border-width:1;border-color:rgba(150,150,150,1.0)}
+      .login .group2 .fist-name{background:rgba(255,255,255,0.0);top:187px;height:auto;width:133px;position:absolute;margin:0;left:38px;font-family:'BellMTBold',Helvetica,Arial,serif;font-size:20.0px;color:rgba(66,66,66,1.0);text-align:center;letter-spacing:2.53px;line-height:26.0px}
+      .login .group2 .last-name{background:rgba(255,255,255,0.0);top:316px;height:auto;width:133px;position:absolute;margin:0;left:37px;font-family:'BellMTBold',Helvetica,Arial,serif;font-size:20.0px;color:rgba(66,66,66,1.0);text-align:center;letter-spacing:2.53px;line-height:26.0px}
+      .login .group2 .email-copy3{background:rgba(255,255,255,0.0);top:458px;height:auto;width:94px;position:absolute;margin:0;left:39px;font-family:'BellMTBold',Helvetica,Arial,serif;font-size:20.0px;color:rgba(66,66,66,1.0);text-align:center;letter-spacing:2.53px;line-height:26.0px}
+      .login .group2 .label4{background:rgba(255,255,255,0.0);top:579px;height:auto;width:133px;position:absolute;margin:0;left:39px;font-family:'BellMTBold',Helvetica,Arial,serif;font-size:20.0px;color:rgba(66,66,66,1.0);text-align:center;letter-spacing:2.53px;line-height:26.0px}
+      .login .group2 .rectangle11-copy2{background:rgba(255,255,255,1.0);top:243px;height:41px;width:500px;position:absolute;margin:0;left:52px;border-style:solid;border-width:2;border-color:rgba(150,150,150,1.0)}
+      .login .group2 .rectangle11-copy3{background:rgba(255,255,255,1.0);top:372px;height:41px;width:500px;position:absolute;margin:0;left:51px;border-style:solid;border-width:2;border-color:rgba(150,150,150,1.0)}
+      .login .group2 .rectangle11-copy4{background:rgba(255,255,255,1.0);top:514px;height:41px;width:500px;position:absolute;margin:0;left:53px;border-style:solid;border-width:2;border-color:rgba(150,150,150,1.0)}
+      .login .group2 .rectangle11-copy5{background:rgba(255,255,255,1.0);top:635px;height:41px;width:500px;position:absolute;margin:0;left:53px;border-style:solid;border-width:2;border-color:rgba(150,150,150,1.0)}
+      .login .group2 .text1{background:rgba(255,255,255,0.0);top:640px;height:30px;width:488px;position:absolute;margin:0;left:66px;font-family:'HelveticaNeue',Helvetica,Arial,serif;font-size:24.0px;color:rgba(74,73,74,1.0);text-align:left;letter-spacing:2.2px;line-height:29.0px;border:0}
+      .login .group2 .text1::placeholder{color:rgba(74,73,74,0.6)}.login .group2 .rectangle12{background:rgba(250,250,250,1.0);top:886px;height:25px;width:25px;position:absolute;margin:0;left:61px;border-style:solid;border-width:2;border-color:rgba(150,150,150,1.0)}
+      .login .text-javacat1-andrew-cmu-edu{background:rgba(255,255,255,0.0);top:825px;height:30px;width:482px;position:absolute;margin:0;left:763px;font-family:'HelveticaNeue',Helvetica,Arial,serif;font-size:24.0px;color:rgba(74,73,74,1.0);text-align:left;letter-spacing:2.2px;line-height:29.0px;border:0}
+      .login .text-javacat1-andrew-cmu-edu::placeholder{color:rgba(74,73,74,0.6)}.login .text-javacat2-andrew-cmu-edu{background:rgba(255,255,255,0.0);top:560px;height:30px;width:508px;position:absolute;margin:0;left:158px;font-family:'HelveticaNeue',Helvetica,Arial,serif;font-size:24.0px;color:rgba(74,73,74,1.0);text-align:left;letter-spacing:2.2px;line-height:29.0px;border:0}
+      .login .text-javacat2-andrew-cmu-edu::placeholder{color:rgba(74,73,74,0.6)}.login .text-java{background:rgba(255,255,255,0.0);top:557px;height:30px;width:501px;position:absolute;margin:0;left:765px;font-family:'HelveticaNeue',Helvetica,Arial,serif;font-size:24.0px;color:rgba(74,73,74,1.0);text-align:left;letter-spacing:2.2px;line-height:29.0px;border:0}
+      .login .text-java::placeholder{color:rgba(74,73,74,0.6)}.login .text-cat{background:rgba(255,255,255,0.0);top:686px;height:30px;width:497px;position:absolute;margin:0;left:755px;font-family:'HelveticaNeue',Helvetica,Arial,serif;font-size:24.0px;color:rgba(74,73,74,1.0);text-align:left;letter-spacing:2.2px;line-height:29.0px;border:0}
+      .login .text-cat::placeholder{color:rgba(74,73,74,0.6)}.anima-animate-appear{opacity:0;display:block;-webkit-animation:anima-reveal .3s ease-in-out 1 normal forwards;-moz-animation:anima-reveal .3s ease-in 1 normal forwards;-o-animation:anima-reveal .3s ease-in-out 1 normal forwards;animation:anima-reveal .3s ease-in-out 1 normal forwards}.anima-animate-disappear{opacity:1;display:block;-webkit-animation:anima-reveal .3s ease-in-out 1 reverse forwards;-moz-animation:anima-reveal .3s ease-in 1 normal forwards;-o-animation:anima-reveal .3s ease-in-out 1 reverse forwards;animation:anima-reveal .3s ease-in-out 1 reverse forwards}.anima-animate-nodelay{-webkit-animation-delay:0;-moz-animation-delay:0;-o-animation-delay:0;animation-delay:0}@-webkit-keyframes anima-reveal{0%{opacity:0}100%{opacity:1}}@-moz-keyframes anima-reveal{0%{opacity:0}100%{opacity:1}}@-o-keyframes anima-reveal{0%{opacity:0}100%{opacity:1}}@keyframes anima-reveal{0%{opacity:0}100%{opacity:1}}
+</style>
+    <meta name="author" content="Launchpad by Anima">
+  </head>
+  <body style="margin: 0;background: rgba(255, 255, 255, 1.0);">
+  <div class="login">
+    <div style="width: 1400px; height: 100%; position:relative; margin:auto;">
+      <div class="group9">
+        <div class="rectangle9">
 
-</body>
+        </div>
+        <div class="rectangle15">
+
+        </div>
+        <img class="oval2" src="https://anima-uploads.s3.amazonaws.com/59ea186910501a000d64ca88/59ea18bbeb7ec8000d062079/59ea18bceb7ec8000b979fb3/img/landingpageoval 2.png" anima-src="https://anima-uploads.s3.amazonaws.com/59ea186910501a000d64ca88/59ea18bbeb7ec8000d062079/59ea18bceb7ec8000b979fb3/img/landingpageoval 2.png">
+        <a href="landingpage">
+          <img class="upmc1" src="https://anima-uploads.s3.amazonaws.com/59ea186910501a000d64ca88/59ea18bbeb7ec8000d062079/59ea18bceb7ec8000b979fb3/img/landingpageupmc1.png" anima-src="https://anima-uploads.s3.amazonaws.com/59ea186910501a000d64ca88/59ea18bbeb7ec8000d062079/59ea18bceb7ec8000b979fb3/img/landingpageupmc1.png">
+        </a>
+        <a href="landingpagecopy">
+          <div class="health-medicine-vi">HEALTH &amp; MEDICINE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;VITAMINS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PERSONAL CARE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HOME HEALTH CARE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WEEKLY DEALS
+          </div>
+        </a>
+        <div class="account">Account
+        </div>
+        <a href="cart">
+          <div class="cart">Cart
+          </div>
+        </a>
+        <a href="cart">
+          <div class="iclocalgrocerystore">
+            <div class="icon24-px">
+              <img class="shape" src="https://anima-uploads.s3.amazonaws.com/59ea186910501a000d64ca88/59ea18bbeb7ec8000d062079/59ea18bceb7ec8000b979fb3/img/landingpageshape.png" anima-src="https://anima-uploads.s3.amazonaws.com/59ea186910501a000d64ca88/59ea18bbeb7ec8000d062079/59ea18bceb7ec8000b979fb3/img/landingpageshape.png">
+              <img class="image1" src="https://anima-uploads.s3.amazonaws.com/59ea186910501a000d64ca88/59ea18bbeb7ec8000d062079/59ea18bceb7ec8000b979fb3/img/landingpageshape  1.png" anima-src="https://anima-uploads.s3.amazonaws.com/59ea186910501a000d64ca88/59ea18bbeb7ec8000d062079/59ea18bceb7ec8000b979fb3/img/landingpageshape  1.png">
+            </div>
+          </div>
+        </a>
+        <div class="avatar">
+
+        </div>
+      </div>
+      <div class="group5">
+        <div class="view1">
+
+        </div>
+        <div class="sortfilterblock">
+          <img class="line" src="https://anima-uploads.s3.amazonaws.com/59ea186910501a000d64ca88/59ea18bbeb7ec8000d062079/59ea18bceb7ec8000b979fb3/img/landingpageline  2.png" anima-src="https://anima-uploads.s3.amazonaws.com/59ea186910501a000d64ca88/59ea18bbeb7ec8000d062079/59ea18bceb7ec8000b979fb3/img/landingpageline  2.png">
+        </div>
+        <img class="u-pmc-logowhite" src="https://anima-uploads.s3.amazonaws.com/59ea186910501a000d64ca88/59ea18bbeb7ec8000d062079/59ea18bceb7ec8000b979fb3/img/landingpageupmclogowhite.png" anima-src="https://anima-uploads.s3.amazonaws.com/59ea186910501a000d64ca88/59ea18bbeb7ec8000d062079/59ea18bceb7ec8000b979fb3/img/landingpageupmclogowhite.png">
+        <div class="uinted-states-upmc">Uinted States&nbsp;&nbsp;© UPMC 2017. All rights reserved.
+        </div>
+      </div>
+      <a href="loginsuccess">
+        <div class="rectangle10">
+
+        </div>
+      </a>
+      <a href="loginsuccess">
+
+      </a>
+      <div class="group">
+        <a href="loginsuccess">
+          <div class="forgot-your-password">Forgot your password?
+          </div>
+          <div class="rectangle">
+
+          </div>
+          <img class="line2" src="https://anima-uploads.s3.amazonaws.com/59ea186910501a000d64ca88/59ea18bbeb7ec8000d062079/59ea3bd4eb7ec8000d0620d8/img/loginline 2 copy.png" anima-src="https://anima-uploads.s3.amazonaws.com/59ea186910501a000d64ca88/59ea18bbeb7ec8000d062079/59ea3bd4eb7ec8000d0620d8/img/loginline 2 copy.png">
+          <div class="label1">Login
+          </div>
+          <div class="email">Email
+          </div>
+          <div class="password">Password
+          </div>
+          <div class="rectangle11">
+
+          </div>
+          <div class="rectangle11-copy">
+
+          </div>
+        </a>
+        <a href="loginsuccess">
+
+        </a>
+        <div class="group3">
+          <a href="loginsuccess">
+
+          </a><a href="loginsuccess">
+          <div class="rectangle2">
+
+          </div>
+        </a>
+          <a href="loginsuccess">
+            <div class="label2">Log in
+            </div>
+          </a>
+        </div>
+      </div>
+      <input class="text" name="text" placeholder="*********************">
+      <a href="registersuccess">
+
+      </a>
+      <div class="group2">
+        <a href="registersuccess">
+
+        </a>
+        <a href="loginsuccess">
+
+        </a>
+        <div class="group4">
+          <a href="loginsuccess">
+
+          </a>
+          <a href="loginsuccess">
+            <div class="rectangle2-copy">
+
+            </div>
+          </a>
+          <a href="loginsuccess">
+            <div class="register">Register
+            </div>
+          </a>
+        </div>
+        <div class="i-have-read-and-acce">I have read and accepted the Privacy Notice
+        </div>
+        <img class="line2-copy" src="https://anima-uploads.s3.amazonaws.com/59ea186910501a000d64ca88/59ea18bbeb7ec8000d062079/59ea3bd4eb7ec8000d0620d8/img/loginline 2 copy.png" anima-src="https://anima-uploads.s3.amazonaws.com/59ea186910501a000d64ca88/59ea18bbeb7ec8000d062079/59ea3bd4eb7ec8000d0620d8/img/loginline 2 copy.png">
+        <div class="label3">Register
+        </div>
+        <a href="registersuccess">
+          <div class="rectangle-copy">
+
+          </div>
+        </a>
+        <div class="fist-name">Fist Name
+        </div>
+        <div class="last-name">Last Name
+        </div>
+        <div class="email-copy3">Email
+        </div>
+        <div class="label4">Password
+        </div>
+        <div class="rectangle11-copy2">
+
+        </div>
+        <div class="rectangle11-copy3">
+
+        </div>
+        <div class="rectangle11-copy4">
+
+        </div>
+        <div class="rectangle11-copy5">
+
+        </div>
+        <input class="text1" name="text1" placeholder="*********************">
+        <div class="rectangle12">
+
+        </div>
+      </div>
+      <input class="text-javacat1-andrew-cmu-edu" name="textJavacat1AndrewCmuEdu" placeholder="javacat1@andrew.cmu.edu">
+      <input class="text-javacat2-andrew-cmu-edu" name="textJavacat2AndrewCmuEdu" placeholder=" javacat2@andrew.cmu.edu">
+      <input class="text-java" name="textJava" placeholder="Java">
+      <input class="text-cat" name="textCat" placeholder=" Cat">
+    </div>
+  </div>
+  <script>anima_isHidden=function(e){
+    if(!(e instanceof HTMLElement))
+      return!1;
+    if(getComputedStyle(e).display=="none")
+      return!0;
+    else if(e.parentNode&&anima_isHidden(e.parentNode))
+      return!0;
+    return!1};
+  anima_loadAsyncSrcForTag=function(tag){
+    var elements=document.getElementsByTagName(tag);
+    var toLoad=[];
+    for(var i=0;i<elements.length;i++){
+      var e=elements[i];
+      var src=e.getAttribute("src");
+      var loaded=(src!=undefined&&src.length>0&&src!='data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+      if(loaded)
+        continue;
+      var asyncSrc=e.getAttribute("anima-src");
+      if(asyncSrc==undefined||asyncSrc.length==0)
+        continue;
+      if(anima_isHidden(e))
+        continue;
+      toLoad.push(e)}
+  toLoad.sort(function(a,b){
+    return anima_getTop(a)-anima_getTop(b)});
+    for(var i=0;i<toLoad.length;i++){
+      var e=toLoad[i];
+      var asyncSrc=e.getAttribute("anima-src");e.setAttribute("src",asyncSrc)}};
+  anima_pauseHiddenVideos=function(tag){
+    var elements=document.getElementsByTagName("video");
+    for(var i=0;i<elements.length;i++){
+      var e=elements[i];
+      var isPlaying=!!(e.currentTime>0&&!e.paused&&!e.ended&&e.readyState>2);
+      var isHidden=anima_isHidden(e);
+      if(!isPlaying&&!isHidden&&e.getAttribute("autoplay")=="autoplay"){
+        e.play()} else if(isPlaying&&isHidden){
+        e.pause()}}};
+  anima_loadAsyncSrc=function(tag){
+    anima_loadAsyncSrcForTag("img");
+    anima_loadAsyncSrcForTag("iframe");
+    anima_loadAsyncSrcForTag("video");
+    anima_pauseHiddenVideos()};
+  var anima_getTop=function(e){
+    var top=0;
+    do{top+=e.offsetTop||0;e=e.offsetParent}while(e);return top};
+  anima_loadAsyncSrc();
+  anima_old_onResize=window.onresize;
+  anima_new_onResize=undefined;
+  anima_updateOnResize=function(){
+    if(anima_new_onResize==undefined||window.onresize!=anima_new_onResize){
+      anima_new_onResize=function(x){
+        if(anima_old_onResize!=undefined)anima_old_onResize(x);
+        anima_loadAsyncSrc()}
+  window.onresize=anima_new_onResize;
+      setTimeout(function(){
+        anima_updateOnResize()},3000)}};
+  anima_updateOnResize();
+  setTimeout(function(){
+    anima_loadAsyncSrc()},200)
+  </script>
+  <script src="launchpad-js/launchpad-banner.js" async="">
+
+  </script>
+  
+  </body>
 </html>
+
