@@ -212,8 +212,22 @@
       margin: 0;
       left: 1056px
     }
-
-
+    .dropdown--button::after, .dropdown-native::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      /* top: 45%; */
+      top: calc(50% - 5px);
+      right: 15px;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      pointer-events: none;
+    }
+    .dropdown--button::after, .dropdown-native::after, .form-dropdown-button::after, .accordion--title::before {
+      background-image: url("data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encod…14-14.063%202%202z%22%20fill%3D%22%23000000%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E");
+      /* background-repeat: no-repeat; */
+    }
     .rectangle19-copy {
       background: rgba(255, 255, 255, 0.0);
       top: 336px;
@@ -222,13 +236,6 @@
       position: absolute;
       margin: 0;
       left: 1056px
-    }
-
-    .dropdown-sm .dropdown--button, .dropdown-sm .dropdown--select {
-      padding: 5px 30px 5px 10px;
-      font-size: 12px;
-      line-height: 1.5;
-      height: 30px;
     }
     .dropdown--select {
       width: 100%;
@@ -242,14 +249,31 @@
       font-weight: normal;
       color: #333;
     }
+    .dropdown-sm .dropdown--button, .dropdown-sm .dropdown--select {
+      padding: 5px 30px 5px 10px;
+      font-size: 12px;
+      line-height: 1.5;
+      height: 30px;
+    }
     .dropdown-default .dropdown--select {
       border: 1px solid #888;
       border-radius: 4px;
     }
-    -button::after, .dropdown-native::after, .form-dropdown-button::after, .accordion--title::before {
+    .icon-arrow-down, .icon-arrow-left, .icon-arrow-back, .title--ratingsreviews::before,
+    .title--headingBackLink::before,
+    .carousel-scroll .prev,
+    .carousel-scroll .next,
+    .icon-arrow-right, .icon-arrow-up, .icon-chevron-up-black,
+    .dropdown--button::after,
+    .dropdown-native::after,
+    .form-dropdown-button::after,
+    .accordion--title::before {
       background-image: url(data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encod…14-14.063%202%202z%22%20fill%3D%22%23000000%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E);
-      background-repeat: no-repeat;
     }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+
     .h-zeroPaddingTop {
       padding-top: 0 !important;
     }
@@ -298,22 +322,6 @@
       border-color: rgba(150, 150, 150, 1.0)
     }
 
-    .cart .remove {
-      background: rgba(255, 255, 255, 0.0);
-      top: 386px;
-      height: auto;
-      width: 144px;
-      position: absolute;
-      margin: 0;
-      left: 821px;
-      font-family: 'HelveticaNeue', Helvetica, Arial, serif;
-      font-size: 24.0px;
-      color: rgba(66, 66, 66, 1.0);
-      text-align: left;
-      letter-spacing: 6.08px;
-      line-height: 29.0px
-    }
-
     .cart .bitmap {
       background: rgba(255, 255, 255, 0.0);
       top: 434px;
@@ -337,22 +345,6 @@
       color: rgba(66, 66, 66, 1.0);
       text-align: center;
       letter-spacing: 1.0px;
-      line-height: 31.0px
-    }
-
-    .cart .summary {
-      background: rgba(255, 255, 255, 0.0);
-      top: 708px;
-      height: auto;
-      width: 197px;
-      position: absolute;
-      margin: 0;
-      left: 1122px;
-      font-family: 'BellMTBold', Helvetica, Arial, serif;
-      font-size: 24.0px;
-      color: rgba(66, 66, 66, 1.0);
-      text-align: center;
-      letter-spacing: 2.0px;
       line-height: 31.0px
     }
 
@@ -778,6 +770,32 @@
       flex: 0 0 50%;
       max-width: 50%;
     }
+    .carousel-scroll {
+      width: auto;
+      overflow-y: hidden;
+      overflow-x: auto;
+      -ms-overflow-style: scrollbar;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+
+    .scrollBar {
+      border-radius: 5px;
+      left: 0;
+      height: 8px;
+      bottom: -6px;
+      position: absolute;
+      background: #fff;
+      border: 1px solid #888;
+      cursor: -webkit-grab;
+      cursor: grab;
+      opacity: 1;
+      z-index: 3;
+    }
+
+
     .l-align-right {
       -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
@@ -832,23 +850,14 @@
     .h-standardSpacingTop {
       margin-top: 30px;
     }
-    .is-initialized.has-scrollbar .carousel-scroll {
+    .is-initialized.has-scrollbar {
       overflow-x: hidden;
       padding-bottom: 10px;
     }
     .is-initialized .carousel-scroll {
       overflow-x: hidden;
     }
-    .carousel-scroll {
-      width: auto;
-      overflow-y: hidden;
-      -ms-overflow-style: scrollbar;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
-      margin-left: -15px;
-      margin-right: -15px;
-    }
-    .is-initialized.has-scrollbar .carousel-scroll .products-scroll, .is-initialized.has-scrollbar .carousel-scroll .carousel-view {
+    .is-initialized.has-scrollbar .products-scroll, .is-initialized.has-scrollbar.carousel-view {
       border-bottom: 1px solid #d6d6d6;
       padding-bottom: 10px;
     }
@@ -928,7 +937,161 @@
     .h-float-right {
       float: right;
     }
-  </style>
+
+    .quantity-input {
+      margin: 5px auto;
+    }
+    .lazyloaded {
+      opacity: 1;
+      transition: opacity 250ms;
+    }
+    .fadeoutLayer-right {
+      background-image: linear-gradient(90deg, rgba(255,255,255,0), #fff);
+      right: -15px;
+      top: 0;
+    }
+    .fadeoutLayer {
+      width: 60px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      display: none;
+    }
+    .btn-secondary,
+    .btn-default {
+      color: #333;
+      background-color: #fff;
+      border: #888 1px solid;
+    }
+
+
+    #openPopUp{
+      text-align:center;
+      background-color: rgba(117, 42, 107, 1.0);
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 1.5em;
+      border-radius: 3.5px;
+      text-decoration: none;
+      font-weight: 100;
+      transition:background-color 0.15s linear;
+      -webkit-transition:background-color 0.15s linear;
+      -moz-transition:background-color 0.25s linear;
+      -o-transition:background-color 0.25s linear;
+    }
+    a#openPopUp:hover{
+      cursor: pointer;
+      background-color: rgba(117, 42, 107, 1.0);
+    }
+    .popup{
+      position: fixed;
+      top: -100vh;
+      left: 0;
+      z-index: 9999999;
+      background: rgba(0,0,0, 0.75);
+      width: 100vw;
+      height: 100vh;
+      opacity: 0;
+
+      -webkit-transition: opacity  0.35s ease;
+      -moz-transition: opacity 0.35s ease;
+      -o-transition: opacity 0.35s ease;
+      transition: opacity 0.35s ease;
+    }
+    .popup .popUpContainer{
+      width: 100%;
+      max-width: 500px;
+      position: fixed; /* To avoid scroll to target */
+      left: 50%;
+      top: -100vh;
+      -webkit-transition: top  0.35s ease;
+      -moz-transition: top 0.35s ease;
+      -o-transition: top 0.35s ease;
+      transition: top 0.35s ease;
+
+      /* Trick to properly center the element by using negative
+      1/2 length of element as margin left and top */
+      margin-left: -250px;
+      background-color: #ffffff;
+      -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      border-radius: 2px;
+      z-index: 9999999;
+    }
+    .popup h2{
+      padding: 0.5em;
+      text-align: center;
+      color: #444444;
+      margin: 0;
+    }
+    .popup img{
+      width: 100%;
+      display: block;
+    }
+    .popup article{
+      height: 300px;
+      background-color: #e67e22;
+    }
+    /* The cancel button on popup dialog */
+    .popup a.closePopUp{
+      font-family: verdana;
+      color: #e74c3c;
+      position: absolute;
+      top: 0.2em;
+      right: 0.375em;
+      margin: 0;
+      padding: 5px;
+      font-weight: bold;
+      font-size: 1.5em;
+      text-decoration: none;
+    }
+    /* The cancel button on popup dialog */
+    .popup a:hover{
+      color: #c0392b;
+    }
+    /* When popup is targeted, by clicking on link with #popup in HTML */
+    .popup:target{
+      opacity: 1;
+      top: 0;
+    }
+    .popup .closePopUpOutSide{
+      position: absolute;
+      left:0;
+      width: 100%;
+      height: 100%;
+      z-index: 9999991;
+    }
+    .popup:target .popUpContainer{
+      top: 50px;
+      -webkit-transition: top  0.35s ease;
+      -moz-transition: top 0.35s ease;
+      -o-transition: top 0.35s ease;
+      transition: top 0.35s ease;
+    }
+
+    @media  (max-width: 796px) {
+      .popup .popUpContainer{
+        width: 90%;
+        max-width: none;
+        left: 5%;
+        margin-left: 0;
+      }
+      .popup ul{
+        padding: 0 1em 0 1em;
+      }
+      .popup:target .popUpContainer{
+        top: 25px;
+        -webkit-transition: top  0.35s ease;
+        -moz-transition: top 0.35s ease;
+        -o-transition: top 0.35s ease;
+        transition: top 0.35s ease;
+      }
+    }
+
+
+    </style>
   <meta name="author" content="Launchpad by Anima">
 </head>
 
@@ -990,13 +1153,14 @@
           </div>
         </div>
         <div class="price">26.00</div>
+
         <div class="quantity">
           <div class="quantitySelect">
             <div class="dropdown dropdown-default dropdown-sm dropdown-native h-tinySpacingLeft h-zeroMarginBottom btn-sm">
-              <select id="qtySelect-5a6ef630-b34b-11e7-bb7a-35570a6d0d33" class="cart-quantity-picker dropdown--select js-adaptiveInput h-zeroPaddingTop h-text-sm js-qtySelector" data-orderitem="5a6ef630-b34b-11e7-bb7a-35570a6d0d34" data-quantity="1">
+              <select id="qtySelect-5a6ef630-b34b-11e7-bb7a-35570a6d0d34" class="cart-quantity-picker dropdown--select js-adaptiveInput h-zeroPaddingTop h-text-sm js-qtySelector" data-orderitem="5a6ef630-b34b-11e7-bb7a-35570a6d0d34" data-quantity="1">::after
                 <option value="0"> qty 0 </option>
-                <option value="1" selected="selected"> qty 2 </option>
-                <option value="2"> qty 2 </option>
+                <option value="1"> qty 1 </option>
+                <option value="2" selected="selected"> qty 2 </option>
                 <option value="3"> qty 3 </option>
                 <option value="4"> qty 4 </option>
               </select>
@@ -1004,11 +1168,12 @@
           </div>
         </div>
 
-        <div class="subtotal">104.00</div>
+        <div class="subtotal">52.00</div>
         <div class="remove">
           <button>Remove</button>
         </div>
       </div>
+
       <div class="basket-product">
         <div class="item">
           <div class="product-image">
@@ -1023,11 +1188,10 @@
         <div class="price">26.00</div>
 
 
-
         <div class="quantity">
           <div class="quantitySelect">
             <div class="dropdown dropdown-default dropdown-sm dropdown-native h-tinySpacingLeft h-zeroMarginBottom btn-sm">
-              <select id="qtySelect-5a6ef630-b34b-11e7-bb7a-35570a6d0d34" class="cart-quantity-picker dropdown--select js-adaptiveInput h-zeroPaddingTop h-text-sm js-qtySelector" data-orderitem="5a6ef630-b34b-11e7-bb7a-35570a6d0d34" data-quantity="1">
+              <select id="qtySelect-5a6ef630-b34b-11e7-bb7a-35570a6d0d33" class="cart-quantity-picker dropdown--select js-adaptiveInput h-zeroPaddingTop h-text-sm js-qtySelector" data-orderitem="5a6ef630-b34b-11e7-bb7a-35570a6d0d34" data-quantity="1">::after
                 <option value="0"> qty 0 </option>
                 <option value="1" selected="selected"> qty 1 </option>
                 <option value="2"> qty 2 </option>
@@ -1039,21 +1203,44 @@
         </div>
 
 
-
         <div class="subtotal">26.00</div>
         <div class="remove">
           <button>Remove</button>
         </div>
       </div>
-      <div class="basket-module" style="padding-top: 1rem">
+
+
+      <div class="basket-module back container" style="padding-top: 1rem">
         <label for="promo-code" style="font-size: medium">Enter a promotional code</label>
         <input id="promo-code" type="text" name="promo-code" maxlength="5" class="promo-code-field">
-        <button class="promo-code-cta">Apply</button>
+        <button class="promo-code-cta"><a href="#popUp" id="openPopup">Apply</a></button>
       </div>
+
+      <!--<div class="pop-window">
+        <div class="inner">
+          <h1>Coupon Not Available</h1>
+          <p>The entered coupon is no longer available.</p>
+          <p>Please try another one.</p>
+          <button name="close" class="btn">OK</button>
+        </div>
+      </div>-->
+
+      <aside id="popUp" class="popup">
+        <div class="popUpContainer">
+          <header>
+            <a href="#!" class="closePopUp">X</a>
+            <h2 class="title" stype="padding-top: 3rem text-align: center">Coupon Not Available!</h2>
+            <h2 stype="padding-top:3rem text-align:center">The entered coupon is not longer available. </h2>
+            <h2 stype="padding-top:3rem text-align:center">Please try another one.</h2>
+          </header>
+        </div>
+        <a href="#!" class="closePopUpOutSide"></a>
+      </aside>
+
     </div>
 
 
-    <aside>
+    <aside style="padding-top: 2rem">
       <div class="summary">
         <div class="title title-left"> <h2 class="title-text bravo">order summary</h2> </div>
 
@@ -1071,24 +1258,26 @@
             <span>subtotal <span class="h-text-normal h-text-md">(3 items)</span></span>
             <span class="h-float-right strong" style="font-size: medium">$130.00</span>
           </div>
+
           <div class="l-col-xs-12 l-col-nopadding order--summary">
-            <span >delivery <span class="h-text-normal h-text-md"></span></span>
-            <span class="h-float-right strong h-text-red">free</span>
+            <span>delivery</span>
+            <span class="h-float-right h-text-red">free</span>
           </div>
+
           <div class="l-col-xs-12 l-col-nopadding order--summary">
             <span>estimated tax</span>
             <span class="h-float-right">$0.70</span>
           </div>
           <div>
-        <span class="h-text-normal h-text-md"> delivery &amp; tax for
-          <a href="#" data-behavior="modal" data-target="#taxZipCodeModal" aria-label="zip code 15206" class="link-underline " id="taxCalculateZipCode">15206</a>
-        </span>
+            <span class="h-text-normal h-text-md"> delivery &amp; tax for
+              <a href="#" data-behavior="modal" data-target="#taxZipCodeModal" aria-label="zip code 15206" class="link-underline " id="taxCalculateZipCode">15206</a>
+            </span>
           </div>
         </div>
 
         <div class="summary-total">
           <div class="total-title">Total</div>
-          <div class="total-value final-value" id="basket-total" style="font-size: large">130.00</div>
+          <div class="total-value final-value" id="basket-total" style="font-size: large">130.70</div>
         </div>
         <div class="summary-checkout">
           <button class="checkout-cta">I'm Ready to Checkout</button>
@@ -1097,14 +1286,14 @@
     </aside>
 
 
-    <div id="RRContainer" class="carousel-container product-recomendation--pdp h-standardSpacingTop carouselCenter has-scrollbar is-initialized" data-init="true" style="width: 542px;">
+    <div id="RRContainer" class="carousel-container product-recomendation--pdp h-standardSpacingTop carouselCenter default-carousel has-scrollbar is-initialized" data-init="true" style="width: 542px;">
       <div class="title">
         <h2 class="title-text bravo">Recommended to you</h2></div>
       <div class="carousel carousel-scroll">
         <div class="js-carousel-view products products-scroll">
           <button type="button" class="js-carousel-control btn btn-secondary prev" aria-label="previous" id="previous" disabled="disabled" aria-hidden="true" style="top: 60px;"></button>
           <div class="fadeoutLayer fadeoutLayer-left" disabled="disabled" aria-hidden="true"></div>
-          <ul class="js-carousel-list product--list" style="width: 1066.5px; transform: translate3d(0px, 0px, 0px);">
+          <ul class="js-carousel-list product--list" style="width: auto; transform: translate3d(0px, 0px, 0px);">
 
             <li class="product h-center h-turn-around" data-position="0" data-product-id="12848162" data-strategy-id="mwebvch1" data-strategy-name="bought_bought">
               <div class="product--link">
@@ -1117,7 +1306,7 @@
               </div>
             </li>
 
-            <li class="product h-center h-turn-around" data-position="0" data-product-id="11010164" data-strategy-id="mwebvch1" data-strategy-name="bought_bought">
+            <li class="product h-center h-turn-around" data-position="1" data-product-id="11010164" data-strategy-id="mwebvch1" data-strategy-name="bought_bought">
               <div class="product--link">
                 <picture>
                   <img src="pictures/11010164.jpeg" alt="Nature Made Vitamin D3 2000 I.U. Tablets" class=" lazyloaded"> </picture>
@@ -1131,7 +1320,7 @@
             </li>
 
 
-            <li class="product h-center h-turn-around" data-position="0" data-product-id="16527278" data-strategy-id="mwebvch1" data-strategy-name="bought_bought">
+            <li class="product h-center h-turn-around" data-position="2" data-product-id="16527278" data-strategy-id="mwebvch1" data-strategy-name="bought_bought">
               <div class="product--link">
                 <picture>
                   <img src="pictures/16527278.jpeg" alt="Nature Made Vitamin D3 2000 I.U. Tablets" class=" lazyloaded"> </picture>
@@ -1141,14 +1330,55 @@
                 </div>
               </div>
             </li>
+
+            <li class="product h-center h-turn-around" data-position="3" data-product-id="16527279" data-strategy-id="mwebvch1" data-strategy-name="bought_bought">
+              <div class="product--link">
+                <picture>
+                  <img src="pictures/52364727.jpeg" alt="Band-Aid® Skin Flex Assorted - 20ct/2pk" class=" lazyloaded"></picture>
+                <div class="details">
+                  <div class="price2"> <span class>$6.59</span></div>
+                  <a class="details--title "> <span>Band-Aid® Skin Flex Assorted - 20ct/2pk</span> </a>
+                </div>
+              </div>
+            </li>
+
+
           </ul>
+          <button type="button" class="btn btn-secondary next active" aria-label="next" id="next" style="top: 55px;">::before</button>
           <div class="fadeoutLayer fadeoutLayer-right"></div>
+          <button class="js-carousel-scrollbar scrollBar" data-left="0" style="width: 570.668px; transform: translate3d(0px, 0px, 0px); transition: opacity 0.3s;">
+          </button>
         </div>
       </div>
     </div>
   </section>
 
-
 </main>
-</body>
+<script>
+  $(document).ready(function() {
 
+    var $overlay = $('<div class="overlay"></div>');
+    var $href = $('this').attr('href');
+    var $popup = $('.pop-window');
+
+    $('<div class="close">x</div>').appendTo($popup);
+    $popup.hide();
+
+    $('a').click(function(e) {
+      e.preventDefault();
+      $overlay.fadeIn(800).appendTo('body');
+      $popup.delay(800).slideDown();
+    });
+
+    $overlay.click(function() {
+      $overlay.delay(800).fadeOut();
+      $popup.slideUp();
+    });
+
+    $('.close').click(function() {
+      $popup.slideUp();
+      $overlay.delay(800).fadeOut();
+    });
+  });
+</script>
+</body>
