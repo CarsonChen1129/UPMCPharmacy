@@ -198,6 +198,7 @@ header{
     /*padding-left:1rem;*/
     color: #FAFAFA;
     text-decoration: none;
+    list-style-type:none;
     /*display: inline-block;*/
     text-align:center;
 }
@@ -218,8 +219,6 @@ header{
 
 
 
-
-
 .purple-banner {
     height:2.2rem;
     width:100%;
@@ -234,6 +233,18 @@ main {
     height:500vh;
     display:block;
 }
+
+
+.search-section {
+
+}
+
+.search-section .search-bg-img {
+    width:100%;
+    height:70vh;
+    filter: blur(5px);
+}
+
 
 footer {
     height:20vh;
