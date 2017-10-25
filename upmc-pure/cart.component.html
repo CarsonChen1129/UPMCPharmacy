@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>UPMC Online Pharmacy</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="stylesheets/homepage.css">
+  <link rel="stylesheet" href="stylesheets/cart.css">
+
+  <script src="lib/jquery-3.2.1.js"></script>
+  <script src="js/homepage.js"></script>
+
+</head>
+<body>
+<header>
+  <section class="header-wrapper">
+    <nav class="header-right-nav">
+      <ul class="header-list">
+        <li>
+          <div>
+            <img class="avatar" src="assets/images/IMG_9354.jpg"/>
+            <span>Account</span>
+          </div>
+        </li>
+        <li>
+          <div>
+            <img class="cart-icon" src="assets/images/icons/shopping-cart.png"/>
+            <span>Cart</span>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </section>
+  <section class="img-wrapper">
+    <img class="logo center" src="assets/images/upmc-1.png">
+  </section>
+</header>
+<nav class="nav-bar">
+  <ul class="nav-list">
+    <li class="hide-imgs hide logo-sticky">
+      <a href="">
+        <img src="assets/images/upmc-1.png">
+      </a>
+    </li>
+    <li class="menu-item">
+      <a href="">Health & Medicine</a>
+      <ul class="dropdown-content">
+        <li><a href="#">Allergy & Asthma</a></li>
+        <li><a href="#">Cough, Cold & Flu</a></li>
+        <li><a href="#">Digestive Health</a></li>
+        <li><a href="#">Pain & Fever</a></li>
+        <li><a href="#">Stop Smoking</a></li>
+        <li><a href="#">First Aid</a></li>
+      </ul>
+    </li>
+    <li class="menu-item" >
+      <a href="">Vitamins</a>
+      <ul class="dropdown-content">
+        <li><a href="#">Multivitamins</a></li>
+        <li><a href="#">Heart Health</a></li>
+        <li><a href="#">Bone & Joint</a></li>
+        <li><a href="#">Probiotics</a></li>
+        <li><a href="#">Vitamin B</a></li>
+        <li><a href="#">Vitamin D</a></li>
+        <li><a href="#">Immune Support</a></li>
+      </ul>
+    </li>
+    <li class="menu-item">
+      <a href="">Personal Care</a>
+      <ul class="dropdown-content">
+        <li><a href="#">Bath & Body</a></li>
+        <li><a href="#">Incontinence</a></li>
+        <li><a href="#">Feminine Care</a></li>
+        <li><a href="#">Oral Care</a></li>
+        <li><a href="#">Shaving</a></li>
+        <li><a href="#">Natural & Organic</a></li>
+        <li><a href="#">Shampoo & Conditioner</a></li>
+      </ul>
+    </li>
+    <li class="menu-item">
+      <a href="">Home Health Care</a>
+      <ul class="dropdown-content">
+        <li><a href="#">Diabetes Care</a></li>
+        <li><a href="#">Home Tests</a></li>
+        <li><a href="#">Monitors</a></li>
+        <li><a href="#">Bathroom Safety</a></li>
+        <li><a href="#">Daily Living Aids</a></li>
+      </ul>
+    </li>
+    <li class="menu-item">
+      <a href="">Weekly Deals</a>
+    </li>
+    <li class="hide-imgs hide search-sticky">
+      <a href="">
+        <img class="cart-icon" src="assets/images/icons/search.png"/>
+      </a>
+    </li>
+    <li class="hide-imgs hide avatar-sticky">
+      <a href="">
+        <img class="avatar" src="assets/images/IMG_9354.jpg"/>
+      </a>
+    </li>
+    <li class="hide-imgs hide cart-sticky">
+      <a href="">
+        <img class="cart-icon" src="assets/images/icons/shopping-cart.png"/>
+      </a>
+    </li>
+  </ul>
+
+  <div class="purple-banner"></div>
+</nav>
+
+  <section class="product-list wrapper" style="padding-bottom: 5rem">
+    <div class="basket">
+      <div class="basket-labels " style="font-size: medium;font-weight: bold">
+        <ul>
+          <li class="item item-heading">Item</li>
+          <li class="price">Price</li>
+          <li class="quantity">Quantity</li>
+          <li class="subtotal">Subtotal</li>
+        </ul>
+      </div>
+      <div class="basket-product">
+        <div class="item">
+          <div class="product-image">
+            <img src="assets/images/cartpictures/15068149.jpeg" alt="Placholder Image 2" class="product-frame">
+          </div>
+          <div class="product-details">
+            <h1 style="font-size: medium "><strong>Nasacort® Allergy 24HR Multi-Symptom Nasal Spray - 2ct 120 sprays</strong></h1>
+            <p><strong>Size: 120.0 EA   |   Wt: 0.05LBS</strong></p>
+            <p style="font-size: small">Product Code - 232321939</p>
+          </div>
+        </div>
+        <div class="price" style="font-size: medium">26.00</div>
+
+        <div class="quantity">
+          <div class="quantitySelect">
+            <div class="dropdown dropdown-default dropdown-sm dropdown-native h-tinySpacingLeft h-zeroMarginBottom btn-sm">
+              <select id="qtySelect-5a6ef630-b34b-11e7-bb7a-35570a6d0d34" class="cart-quantity-picker dropdown--select js-adaptiveInput h-zeroPaddingTop h-text-sm js-qtySelector" data-orderitem="5a6ef630-b34b-11e7-bb7a-35570a6d0d34" data-quantity="1">::after
+                <option value="0" > qty 0 </option>
+                <option value="1"> qty 1 </option>
+                <option value="2" selected="selected"> qty 2<i class="down"></i></option>
+                <option value="3"> qty 3 </option>
+                <option value="4"> qty 4 </option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="subtotal" style="font-size: medium">52.00</div>
+        <div class="remove">
+          <button class="table-remove delete-one">Remove</button>
+        </div>
+      </div>
+
+      <div class="basket-product">
+        <div class="item">
+          <div class="product-image">
+            <img src="assets/images/cartpictures/14511683.jpeg" alt="Placholder Image 2" class="product-frame">
+          </div>
+          <div class="product-details">
+            <h1 style="font-size: medium"><strong>Ultimate Flora Women's Daily Probiotic - 30 Count</strong></h1>
+            <p><strong>Size: 30.0 EA   |   Wt: 0.05LBS</strong></p>
+            <p style="font-size: small;">Product Code - 232321939</p>
+          </div>
+        </div>
+        <div class="price" style="font-size: medium">3.99</div>
+
+
+        <div class="quantity">
+          <div class="quantitySelect">
+            <div class="dropdown dropdown-default dropdown-sm dropdown-native h-tinySpacingLeft h-zeroMarginBottom btn-sm">
+              <select id="qtySelect-5a6ef630-b34b-11e7-bb7a-35570a6d0d33" class="cart-quantity-picker dropdown--select js-adaptiveInput h-zeroPaddingTop h-text-sm js-qtySelector" data-orderitem="5a6ef630-b34b-11e7-bb7a-35570a6d0d34" data-quantity="1">::after
+                <option value="0"> qty 0 </option>
+                <option value="1" selected="selected"> qty 1 </option>
+                <option value="2"> qty 2 </option>
+                <option value="3"> qty 3 </option>
+                <option value="4"> qty 4 </option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="subtotal" style="font-size: medium">3.99</div>
+        <div class="remove">
+          <button class="table-remove delete-one">Remove</button>
+        </div>
+      </div>
+
+
+
+
+      <div class="basket-product">
+        <div class="item">
+          <div class="product-image">
+            <img src="assets/images/cartpictures/51219490.jpeg" alt="Placholder Image 3" class="product-frame">
+          </div>
+          <div class="product-details">
+            <h1 style="font-size: medium"><strong>Emergen-C® Dietary Supplement Drink Mix with 1000mg Vitamin C - Caffeine Free Super Orange Flavor</strong></h1>
+            <p><strong>Size: 1000mg   |   Wt: 1.00LBS</strong></p>
+            <p style="font-size: small">Product Code - 132321939</p>
+          </div>
+        </div>
+        <div class="price" style="font-size: medium">4.49</div>
+
+
+        <div class="quantity">
+          <div class="quantitySelect">
+            <div class="dropdown dropdown-default dropdown-sm dropdown-native h-tinySpacingLeft h-zeroMarginBottom btn-sm">
+              <select id="qtySelect-5a6ef630-b34b-11e7-bb7a-35570a6d0d35" class="cart-quantity-picker dropdown--select js-adaptiveInput h-zeroPaddingTop h-text-sm js-qtySelector" data-orderitem="5a6ef630-b34b-11e7-bb7a-35570a6d0d34" data-quantity="1">::after
+                <option value="0"> qty 0 </option>
+                <option value="1"> qty 1 </option>
+                <option value="2"> qty 2 </option>
+                <option value="3"> qty 3 </option>
+                <option value="4"selected="selected"> qty 4 </option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="subtotal" style="font-size: medium">17.06</div>
+        <div class="remove">
+          <button class="table-remove delete-one">Remove</button>
+        </div>
+      </div>
+
+
+      <div class="basket-module back container" style="padding-top: 1rem; padding-bottom: 3rem">
+        <label for="promo-code" style="font-size: medium">Enter a promotional code</label>
+        <input id="promo-code" type="text" name="promo-code" maxlength="5" class="promo-code-field">
+        <button class="promo-code-cta"><a href="#popUp" id="openPopup">Apply</a></button>
+      </div>
+
+
+      <aside id="popUp" class="popup">
+        <div class="popUpContainer">
+          <header>
+            <a href="#!" class="closePopUp">X</a>
+            <h2 class="title" stype="padding-top: 3rem text-align: center">Coupon Not Available!</h2>
+            <h2 stype="padding-top:3rem text-align:center">The entered coupon is not longer available. </h2>
+            <h2 stype="padding-top:3rem text-align:center">Please try another one.</h2>
+          </header>
+        </div>
+        <a href="#!" class="closePopUpOutSide"></a>
+      </aside>
+
+    </div>
+
+
+    <aside style="padding-top: 2rem">
+      <div class="summary">
+        <div class="title title-left"> <h2 class="title-text bravo">order summary</h2> </div>
+
+        <div class="summary-delivery">
+          <div id="subtotal" class="l-col-xs-12 l-col-nopadding order--summary">
+            <span>subtotal <span class="h-text-normal h-text-md">(3 items)</span></span>
+            <span class="h-float-right strong" style="font-size: medium">$130.00</span>
+          </div>
+
+          <div class="l-col-xs-12 l-col-nopadding order--summary">
+            <span>delivery</span>
+            <span class="h-float-right strong h-text-red">free</span>
+          </div>
+
+          <div class="l-col-xs-12 l-col-nopadding order--summary">
+            <span>estimated tax</span>
+            <span class="h-float-right">$0.70</span>
+          </div>
+          <div>
+            <span class="h-text-normal h-text-md" style="font-size: small;"> delivery &amp; tax for
+              <a href="#" data-behavior="modal" data-target="#taxZipCodeModal" aria-label="zip code 15206" class="link-underline " id="taxCalculateZipCode">15206</a>
+            </span>
+          </div>
+        </div>
+
+        <div class="summary-total">
+          <div class="total-title" style="font-size: large">Total</div>
+          <div class="total-value final-value" id="basket-total" style="font-size: large">130.70</div>
+        </div>
+        <div class="summary-checkout">
+          <button class="checkout-cta">I'm Ready to Checkout</button>
+        </div>
+      </div>
+    </aside>
+
+
+    <div id="RRContainer" class="carousel-container product-recomendation--pdp h-standardSpacingTop carouselCenter default-carousel has-scrollbar is-initialized" data-init="true" style="width: 542px;">
+      <div class="title">
+        <h2 class="title-text bravo">Recommended to you</h2></div>
+      <div class="carousel carousel-scroll">
+        <div class="js-carousel-view products products-scroll">
+          <button type="button" class="js-carousel-control btn btn-secondary prev" aria-label="previous" id="previous" disabled="disabled" aria-hidden="true" style="top: 60px;"></button>
+          <div class="fadeoutLayer fadeoutLayer-left" disabled="disabled" aria-hidden="true"></div>
+          <ul class="js-carousel-list product--list" style="width: auto; transform: translate3d(0px, 0px, 0px);">
+
+            <li class="product h-center h-turn-around" data-position="0" data-product-id="12848162" data-strategy-id="mwebvch1" data-strategy-name="bought_bought">
+              <div class="product--link">
+                <picture>
+                  <img src="assets/images/cartpictures/12848162.jpeg" alt="Nicotine 2mg Original Gum 220 ct - up &amp; up™" class=" lazyloaded"> </picture>
+                <div class="details">
+                  <div class="price2"> <span class>$48.49</span> </div>
+                  <a class="details--title "> <span>Nicotine 2mg Original Gum 220 ct - up &amp; up</span> </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="product h-center h-turn-around" data-position="1" data-product-id="11010164" data-strategy-id="mwebvch1" data-strategy-name="bought_bought">
+              <div class="product--link">
+                <picture>
+                  <img src="assets/images/cartpictures/11010164.jpeg" alt="Nature Made Vitamin D3 2000 I.U. Tablets" class=" lazyloaded"> </picture>
+                <div class="details">
+                  <div class="price2"> <span>$5.99</span> </div>
+                  <a class="details--title ">
+                    <span>Nature Made Vitamin D3 2000 I.U. Tablets</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+
+            <li class="product h-center h-turn-around" data-position="2" data-product-id="16527278" data-strategy-id="mwebvch1" data-strategy-name="bought_bought">
+              <div class="product--link">
+                <picture>
+                  <img src="assets/images/cartpictures/16527278.jpeg" alt="Nature Made Vitamin D3 2000 I.U. Tablets" class=" lazyloaded"> </picture>
+                <div class="details">
+                  <div class="price2"> <span class>$13.99</span></div>
+                  <a class="details--title "> <span>Flonase Allergy Relief Spray - 2ct 120 sprays</span> </a>
+                </div>
+              </div>
+            </li>
+
+            <li class="product h-center h-turn-around" data-position="3" data-product-id="16527279" data-strategy-id="mwebvch1" data-strategy-name="bought_bought">
+              <div class="product--link">
+                <picture>
+                  <img src="assets/images/cartpictures/52364727.jpeg" alt="Band-Aid® Skin Flex Assorted - 20ct/2pk" class=" lazyloaded"></picture>
+                <div class="details">
+                  <div class="price2"> <span class>$6.59</span></div>
+                  <a class="details--title "> <span>Band-Aid® Skin Flex Assorted - 20ct/2pk</span> </a>
+                </div>
+              </div>
+            </li>
+
+
+          </ul>
+          <button type="button" class="btn btn-secondary next active" aria-label="next" id="next" style="top: 55px;">::before</button>
+          <div class="fadeoutLayer fadeoutLayer-right"></div>
+          <button class="js-carousel-scrollbar scrollBar" data-left="0" style="width: 570.668px; transform: translate3d(0px, 0px, 0px); transition: opacity 0.3s;">
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<footer>
+  <section class="purple-block"></section>
+  <section class="copyright">
+    <p>United States @ UPMC 2017. All rights reserved.</p>
+  </section>
+  <section class="img-wrapper">
+    <img class="footer-logo center" src="assets/images/UPMC-Logo-white.png">
+  </section>
+</footer>
+</body>
+<script>
+  $('.table-remove').click(function () {
+    $(this).parent('div').parent('div').detach();
+  });
+
+</script>
+</html>
