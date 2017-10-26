@@ -3,9 +3,11 @@
 
 p {
   font-family: 'Muli', sans-serif;
-  font-size: 135%;
+  font-size: 100%;
   text-align: center;
   margin: 15px 0px 15px 0px;
+  font-weight: bold;
+  opacity: 0.8
 }
 
 .banner-font {
@@ -21,7 +23,7 @@ p {
 }
 
 .path-margin-left {
-  margin-left: 128px;
+  margin-left: 98px;
 }
 
 .product-margin-left {
@@ -30,4 +32,8 @@ p {
 
 .product-margin-right {
   margin-right: 96px;
+}
+
+.pic-margin {
+  margin: 8px 8px 8px 8px;
 }
