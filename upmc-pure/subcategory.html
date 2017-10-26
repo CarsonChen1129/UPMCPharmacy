@@ -1,9 +1,9 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
     <meta name="author" content="Team3 (Jiajun Chen,Yingfei Shen,Jianing He,Mengyu Yin)">
     <meta charset="utf-8">
-    <title>UPMC Online Pharmacy</title>
+    <title>Subcategory</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/upmc-icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/upmc-icons/apple-icon-60x60.png">
@@ -23,6 +23,9 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" type="image/x-icon" href="assets/icons/upmc-icons/favicon.ico">
+    <link rel="stylesheet" href="stylesheets/category.css"> <!--Need to put at the first-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-purple.css">
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheets/index.css">
     <link rel="stylesheet" href="lib/jquery-ui-1.12.1/jquery-ui.css">
@@ -31,6 +34,8 @@
     <script src="js/index.js"></script>
 </head>
 <body>
+
+<!--Header-->
 <header>
     <section class="header-wrapper">
         <nav class="header-left-nav">
@@ -71,6 +76,7 @@
         </a>
     </section>
 </header>
+    <!--Nav-->
 <nav class="nav-bar">
     <ul class="nav-list">
         <li class="hide-imgs hide logo-sticky">
@@ -159,9 +165,104 @@
         </div>
     </section>
 </nav>
-<main>
 
+<main>
+    <!-- Path -->
+    <nav class="path-margin-left">
+        <ul style ="display: inline-block;list-style-type: none;">
+            <li style ="display: inline-block;list-style-type: none;">
+                <a href="">
+                    <h3 class="w3-padding-16 main-font w3-hover-opacity">Home</h3>
+                </a>
+            </li>
+            <li style ="display: inline-block;list-style-type: none;">
+                <a href="category.html">
+                    <h3 class="w3-padding-16 main-font w3-hover-opacity"> > Health & Medicine</h3>
+                </a>
+            </li>
+            <li style ="display: inline-block;list-style-type: none;">
+                <a href="">
+                    <h3 class="w3-padding-16 main-font w3-hover-opacity">> Allergy & Asthma</h3>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Banner -->
+    <div class="w3-display-container w3-content w3-center" style="max-width:1500px">
+        <img src="assets/images/img-subcategory/allergy&asthma.jpg" width="82%" height="540">
+        <div class="w3-display-middle w3-padding-large w3-wide w3-center w3-black" style="opacity: 0.75">
+            <h1 class="w3-xxxlarge w3-animate-bottom banner-font">Allergy</h1>
+            <h1 class="w3-xxlarge w3-animate-bottom banner-font"> & </h1>
+            <h1 class="w3-xxxlarge w3-animate-bottom banner-font">Asthma</h1>
+        </div>
+    </div>
+
+    <!-- Category -->
+    <!-- row1 -->
+    <div class="w3-row-padding product-margin-left product-margin-right">
+        <a href="category-result.html" class="w3-third">
+            <div class="w3-card-2 w3-margin">
+                <img src="assets/images/img-subcategory/allergy-asthma-for-children.jpg" style="width:100%">
+                <div class="w3-container">
+                    <p>Allergy & Asthma for Children</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="category-result.html" class="w3-third">
+            <div class="w3-card-2 w3-margin">
+                <img src="assets/images/img-subcategory/allergy-sinus-medicine.jpg" style="width:100%">
+                <div class="w3-container">
+                    <p>Allergy & Sinus Medicine</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="category-result.html" class="w3-third">
+            <div class="w3-card-2 w3-margin">
+                <img src="assets/images/img-subcategory/allergy-eye-drops.jpg" style="width:100%">
+                <div class="w3-container">
+                    <p>Allergy Eye Drops</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="w3-padding-16"></div>
+
+    <!-- row2 -->
+    <div class="w3-row-padding product-margin-left product-margin-right">
+        <a href="category-result.html" class="w3-third">
+            <div class="w3-card-2 w3-margin">
+                <img src="assets/images/img-subcategory/asthma-treatment.jpg" style="width:100%">
+                <div class="w3-container">
+                    <p>Asthma Treatment</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="category-result.html" class="w3-third">
+            <div class="w3-card-2 w3-margin">
+                <img src="assets/images/img-subcategory/humidifiers-purifiers-vaporizers.jpg" style="width:100%">
+                <div class="w3-container">
+                    <p>Humidifiers, Purifiers & Vaporizers</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="category-result.html" class="w3-third">
+            <div class="w3-card-2 w3-margin">
+                <img src="assets/images/img-subcategory/nasal-care.jpg" style="width:100%">
+                <div class="w3-container">
+                    <p>Nasal Care</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="w3-padding-16"></div>
 </main>
+
+<!-- Footer -->
 <footer class="footer">
     <div class="block-wrapper">
         <div class="footer-subscribe">
@@ -283,3 +384,4 @@
 </footer>
 </body>
 </html>
+
