@@ -3,7 +3,7 @@
 <head>
     <meta name="author" content="Team3 (Jiajun Chen,Yingfei Shen,Jianing He,Mengyu Yin)">
     <meta charset="utf-8">
-    <title>UPMC Login &amp; & &amp; Registration</title>
+    <title>Breathe Right Extra Nasal Strips</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/upmc-icons/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/upmc-icons/apple-icon-60x60.png">
@@ -22,18 +22,15 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
     <link rel="icon" type="image/x-icon" href="assets/icons/upmc-icons/favicon.ico">
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/productpage.css">
     <link rel="stylesheet" href="stylesheets/index.css">
     <link rel="stylesheet" href="lib/jquery-ui-1.12.1/jquery-ui.css">
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="stylesheets/form-elements.css">
-    <link rel="stylesheet" href="stylesheets/style.css">
-
-    <script src="lib/jquery-3.2.1.js"></script>
+    <!--<script src="lib/jquery-3.2.1.js"></script>-->
+    <script src="lib/jquery-2.1.4.min.js"></script>
     <script src="lib/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <script src="lib/foundation.js"></script>
     <script src="js/index.js"></script>
 </head>
 <body>
@@ -167,88 +164,166 @@
         </section>
     </nav>
     <main>
-        <div class="top-content">
-            <div style="width: 1200px; height: 100%; position:center; margin:100px;">
-                <div class="row">
-                    <div class="col-sm-5">
-                        <div class="form-box">
-                            <div class="form-top">
-                                <div class="form-top-left">
-                                    <h3>Login</h3>
-                                </div>
-                                <div class="form-top-right">
-                                    <i class="fa fa-lock"></i>
-                                </div>
-                            </div>
-                            <div class="form-bottom">
-                                <form role="form" action="" method="post" class="login-form">
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-username">Username</label>
-                                        <input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-password">Password</label>
-                                        <input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
-                                    </div>
-                                    <button type="submit" class="btn">Log in</button>
-                                </form>
-                            </div>
-                        </div>
+        <div class="row columns">
+            <nav aria-label="You are here:" role="navigation">
+                <ul class="breadcrumbs">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Health & Medicine</a></li>
+                    <li><a href="#">Allergy & Asthma</a></li>
+                    <li><a href="#">Nasal Care</a></li>
+                    <li>
+                        <span class="show-for-sr">Current: </span> Breathe Right Extra Nasal Strips
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
-                        <div class="social-login">
-                            <h3>...or login with:</h3>
-                            <div class="social-login-buttons">
-                                <a class="btn btn-link-1 btn-link-1-facebook" href="#">
-                                    <i class="fa fa-facebook"></i> Facebook
-                                </a>
-                                <a class="btn btn-link-1 btn-link-1-twitter" href="#">
-                                    <i class="fa fa-twitter"></i> Twitter
-                                </a>
-                                <a class="btn btn-link-1 btn-link-1-google-plus" href="#">
-                                    <i class="fa fa-google-plus"></i> Google Plus
-                                </a>
-                            </div>
+        <div class="row">
+            <div class="medium-6 columns">
+                <img class="thumbnail" src="assets/images/product1.png">
+                <div class="row small-up-4">
+                    <div class="column">
+                        <img class="thumbnail" src="assets/images/product2.jpg">
+                    </div>
+                    <div class="column">
+                        <img class="thumbnail" src="assets/images/product2.jpg">
+                    </div>
+                    <div class="column">
+                        <img class="thumbnail" src="assets/images/product2.jpg">
+                    </div>
+                    <div class="column">
+                        <img class="thumbnail" src="assets/images/product2.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="medium-6 large-5 columns">
+                <h3>Breathe Right Extra Nasal Strips</h3>
+                <p>$ 13.49</p>
+
+                <label> Buy Once/Subscribe
+                    <select>
+                        <option value="1">Buy Once</option>
+                        <option value="2">Buy One Every Week</option>
+                        <option value="3">Buy One Every Two Weeks</option>
+                        <option value="4">Buy One Every Three Weeks</option>
+                        <option value="5">Buy One Every Month</option>
+                    </select>
+                </label>
+
+                <div class="row">
+                    <div class="small-3 columns">
+                        <label for="middle-label" class="middle">Quantity</label>
+                    </div>
+                    <div class="small-9 columns">
+                        <input type="text" id="middle-label" placeholder="1">
+                    </div>
+                </div>
+
+                <a href="#" class="button large expanded">Add to Cart</a>
+
+                <div class="small secondary expanded button-group">
+                    <p>Share to:</p>
+                    <a class="button">Facebook</a>
+                    <a class="button">Twitter</a>
+                    <a class="button">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="column row">
+            <hr>
+            <ul class="tabs" data-tabs id="example-tabs">
+                <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Description</a></li>
+                <li class="tabs-title"><a href="#panel2">Reviews</a></li>
+                <li class="tabs-title"><a href="#panel3">Similar Products</a></li>
+            </ul>
+            <div class="tabs-content" data-tabs-content="example-tabs">
+                <div class="tabs-panel is-active" id="panel1">
+                    <h4>Details</h4>
+                    <div class="media-object stack-for-small">
+                        <div class="media-object-section">
+                            <p>Drug free. Breathe better. Sleep better. 50% stronger to help you breathe even better. Extra band makes it 50% stronger. One size designed for adult noses. It's Simple: Flexible spring-like bands gently lift nasal passages open to improve airflow. Special adhesive holds strips comfortably in place. 50% Stronger: Built with an extra spring-like band to help you breathe even better. Try one if you suffer from: Snoring: For best results, use nightly. Nasal congestion due to allergies, colds, or deviated septum.</p>
                         </div>
                     </div>
-                    <div class="col-sm-1 middle-border"></div>
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-5">
-                        <div class="form-box">
-                            <div class="form-top">
-                                <div class="form-top-left">
-                                    <h3>Register Now</h3>
-                                </div>
-                                <div class="form-top-right">
-                                    <i class="fa fa-pencil"></i>
-                                </div>
-                            </div>
-                            <div class="form-bottom">
-                                <form role="form" action="" method="post" class="registration-form">
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-first-name">First Name</label>
-                                        <input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-last-name">Last Name</label>
-                                        <input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-email">Email</label>
-                                        <input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-create-password">Password</label>
-                                        <input type="password" name="form-create-password" placeholder="Create Your Password..." class="form-create-password form-control" id="form-create-password">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-confirm-password">Password</label>
-                                        <input type="password" name="form-confirm-password" placeholder="Confirm Your New Password..." class="form-confirm-password form-control" id="form-confirm-password">
-                                    </div>
-                                    <input type="checkbox" id="acceptTerms" name="acceptTerms" value="newsletter">
-                                    <label for="acceptTerms">I have read and accepted the Privacy Notice</label>
-                                    <button type="submit" class="btn">Register</button>
-                                </form>
-                            </div>
+                    <div class="media-object stack-for-small">
+                        <div class="media-object-section">
+                            <h4>Directions</h4>
+                            <p>Please read enclosed instruction sheet before use for complete caution statements; proper application and removal.</p>
+                        </div>
+                    </div>
+                    <div class="media-object stack-for-small">
+                        <div class="media-object-section">
+                            <h4>Warning</h4>
+                            <p>Packaging of this product contains natural rubber latex which may cause allergic reactions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs-panel" id="panel2">
+                    <h4>Reviews</h4>
+                    <div class="media-object stack-for-small">
+                        <div class="media-object-section">
+                            <img class="thumbnail" src="http://placehold.it/200x200">
+                        </div>
+                        <div class="media-object-section">
+                            <h5>Mike Stevenson</h5>
+                            <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>
+                        </div>
+                    </div>
+                    <div class="media-object stack-for-small">
+                        <div class="media-object-section">
+                            <img class="thumbnail" src="http://placehold.it/200x200">
+                        </div>
+                        <div class="media-object-section">
+                            <h5>Mike Stevenson</h5>
+                            <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you</p>
+                        </div>
+                    </div>
+                    <div class="media-object stack-for-small">
+                        <div class="media-object-section">
+                            <img class="thumbnail" src="http://placehold.it/200x200">
+                        </div>
+                        <div class="media-object-section">
+                            <h5>Mike Stevenson</h5>
+                            <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you</p>
+                        </div>
+                    </div>
+                    <label>
+                        My Review
+                        <textarea placeholder="None"></textarea>
+                    </label>
+                    <button class="button">Submit Review</button>
+                </div>
+                <div class="tabs-panel" id="panel3">
+                    <div class="row medium-up-3 large-up-5">
+                        <div class="column">
+                            <img class="thumbnail" src="http://placehold.it/350x200">
+                            <h5>Other Product <small>$22</small></h5>
+                            <p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam.</p>
+                            <a href="#" class="button hollow tiny expanded">Buy Now</a>
+                        </div>
+                        <div class="column">
+                            <img class="thumbnail" src="http://placehold.it/350x200">
+                            <h5>Other Product <small>$22</small></h5>
+                            <p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam.</p>
+                            <a href="#" class="button hollow tiny expanded">Buy Now</a>
+                        </div>
+                        <div class="column">
+                            <img class="thumbnail" src="http://placehold.it/350x200">
+                            <h5>Other Product <small>$22</small></h5>
+                            <p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam.</p>
+                            <a href="#" class="button hollow tiny expanded">Buy Now</a>
+                        </div>
+                        <div class="column">
+                            <img class="thumbnail" src="http://placehold.it/350x200">
+                            <h5>Other Product <small>$22</small></h5>
+                            <p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam.</p>
+                            <a href="#" class="button hollow tiny expanded">Buy Now</a>
+                        </div>
+                        <div class="column">
+                            <img class="thumbnail" src="http://placehold.it/350x200">
+                            <h5>Other Product <small>$22</small></h5>
+                            <p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam.</p>
+                            <a href="#" class="button hollow tiny expanded">Buy Now</a>
                         </div>
                     </div>
                 </div>
@@ -375,4 +450,8 @@
         </div>
     </footer>
 </body>
+
+<script>
+    $(document).foundation();
+</script>
 </html>
