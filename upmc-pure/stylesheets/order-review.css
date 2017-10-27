@@ -1,0 +1,147 @@
+.h-tightSpacing {
+  margin: 10px auto;
+}
+.l-align-left {
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+.padding-left-bcb {
+  padding-left: 10px;
+}
+
+.h-display-flex {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.h-zeroMargin {
+  margin: 0 !important;
+}
+.h1-light-font {
+  font-weight: 300;
+  font-size: 21px;
+  color: #000000;
+}
+.padding-left-bcbcount {
+  padding-left: 8px;
+  margin-bottom: -2px;
+}
+.h-standardSpacingLeft {
+  margin-left: 15px;
+}
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+.line-display-block {
+  display: block;
+}
+.h-checkoutSpacingTop {
+  margin-top: 30px;
+}
+.h-standardPaddingRight {
+  padding-right: 15px;
+}
+.h-standardPaddingLeft {
+  padding-left: 15px;
+}
+.h-tightPadding {
+  padding: 10px 0;
+}
+.h-tightSpacingBottom {
+  margin-bottom: 10px;
+}
+.h-img-rounded {
+  border-radius: 5px;
+}
+.h-bg-grayLightest, .h-bg-grayLighter {
+  background-color: #f7f7f7;
+}
+.h-text-bold {
+  font-weight: bold;
+  font-size: medium;
+}
+.h-text-greenDark {
+  color: #008300 !important;
+}
+.checkout_bcb_item_width {
+  width: 75%;
+}
+.h-float-left {
+  float: left;
+}
+.h-float-clear {
+  clear: both;
+}
+.h-text-lg {
+  font-size: 16px;
+}
+.product-review--image {
+  margin-right: 10px;
+  width: 100px;
+  height: 100px;
+}
+.h-display-flex-top {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.h-standardSpacing {
+  margin: 15px auto;
+}
+.h-standardSpacingBottom {
+  margin-bottom: 15px;
+}
+.h-border-right {
+  border-right: 1px solid #d6d6d6;
+}
+.l-col-sm-block-1>* {
+  width: calc(100% - 15px);
+}
+
+[class*='l-col-']:not([class*='block']) {
+  padding: 0 15px;
+  min-width: 0;
+}
+
+.l-col-xs-flex {
+  -ms-flex: 1;
+  flex: 1;
+}
+[class*='l-col-']:not([class*='block']) {
+  padding: 0 15px;
+  min-width: 0;
+}
+
+.l-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-order: 0;
+  order: 0;
+  height: auto;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  backface-visibility: inherit;
+}
+
+.visa{
+  width: 35px;
+  height: 30px;
+}
+

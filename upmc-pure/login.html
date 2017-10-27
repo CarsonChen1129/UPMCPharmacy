@@ -24,17 +24,15 @@
     <meta name="theme-color" content="#ffffff">
 
     <link rel="icon" type="image/x-icon" href="assets/icons/upmc-icons/favicon.ico">
-    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheets/index.css">
     <link rel="stylesheet" href="lib/jquery-ui-1.12.1/jquery-ui.css">
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="stylesheets/form-elements.css">
-    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/login.css">
 
     <script src="lib/jquery-3.2.1.js"></script>
     <script src="lib/jquery-ui-1.12.1/jquery-ui.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/login.js"></script>
+    
 </head>
 <body>
     <header>
@@ -165,95 +163,68 @@
             </div>
         </section>
     </nav>
-    <main>
-        <div class="top-content">
-            <div style="width: 1200px; height: 100%; position:center; margin:50px;">
-                <div class="row">
-                    <div class="col-sm-5">
-                        <div class="form-box">
-                            <div class="form-top">
-                                <div class="form-top-left">
-                                    <h3>Login</h3>
-                                </div>
-                                <div class="form-top-right">
-                                    <i class="fa fa-lock"></i>
-                                </div>
-                            </div>
-                            <div class="form-bottom">
-                                <form role="form" action="" method="post" class="login-form">
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-username">Username</label>
-                                        <input type="text" name="form-username" placeholder="Username..." class="form-username form-control" id="form-username">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-password">Password</label>
-                                        <input type="password" name="form-password" placeholder="Password..." class="form-password form-control" id="form-password">
-                                    </div>
-                                    <a href="index-login.html"><button type="submit" class="btn">Log in</button></a>
-                                </form>
-                            </div>
-                        </div>
-
-                        <div class="social-login">
-                            <h3>...or login with:</h3>
-                            <div class="social-login-buttons">
-                                <a class="btn btn-link-1 btn-link-1-facebook" href="#">
-                                    <i class="fa fa-facebook"></i> Facebook
-                                </a>
-                                <a class="btn btn-link-1 btn-link-1-twitter" href="#">
-                                    <i class="fa fa-twitter"></i> Twitter
-                                </a>
-                                <a class="btn btn-link-1 btn-link-1-google-plus" href="#">
-                                    <i class="fa fa-google-plus"></i> Google Plus
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-1 middle-border"></div>
-                    <div class="col-sm-1"></div>
-                    <div class="col-sm-5">
-                        <div class="form-box">
-                            <div class="form-top">
-                                <div class="form-top-left">
-                                    <h3>Register Now</h3>
-                                </div>
-                                <div class="form-top-right">
-                                    <i class="fa fa-pencil"></i>
-                                </div>
-                            </div>
-                            <div class="form-bottom">
-                                <form role="form" action="" method="post" class="registration-form">
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-first-name">First Name</label>
-                                        <input type="text" name="form-first-name" placeholder="First name..." class="form-first-name form-control" id="form-first-name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-last-name">Last Name</label>
-                                        <input type="text" name="form-last-name" placeholder="Last name..." class="form-last-name form-control" id="form-last-name">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-email">Email</label>
-                                        <input type="text" name="form-email" placeholder="Email..." class="form-email form-control" id="form-email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-create-password">Password</label>
-                                        <input type="password" name="form-create-password" placeholder="Create Your Password..." class="form-create-password form-control" id="form-create-password">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="sr-only" for="form-confirm-password">Password</label>
-                                        <input type="password" name="form-confirm-password" placeholder="Confirm Your New Password..." class="form-confirm-password form-control" id="form-confirm-password">
-                                    </div>
-                                    <input type="checkbox" id="acceptTerms" name="acceptTerms" value="newsletter">
-                                    <label for="acceptTerms">I have read and accepted the Privacy Notice</label>
-                                    <a href="index-login.html"><button type="submit" class="btn">Register</button></a>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+    <main>  
+    <div style="height: 640px; display:block;background: #000;"> 		
+  		<div class="cotn_principal">
+			<div class="cont_centrar">
+			<div class="cont_login">
+				<div class="cont_info_log_sign_up">
+      				<div class="col_md_login">
+						<div class="cont_ba_opcitiy">        
+        						<h2>LOGIN</h2>  
+  								<p>Click button below to login if you are already with us.</p> 
+  								<button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+  						</div>
+  					</div>
+					<div class="col_md_sign_up">
+						<div class="cont_ba_opcitiy">
+  							<h2>SIGN UP</h2>
+							<p>Click button below to sign up if you are a new user.</p>
+  							<button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+						</div>
+ 					</div>
+       			</div>
+  
+    			<div class="cont_back_info">
+       			<div class="cont_img_back_grey">
+       				<img src="assets/images/img-login/upmc.jpeg" alt="" />
+       			</div>      
+    			</div>
+			<div class="cont_forms" >
+    				<div class="cont_img_back_">
+       				<img src="assets/images/img-login/upmc.jpeg" alt="" />
+       			</div>
+ 			<div class="cont_form_login">
+   				<h2>LOGIN</h2>
+ 				<input type="text" placeholder="Email" />
+				<input type="password" placeholder="Password" />
+				<label class="container">Remember me
+  					<input type="checkbox">
+  					<span class="checkmark"></span>
+				</label>
+				<button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+				<a class="forgot" href="#">Forgot your password?</a>
+  			</div>
+  
+   			<div class="cont_form_sign_up">
+     			<h2>SIGN UP</h2>
+				<input type="text" placeholder="Email" />
+				<input type="text" placeholder="User" />
+				<input type="password" placeholder="Password" />
+				<input type="password" placeholder="Confirm Password" />
+				<label class="container">
+  					<input type="checkbox">
+  					<span class="checkmark"></span>
+  				</label>
+  				<h3>I have read and accepted the Privacy Notice</h3>
+				<button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+  			</div>
+    		</div>   
+  	</div>
+ </div>
+</div>
+</div>
+</main>
     <footer class="footer">
         <div class="block-wrapper">
             <div class="footer-subscribe">
