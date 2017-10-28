@@ -23,8 +23,10 @@ setTimeout(function(){   document.querySelector('.cont_form_login').style.displa
 },400);  
 
 
-}    
+}
 
+
+localStorage.setItem("logged", true);
 
 
 function ocultar_login_sign_up() {

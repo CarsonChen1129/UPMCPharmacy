@@ -24,6 +24,7 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" type="image/x-icon" href="assets/icons/upmc-icons/favicon.ico">
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/w3.css">
     <link rel="stylesheet" href="stylesheets/productpage.css">
     <link rel="stylesheet" href="stylesheets/index.css">
     <link rel="stylesheet" href="lib/jquery-ui-1.12.1/jquery-ui.css">
@@ -31,137 +32,158 @@
     <script src="lib/jquery-2.1.4.min.js"></script>
     <script src="lib/jquery-ui-1.12.1/jquery-ui.js"></script>
     <script src="lib/foundation.js"></script>
+    <script src="js/bvapi.js"></script>
     <script src="js/index.js"></script>
 </head>
 <body>
-    <header>
-        <section class="header-wrapper">
-            <nav class="header-left-nav">
-                <ul class="header-list">
-                    <li><a href="http://www.upmc.com/contact/Pages/default.aspx">Contact us</a></li>
-                    <li><a href="http://www.upmc.com/Services/Pages/default.aspx">Services</a></li>
-                    <li><a href="http://www.upmc.com/Services/pharmacy/Pages/default.aspx">Find a store</a></li>
-                    <li><a href="tel:1-800-533-8762">1-800-533-8762(UPMC)</a></li>
-                </ul>
-            </nav>
-            <nav class="header-right-nav">
-                <ul class="header-list">
-                    <li>
-                        <a href="">
-                            <img class="avatar" src="assets/images/IMG_9354.jpg"/>
-                            <span>Your Account</span>
-                        </a>
+<header>
+    <section class="header-wrapper">
+        <nav class="header-left-nav">
+            <ul class="header-list">
+                <li><a href="http://www.upmc.com/contact/Pages/default.aspx">Contact us</a></li>
+                <li><a href="http://www.upmc.com/Services/Pages/default.aspx">Services</a></li>
+                <li><a href="http://www.upmc.com/Services/pharmacy/Pages/default.aspx">Find a store</a></li>
+                <li><a href="tel:1-800-533-8762">1-800-533-8762(UPMC)</a></li>
+            </ul>
+        </nav>
+        <nav class="header-right-nav">
+            <ul class="header-list">
+                <li id="not-logged-in">
+                    <a href="login.html">
+                        <i class="avatar fa fa-user-circle-o" aria-hidden="true"></i>
+                        <span>Your Account</span>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="login.html">Log In</a></li>
+                        <li><a href="login.html">Register</a></li>
+                    </ul>
+                </li>
+                <li id="logged-in">
+                    <a href="login.html">
+                        <img class="avatar" src="assets/images/IMG_9354.jpg"/>
+                        <span>Your Account</span>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Log Out</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="cart.html">
+                        <img class="cart-icon" src="assets/icons/shopping-cart.png"/>
+                        <span>Shopping Bag</span>
                         <ul class="dropdown-content">
-                            <li><a href="#">Log Out</a></li>
+                            <li><a href="cart.html">View Cart</a></li>
+                            <li><a href="cart.html">Check Out</a></li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img class="cart-icon" src="assets/icons/shopping-cart.png"/>
-                            <span>Shopping Bag</span>
-                            <ul class="dropdown-content">
-                                <li><a href="#">View Cart</a></li>
-                                <li><a href="#">Check Out</a></li>
-                            </ul>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </section>
-        <section class="img-wrapper">
-            <a href="index.html">
-                <img class="logo center" src="assets/images/upmc-1.png">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <section class="img-wrapper">
+        <a href="index.html">
+            <img class="logo center" src="assets/images/upmc-1.png">
+        </a>
+    </section>
+</header>
+<nav class="nav-bar">
+    <ul class="nav-list">
+        <li class="hide-imgs hide logo-sticky">
+            <a href="">
+                <img src="assets/images/upmc-1.png">
             </a>
-        </section>
-    </header>
-    <nav class="nav-bar">
-        <ul class="nav-list">
-            <li class="hide-imgs hide logo-sticky">
-                <a href="index.html">
-                    <img src="assets/images/upmc-1.png">
-                </a>
-            </li>
-            <li class="menu-item">
-                <a href="category.html">Shop</a>
-                <ul class="dropdown-content">
-                    <li><a href="category.html">Health & Medicine</a></li>
-                    <li><a href="category.html">Vitamins</a></li>
-                    <li><a href="category.html">Personal Care</a></li>
-                    <li><a href="category.html">Home Health Care</a></li>
-                </ul>
-            </li>
-            <li class="menu-item" >
-                <a href="">Prescription</a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Prescription Status</a></li>
-                    <li><a href="#">Request New Prescription</a></li>
-                    <li><a href="#">Refill Prescriptions</a></li>
-                    <li><a href="#">Auto Refill</a></li>
-                    <li><a href="#">Print Prescription Records</a></li>
-                    <li><a href="#">Drug Information</a></li>
-                </ul>
-            </li>
-            <li class="menu-item">
-                <a href="">Contact Lenses</a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Recorder Contact Lenses</a></li>
-                    <li><a href="#">Shop All Contact Lenses</a></li>
-                    <li><a href="#">Solutions, Drops & Cases</a></li>
-                    <li><a href="#">Eye Health Supplements</a></li>
-                </ul>
-            </li>
-            <li class="menu-item">
-                <a href="">Health Info & Services</a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Appointment Scheduler</a></li>
-                    <li><a href="#">Healthcare Clinic</a></li>
-                    <li><a href="#">Flu Shots & Immunizations</a></li>
-                    <li><a href="#">Medicare Information</a></li>
-                    <li><a href="#">Health Apps & Devices</a></li>
-                    <li><a href="#">Health Answers</a></li>
-                </ul>
-            </li>
-            <li class="menu-item">
-                <a href="">Online Doctor®</a>
-            </li>
-            <li class="menu-item">
-                <a href="">Weekly Deals</a>
-            </li>
-            <li class="hide-imgs hide search-sticky">
-                <a id="search-button">
-                    <img class="cart-icon" src="assets/icons/search.png"/>
-                </a>
-            </li>
-            <li class="hide-imgs hide avatar-sticky">
-                <a href="login.html">
-                    <i class="avatar fa fa-user-circle-o" aria-hidden="true"></i>
-                </a>
-                <ul class="dropdown-content">
-                    <li><a href="login.html">Log In</a></li>
-                    <li><a href="login.html">Register</a></li>
-                </ul>
-            </li>
-            <li class="hide-imgs hide cart-sticky">
-                <a href="cart.html">
-                    <img class="cart-icon" src="assets/icons/shopping-cart.png"/>
-                </a>
-                <ul class="dropdown-content">
-                    <li><a href="cart.html">View Cart</a></li>
-                    <li><a href="cart.html">Check Out</a></li>
-                </ul>
-            </li>
-        </ul>
-        <div class="purple-banner"></div>
-        <section class="nav-search" id="nav-search">
-            <div class="search-area">
-                <div class="search-box">
-                    <label for="search-item-nav"></label>
-                    <input id="search-item-nav" class="search-input" type="search" placeholder="Search products by name or keywords">
-                    <a href="search-result.html"><button>Search</button></a>
-                </div>
+        </li>
+        <li class="menu-item">
+            <a href="category.html">Shop</a>
+            <ul class="dropdown-content">
+                <li><a href="category.html">Health & Medicine</a></li>
+                <li><a href="category.html">Vitamins</a></li>
+                <li><a href="category.html">Personal Care</a></li>
+                <li><a href="category.html">Home Health Care</a></li>
+            </ul>
+        </li>
+        <li class="menu-item" >
+            <a href="error.html">Prescription</a>
+            <ul class="dropdown-content">
+                <li><a href="error.html">Prescription Status</a></li>
+                <li><a href="error.html">Request New Prescription</a></li>
+                <li><a href="error.html">Refill Prescriptions</a></li>
+                <li><a href="error.html">Auto Refill</a></li>
+                <li><a href="error.html">Print Prescription Records</a></li>
+                <li><a href="error.html">Drug Information</a></li>
+            </ul>
+        </li>
+        <li class="menu-item">
+            <a href="error.html">Contact Lenses</a>
+            <ul class="dropdown-content">
+                <li><a href="error.html">Recorder Contact Lenses</a></li>
+                <li><a href="error.html">Shop All Contact Lenses</a></li>
+                <li><a href="error.html">Solutions, Drops & Cases</a></li>
+                <li><a href="error.html">Eye Health Supplements</a></li>
+            </ul>
+        </li>
+        <li class="menu-item">
+            <a href="error.html">Health Info & Services</a>
+            <ul class="dropdown-content">
+                <li><a href="error.html">Appointment Scheduler</a></li>
+                <li><a href="error.html">Healthcare Clinic</a></li>
+                <li><a href="error.html">Flu Shots & Immunizations</a></li>
+                <li><a href="error.html">Medicare Information</a></li>
+                <li><a href="error.html">Health Apps & Devices</a></li>
+                <li><a href="error.html">Health Answers</a></li>
+            </ul>
+        </li>
+        <li class="menu-item">
+            <a href="error.html">Online Doctor®</a>
+        </li>
+        <li class="menu-item">
+            <a href="error.html">Weekly Deals</a>
+        </li>
+        <li class="hide-imgs hide search-sticky">
+            <a id="search-button">
+                <img class="cart-icon" src="assets/icons/search.png"/>
+            </a>
+        </li>
+        <!--<li id="nav-account">-->
+        <!--</li>-->
+        <!--<li id="nav-not-logged-in" class="hide-imgs hide avatar-sticky">-->
+        <!--<a href="login.html">-->
+        <!--<i class="avatar fa fa-user-circle-o" aria-hidden="true"></i>-->
+        <!--</a>-->
+        <!--<ul class="dropdown-content">-->
+        <!--<li><a href="login.html">Log In</a></li>-->
+        <!--<li><a href="login.html">Register</a></li>-->
+        <!--</ul>-->
+        <!--</li>-->
+        <li id="nav-logged-in" class="hide-imgs hide avatar-sticky">
+            <a href="login.html">
+                <img class="avatar" src="assets/images/IMG_9354.jpg">
+            </a>
+            <ul class="dropdown-content">
+                <li><a href="login.html">Log Out</a></li>
+            </ul>
+        </li>
+        <li class="hide-imgs hide cart-sticky">
+            <a href="cart.html">
+                <img class="cart-icon" src="assets/icons/shopping-cart.png"/>
+            </a>
+            <ul class="dropdown-content">
+                <li><a href="cart.html">View Cart</a></li>
+                <li><a href="cart.html">Check Out</a></li>
+            </ul>
+        </li>
+    </ul>
+    <div class="purple-banner"></div>
+    <section class="nav-search" id="nav-search">
+        <div class="search-area">
+            <div class="search-box">
+                <label for="search-item-nav"></label>
+                <input id="search-item-nav" class="search-input" type="search" placeholder="Search products by name or keywords">
+                <a href="search-result.html"><button>Search</button></a>
             </div>
-        </section>
-    </nav>
+        </div>
+    </section>
+</nav>
     <main>
         <div class="row columns">
             <nav aria-label="You are here:" role="navigation">
@@ -218,13 +240,38 @@
                     </div>
                 </div>
 
-                <a href="#" class="button large expanded">Add to Cart</a>
+                <a onclick="document.getElementById('add-to-cart-model').style.display='block'" class="button large expanded">Add to Cart</a>
 
                 <div class="small secondary expanded button-group">
                     <p>Share to:</p>
                     <a class="button">Facebook</a>
                     <a class="button">Twitter</a>
                     <a class="button">Instagram</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="add-to-cart-model" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="width: 40%">
+                <div class="w3-container w3-purple w3-large w3-margin-top">
+                            <span onclick="document.getElementById('add-to-cart-model').style.display='none'"
+                                  class="w3-button w3-purple w3-large w3-right">&times;
+                            </span>
+                </div>
+                <div class="w3-container">
+                    <h3 class="main-font">Successfully add to your shopping cart.</h3>
+                    <h5 class="main-font">Product Details:</h5>
+                    <p class="main-font">Price: $13.49</p>
+                    <p class="main-font">Quantity: 1</p>
+                    <p class="main-font">Product Name: Breath Right Extra Nasal Strips</p>
+                </div>
+
+                <div class="w3-container w3-light-grey w3-padding">
+                    <button class="w3-button w3-left w3-white w3-border main-font"
+                            onclick="document.getElementById('add-to-cart-model').style.display='none'">Continue to Shopping</button>
+                    <a href="cart.html">
+                        <button class="w3-button w3-right w3-purple w3-border main-font">Go to my Shopping Cart</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -238,54 +285,1110 @@
             </ul>
             <div class="tabs-content" data-tabs-content="example-tabs">
                 <div class="tabs-panel is-active" id="panel1">
-                    <h4>Details</h4>
-                    <div class="media-object stack-for-small">
-                        <div class="media-object-section">
-                            <p>Drug free. Breathe better. Sleep better. 50% stronger to help you breathe even better. Extra band makes it 50% stronger. One size designed for adult noses. It's Simple: Flexible spring-like bands gently lift nasal passages open to improve airflow. Special adhesive holds strips comfortably in place. 50% Stronger: Built with an extra spring-like band to help you breathe even better. Try one if you suffer from: Snoring: For best results, use nightly. Nasal congestion due to allergies, colds, or deviated septum.</p>
-                        </div>
-                    </div>
-                    <div class="media-object stack-for-small">
-                        <div class="media-object-section">
-                            <h4>Directions</h4>
-                            <p>Please read enclosed instruction sheet before use for complete caution statements; proper application and removal.</p>
-                        </div>
-                    </div>
-                    <div class="media-object stack-for-small">
-                        <div class="media-object-section">
-                            <h4>Warning</h4>
-                            <p>Packaging of this product contains natural rubber latex which may cause allergic reactions</p>
-                        </div>
-                    </div>
+                    <!--<h4>Details</h4>-->
+                    <!--<div class="media-object stack-for-small">-->
+                        <!--<div class="media-object-section">-->
+                            <!--<p>Drug free. Breathe better. Sleep better. 50% stronger to help you breathe even better. Extra band makes it 50% stronger. One size designed for adult noses. It's Simple: Flexible spring-like bands gently lift nasal passages open to improve airflow. Special adhesive holds strips comfortably in place. 50% Stronger: Built with an extra spring-like band to help you breathe even better. Try one if you suffer from: Snoring: For best results, use nightly. Nasal congestion due to allergies, colds, or deviated septum.</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="media-object stack-for-small">-->
+                        <!--<div class="media-object-section">-->
+                            <!--<h4>Directions</h4>-->
+                            <!--<p>Please read enclosed instruction sheet before use for complete caution statements; proper application and removal.</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="media-object stack-for-small">-->
+                        <!--<div class="media-object-section">-->
+                            <!--<h4>Warning</h4>-->
+                            <!--<p>Packaging of this product contains natural rubber latex which may cause allergic reactions</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <div class="tab-head">
+                        <div class="ng-scope">
+                            <div>
+                                <div class="desc-heading" id="selfServeDescription">Details</div>
+                            </div>
+                            <div class="text-content" id="VPD_Description">
+                                <section id="collapseDescription">
+                                    <section class="panel-body">
+                                        <div id="descriptionContentPlaceHolder">
+                                            <div><strong>Quick view</strong></div>
+                                            <article class="body-text1">
+                                                <ul id="vpd-overview-ul" class="list-group bullets pl15">
+                                                    <li>Strong to help you breathe better</li>
+                                                    <li>Instantly relieves nasal congestion</li>
+                                                    <li>
+                                                        Drug free; safe to use with any medicine
+                                                    </li>
+                                                </ul>
+                                            </article>
+                                            <p><span style="font-style: Italic;font-weight: normal;">Please Note:&nbsp; Product received may temporarily differ from image shown due to packaging update.&nbsp; </span><span style="font-style: Normal;font-weight: bold;">&nbsp; </span></p>
+                                            <p><span style="font-style: Normal;font-weight: bold;">Breath Better.&nbsp; Sleep Better.®</span></p>
+                                            <ul start="1" style="list-style-type:disc">
+                                                <li value="1"><span>50% Stronger to Breathe Even Better</span></li>
+                                                <li value="3"><span>Instantly Relieves Nasal Congestion</span></li>
+                                                <li value="6"><span>Drug Free</span></li>
+                                            </ul>
+                                            <ul start="1" style="list-style-type:disc">
+                                                <li value="1"><span>Built With an Extra "Spring-Like" Band to Help You Breathe Even Better</span></li>
+                                                <li value="3"><span>Only Strip with 3M™ Adhesive to Hold Strip Comfortably in Place</span></li>
+                                                <li value="6"><span>Instantly Relieves Nasal Congestion Due to Allergies, Colds &amp; Deviated Septum</span></li>
+                                            </ul>
+                                            <p><span>One Size, Designed for Adult Noses</span></p>
+                                            <p><span>1-800-858-6673</span></p>
+                                            <p>©2009 GlaxoSmithKline</p>
+                                        </div>
+                                    </section>
+                                </section>
+                            </div>
+                            <div>
+                                <div class="desc-heading" id="selfServeWarnings">Warnings <span class="sr-only">for self serve</span></div>
+                            </div>
+                            <div class="text-content" id="VPD_Warnings">
+                                <section id="collapseWarnings">
+                                    <section class="panel-body panel-body vpd-body-contents">
+                                        <div id="warningsContentPlaceHolder">
+                                            <p>Packaging of this product contains natural rubber latex which may cause allergic reactions.</p>
+                                            <p>Please read enclosed instruction sheet before use for:</p>
+                                            <ul>
+                                                <li>complete caution statements</li>
+                                                <li>proper application and removal</li>
+                                            </ul>
+                                            <p>Try one if you suffer from:</p>
+                                            <ul>
+                                                <li>Snoring - For best results use nightly. </li>
+                                                <li>Nasal Congestion due to allergies, colds, or deviated septum.</li>
+                                            </ul>
+                                        </div>
+                                    </section>
+                                </section>
+                            </div>
+                            <div>
+                                <div class="desc-heading" id="selfServeShipping">Shipping <span class="sr-only">for self serve</span></div>
+                            </div>
+                            <div class="text-content" id="VPD_Shipping">
+                                <section id="collapseShipping">
+                                    <section class="panel-body panel-body vpd-body-contents">
+                                        <div id="shippingContentPlaceHolder">
+                                            <p id="shiptostoreoptions">Not eligible for Ship to Store at this time <a href="/topic/help/shophelp/shiptostore.jsp" title="See Ship to Store FAQs">See Ship to Store FAQs</a></p>
+                                            <p>This product has no shipping restrictions.</p>
+                                            Shipping Weight (in lbs): 0.08<br>
+                                            Product in inches (LxWxH): 6.0x 5.0x 4.0<br>
+                                            Item Code:
+                                            500637<br>
+                                            <span class="universal-product-code">UPC: 75714510255</span>
+                                        </div>
+                                    </section>
+                                </section>
+                            </div>
+                            <div>
+                                <div id="closureContentID" class="panel-body vpd-body-contents">
+                                    <h2 style="margin-bottom:0" class="desc-heading">From the manufacturer</h2>
+                                    <div id="description-content" style="overflow:hidden;position:relative;">
+                                        <div class="tab-container">
+                                            <div class="terms">
+                                                <div id="wc-pp-auto-container" style="width:100%;overflow-y:visible!important">
+                                                    <div class="wc-responsive wc-layout-computer wc-device-computer wc-6-col wc-medium wc-3-2col wc-2-3col wc-2-4col wc-rf-col-3 wc-richfeatures-layout-computer" id="wc-aplus" style="max-width: 650px !important;">
+                                                        <div class="wc-fragment" data-channel-product-name="Breathe Right Extra Strength Nasal Strip" data-compiler-v="2017.20.2.57" data-cpi="prod6000594" data-gtin="00757145102556" data-language-code="en" data-module-brand="Breathe Right" data-module-code="breatheright" data-module-name="Breathe Right" data-mpn="10255" data-produced="2017-10-22 17:38" data-section-caption="WHY BREATHE RIGHT® NASAL STRIPS" data-section-tag="features" data-section-template-code="rich-features" data-vendor-name="Breathe Right Extra (26 count)" data-wcpc="1401292478964" id="wc-features-3217a71">
+                                                            <h2 class="wc-first-header">WHY BREATHE RIGHT® NASAL STRIPS</h2>
+                                                            <div class="wc-aplus-body">
+                                                                <div class="wc-reset">
+                                                                    <ul class="wc-rich-features wc-rich-content-orientation-right-aligned wc-first wc-last wc-no-line-seperator">
+                                                                        <li class="wc-rich-feature-item wc-text-placement-true wc-odd-0 wc-first wc-has-media wc-thumb-large ">
+                                                                            <div class="wc-media-wrap">
+                                                                                <div class="wc-media-inner-wrap"> <img alt="" class="wc-media wc-image" data-asset-type="image" data-asset-url="/_cp/products/1400862335642/tab-7cb45113-5f75-433d-b3ce-4af1a7f7cc09/c8975b10-cbbf-4654-a8d2-fcf074c3f997.jpg" data-asset-wrapper="rich-features" data-height="6" data-width="900" height="6" module-id="breatheright" src="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-7cb45113-5f75-433d-b3ce-4af1a7f7cc09/c8975b10-cbbf-4654-a8d2-fcf074c3f997.jpg.w960.jpg" title="" wcpc="1401292478964" width="900"> </div>
+                                                                            </div>
+                                                                            <div class="wc-text-wrap"> </div>
+                                                                        </li>
+                                                                        <li class="wc-rich-feature-item wc-text-placement-false wc-even-1 wc-has-media wc-thumb-medium wc-last ">
+                                                                            <div class="wc-media-wrap">
+                                                                                <div class="wc-media-inner-wrap"> <img alt="" class="wc-media wc-image" data-asset-type="image" data-asset-url="/_cp/products/1400862335642/tab-7cb45113-5f75-433d-b3ce-4af1a7f7cc09/12e80c5f-6c3e-4f7e-8b5c-63d3ca180fa2.jpg" data-asset-wrapper="rich-features" data-height="314" data-width="288" height="314" module-id="breatheright" src="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-7cb45113-5f75-433d-b3ce-4af1a7f7cc09/12e80c5f-6c3e-4f7e-8b5c-63d3ca180fa2.jpg.w960.jpg" title="" wcpc="1401292478964" width="288"> </div>
+                                                                            </div>
+                                                                            <div class="wc-text-wrap">
+                                                                                <div class="wc-rich-content-description"> Breathe Right<sup>®</sup> nasal strips open your nasal passages to reduce or even stop snoring and nasal congestion due to:<br> • Colds <br>• Allergies <br>• Deviated Septum <br><br><br>Breathe Right<sup>®</sup> nasal strips are clinically proven to relieve nasal congestion, helping you breathe better so you can sleep better.<br><br><br><br> </div>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="wc-clear-both" style="height: 0px !important"></div>
+                                                        </div>
+                                                        <div class="wc-fragment" data-channel-product-name="Breathe Right Extra Strength Nasal Strip" data-compiler-v="2017.20.2.57" data-cpi="prod6000594" data-gtin="00757145102556" data-language-code="en" data-module-brand="Breathe Right" data-module-code="breatheright" data-module-name="Breathe Right" data-mpn="10255" data-produced="2017-10-22 17:38" data-section-caption="HOW TO PROPERLY USE BREATHE RIGHT® NASAL STRIPS" data-section-tag="features" data-section-template-code="rich-features" data-vendor-name="Breathe Right Extra (26 count)" data-wcpc="1401292478964" id="wc-features-3ae96cf0">
+                                                            <h2>HOW TO PROPERLY USE BREATHE RIGHT® NASAL STRIPS</h2>
+                                                            <div class="wc-aplus-body">
+                                                                <div class="wc-reset">
+                                                                    <ul class="wc-rich-features wc-rich-content-orientation-right-aligned wc-first wc-last wc-no-line-seperator">
+                                                                        <li class="wc-rich-feature-item wc-text-placement-true wc-odd-0 wc-first wc-has-media wc-thumb-large ">
+                                                                            <div class="wc-media-wrap">
+                                                                                <div class="wc-media-inner-wrap"> <img alt="" class="wc-media wc-image" data-asset-type="image" data-asset-url="/_cp/products/1400862335642/tab-6ff54d30-0a7d-4813-8811-0f0334a66f00/af3f43e0-2242-421f-a54f-cbe569571bdc.jpg" data-asset-wrapper="rich-features" data-height="6" data-width="900" height="6" module-id="breatheright" src="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-6ff54d30-0a7d-4813-8811-0f0334a66f00/af3f43e0-2242-421f-a54f-cbe569571bdc.jpg.w960.jpg" title="" wcpc="1401292478964" width="900"> </div>
+                                                                            </div>
+                                                                            <div class="wc-text-wrap"> </div>
+                                                                        </li>
+                                                                        <li class="wc-rich-feature-item wc-text-placement-true wc-even-1 wc-has-media wc-thumb-large ">
+                                                                            <div class="wc-media-wrap">
+                                                                                <div class="wc-media-inner-wrap"> <img alt="" class="wc-media wc-image" data-asset-type="image" data-asset-url="/_cp/products/1400862335642/tab-6ff54d30-0a7d-4813-8811-0f0334a66f00/36d53203-4210-42e3-84e7-1c26359d0668.jpg" data-asset-wrapper="rich-features" data-height="350" data-width="304" height="350" module-id="breatheright" src="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-6ff54d30-0a7d-4813-8811-0f0334a66f00/36d53203-4210-42e3-84e7-1c26359d0668.jpg.w960.jpg" title="" wcpc="1401292478964" width="304"> </div>
+                                                                            </div>
+                                                                            <div class="wc-text-wrap"> </div>
+                                                                        </li>
+                                                                        <li class="wc-rich-feature-item wc-text-placement-false wc-odd-0 wc-has-media wc-thumb-medium wc-last ">
+                                                                            <div class="wc-media-wrap">
+                                                                                <div class="wc-meta" itemprop="video" itemscope="itemscope" itemtype="https://schema.org/VideoObject" style="display:none">
+                                                                                    <meta content="Breathe Right Extra (26 count)" itemprop="name">
+                                                                                    <meta content="Breathe Right Extra (26 count)" itemprop="description">
+                                                                                    <meta content="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-6ff54d30-0a7d-4813-8811-0f0334a66f00/e07bb3da-ba26-49d7-8e5f-7380d4b0f18d.MP4.mp4full.mp4" itemprop="contentUrl">
+                                                                                    <meta content="540" itemprop="height">
+                                                                                    <meta content="960" itemprop="width">
+                                                                                    <meta content="2016-08-23T13:02:05.000-04:00" itemprop="uploadDate">
+                                                                                    <meta content="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-6ff54d30-0a7d-4813-8811-0f0334a66f00/83aaa29e-bcd5-45bf-8859-d32bbc9bbb36.png.w960.png" itemprop="thumbnailUrl">
+                                                                                    <meta content="PT45S" itemprop="duration">
+                                                                                </div>
+                                                                                <div class="wc-media-inner-wrap wchs" data-resources-base="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/">
+                                                                                    <img alt="" caption="" class="wc-media wc-video" data-ada-compliant="false" data-asset-type="video" data-asset-url="/_cp/products/1400862335642/tab-6ff54d30-0a7d-4813-8811-0f0334a66f00/e07bb3da-ba26-49d7-8e5f-7380d4b0f18d.MP4" data-asset-wrapper="rich-features" data-height="270" data-supports-https="true" data-wc-rel-click-name="eliminate-zoom-report-for-video" data-width="480" description="" height="270" module-id="breatheright" src="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-6ff54d30-0a7d-4813-8811-0f0334a66f00/83aaa29e-bcd5-45bf-8859-d32bbc9bbb36.png.w480.png" wc-duration="45.333333" wc-runtime="6" wcobj="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-6ff54d30-0a7d-4813-8811-0f0334a66f00/e07bb3da-ba26-49d7-8e5f-7380d4b0f18d.MP4.flash.flv" wcobj-add-play="true" wcobj-height="540" wcobj-mobile="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-6ff54d30-0a7d-4813-8811-0f0334a66f00/e07bb3da-ba26-49d7-8e5f-7380d4b0f18d.MP4.mobile.mp4" wcobj-type="video/x-flv" wcobj-width="960" wcpc="1401292478964" width="480"> <a class="wc-play-video wc-play-responsive-video" href="javascript:void(0);" aria-label=" Watch Movie" style="max-width: 480px; max-height: 270px;"></a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="wc-text-wrap"> </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="wc-clear-both" style="height: 0px !important"></div>
+                                                        </div>
+                                                        <div class="wc-fragment" data-channel-product-name="Breathe Right Extra Strength Nasal Strip" data-compiler-v="2017.20.2.57" data-cpi="prod6000594" data-gtin="00757145102556" data-language-code="en" data-module-brand="Breathe Right" data-module-code="breatheright" data-module-name="Breathe Right" data-mpn="10255" data-produced="2017-10-22 17:38" data-section-caption="HOW BREATHE RIGHT® WORKS" data-section-tag="features" data-section-template-code="rich-features" data-vendor-name="Breathe Right Extra (26 count)" data-wcpc="1401292478964" id="wc-features-ffea58a3">
+                                                            <h2>HOW BREATHE RIGHT® WORKS</h2>
+                                                            <div class="wc-aplus-body">
+                                                                <div class="wc-reset">
+                                                                    <ul class="wc-rich-features wc-rich-content-orientation-left-aligned wc-first wc-last wc-no-line-seperator">
+                                                                        <li class="wc-rich-feature-item wc-text-placement-true wc-odd-0 wc-first wc-has-media wc-thumb-large ">
+                                                                            <div class="wc-media-wrap">
+                                                                                <div class="wc-media-inner-wrap"> <img alt="" class="wc-media wc-image" data-asset-type="image" data-asset-url="/_cp/products/1400862335642/tab-a569dc37-4231-49b5-a32a-7052d9148005/fb4bad54-94a6-46c4-84f2-db0bf7016c29.jpg" data-asset-wrapper="rich-features" data-height="6" data-width="900" height="6" module-id="breatheright" src="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-a569dc37-4231-49b5-a32a-7052d9148005/fb4bad54-94a6-46c4-84f2-db0bf7016c29.jpg.w960.jpg" title="" wcpc="1401292478964" width="900"> </div>
+                                                                            </div>
+                                                                            <div class="wc-text-wrap"> </div>
+                                                                        </li>
+                                                                        <li class="wc-rich-feature-item wc-text-placement-false wc-even-1 wc-has-media wc-thumb-medium wc-last ">
+                                                                            <div class="wc-media-wrap">
+                                                                                <div class="wc-media-inner-wrap"> <img alt="" class="wc-media wc-image" data-asset-type="image" data-asset-url="/_cp/products/1400862335642/tab-a569dc37-4231-49b5-a32a-7052d9148005/e1a481a8-cfd4-4a67-82e5-eb78f70dea5b.jpg" data-asset-wrapper="rich-features" data-height="239" data-width="346" height="239" module-id="breatheright" src="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-a569dc37-4231-49b5-a32a-7052d9148005/e1a481a8-cfd4-4a67-82e5-eb78f70dea5b.jpg.w960.jpg" title="" wcpc="1401292478964" width="346"> </div>
+                                                                            </div>
+                                                                            <div class="wc-text-wrap">
+                                                                                <div class="wc-rich-content-description"> Breathe Right<sup>®&nbsp;</sup>nasal strips are made of flexible, spring-like bands that fit right above the flare of the nostrils. A sticky adhesive is used to lift the sides of the nose and open the nasal passages, making it easier to breathe for a more restful night of sleep. </div>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="wc-clear-both" style="height: 0px !important"></div>
+                                                        </div>
+                                                        <div class="wc-fragment" data-channel-product-name="Breathe Right Extra Strength Nasal Strip" data-compiler-v="2017.20.2.57" data-cpi="prod6000594" data-gtin="00757145102556" data-language-code="en" data-module-brand="Breathe Right" data-module-code="breatheright" data-module-name="Breathe Right" data-mpn="10255" data-produced="2017-10-22 17:38" data-section-caption="STUFFY NOSE &amp; SNORING?" data-section-tag="features" data-section-template-code="rich-features" data-vendor-name="Breathe Right Extra (26 count)" data-wcpc="1401292478964" id="wc-features-dbca62f7">
+                                                            <h2>STUFFY NOSE &amp; SNORING?</h2>
+                                                            <div class="wc-aplus-body">
+                                                                <div class="wc-reset">
+                                                                    <ul class="wc-rich-features wc-rich-content-orientation-right-aligned wc-first wc-last wc-no-line-seperator">
+                                                                        <li class="wc-rich-feature-item wc-text-placement-true wc-odd-0 wc-first wc-has-media wc-thumb-large ">
+                                                                            <div class="wc-media-wrap">
+                                                                                <div class="wc-media-inner-wrap"> <img alt="" class="wc-media wc-image" data-asset-type="image" data-asset-url="/_cp/products/1400862335642/tab-06f8f40f-fac6-43ef-8ed7-8fcc2828de25/9dfdb265-8c31-4e05-8e3e-4bc0e50c3b40.jpg" data-asset-wrapper="rich-features" data-height="6" data-width="900" height="6" module-id="breatheright" src="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-06f8f40f-fac6-43ef-8ed7-8fcc2828de25/9dfdb265-8c31-4e05-8e3e-4bc0e50c3b40.jpg.w960.jpg" title="" wcpc="1401292478964" width="900"> </div>
+                                                                            </div>
+                                                                            <div class="wc-text-wrap"> </div>
+                                                                        </li>
+                                                                        <li class="wc-rich-feature-item wc-text-placement-true wc-even-1 wc-has-media wc-thumb-large ">
+                                                                            <div class="wc-media-wrap">
+                                                                                <div class="wc-media-inner-wrap"> <img alt="" class="wc-media wc-image" data-asset-type="image" data-asset-url="/_cp/products/1400862335642/tab-06f8f40f-fac6-43ef-8ed7-8fcc2828de25/78f9c50a-6ab8-4a50-b5fc-10eadfd771d3.jpg" data-asset-wrapper="rich-features" data-height="178" data-width="661" height="178" module-id="breatheright" src="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-06f8f40f-fac6-43ef-8ed7-8fcc2828de25/78f9c50a-6ab8-4a50-b5fc-10eadfd771d3.jpg.w960.jpg" title="" wcpc="1401292478964" width="661"> </div>
+                                                                            </div>
+                                                                            <div class="wc-text-wrap"> </div>
+                                                                        </li>
+                                                                        <li class="wc-rich-feature-item wc-text-placement-false wc-odd-0 wc-has-media wc-thumb-medium wc-last ">
+                                                                            <div class="wc-media-wrap">
+                                                                                <div class="wc-media-inner-wrap"> <img alt="" class="wc-media wc-image" data-asset-type="image" data-asset-url="/_cp/products/1400862335642/tab-06f8f40f-fac6-43ef-8ed7-8fcc2828de25/22a53aa7-6945-4d43-914b-1cb9103fcfbb.jpg" data-asset-wrapper="rich-features" data-height="208" data-width="328" height="208" module-id="breatheright" src="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-06f8f40f-fac6-43ef-8ed7-8fcc2828de25/22a53aa7-6945-4d43-914b-1cb9103fcfbb.jpg.w960.jpg" title="" wcpc="1401292478964" width="328"> </div>
+                                                                            </div>
+                                                                            <div class="wc-text-wrap">
+                                                                                <div class="wc-rich-content-description"> Breathe Right<sup>®</sup> nasal strips can help you reduce or even stop snoring. The spring-like bands in Breathe Right<sup>®</sup> nasal strips lift and open nasal passages to help you breathe better so you can sleep better—and snore less. </div>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="wc-clear-both" style="height: 0px !important"></div>
+                                                        </div>
+                                                        <div class="wc-fragment" data-channel-product-name="Breathe Right Extra Strength Nasal Strip" data-compiler-v="2017.20.2.57" data-cpi="prod6000594" data-gtin="00757145102556" data-language-code="en" data-module-brand="Breathe Right" data-module-code="breatheright" data-module-name="Breathe Right" data-mpn="10255" data-produced="2017-10-22 17:38" data-section-caption="COLDS AND NASAL CONGESTION" data-section-tag="features" data-section-template-code="rich-features" data-vendor-name="Breathe Right Extra (26 count)" data-wcpc="1401292478964" id="wc-features-ba4f2cf8">
+                                                            <h2>COLDS AND NASAL CONGESTION</h2>
+                                                            <div class="wc-aplus-body">
+                                                                <div class="wc-reset">
+                                                                    <ul class="wc-rich-features wc-rich-content-orientation-right-aligned wc-first wc-last wc-no-line-seperator">
+                                                                        <li class="wc-rich-feature-item wc-text-placement-true wc-odd-0 wc-first wc-has-media wc-thumb-large ">
+                                                                            <div class="wc-media-wrap">
+                                                                                <div class="wc-media-inner-wrap"> <img alt="" class="wc-media wc-image" data-asset-type="image" data-asset-url="/_cp/products/1400862335642/tab-489cc58e-ea5e-4e9e-98f2-979b74df02d4/5fb26ec4-2718-4100-b95c-ee6117d379e4.jpg" data-asset-wrapper="rich-features" data-height="6" data-width="900" height="6" module-id="breatheright" src="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-489cc58e-ea5e-4e9e-98f2-979b74df02d4/5fb26ec4-2718-4100-b95c-ee6117d379e4.jpg.w960.jpg" title="" wcpc="1401292478964" width="900"> </div>
+                                                                            </div>
+                                                                            <div class="wc-text-wrap"> </div>
+                                                                        </li>
+                                                                        <li class="wc-rich-feature-item wc-text-placement-false wc-even-1 wc-has-media wc-thumb-medium wc-last ">
+                                                                            <div class="wc-media-wrap">
+                                                                                <div class="wc-media-inner-wrap"> <img alt="" class="wc-media wc-image" data-asset-type="image" data-asset-url="/_cp/products/1400862335642/tab-489cc58e-ea5e-4e9e-98f2-979b74df02d4/b2a37936-b464-436b-8457-075b03f8d154.jpg" data-asset-wrapper="rich-features" data-height="223" data-width="274" height="223" module-id="breatheright" src="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-489cc58e-ea5e-4e9e-98f2-979b74df02d4/b2a37936-b464-436b-8457-075b03f8d154.jpg.w960.jpg" title="" wcpc="1401292478964" width="274"> </div>
+                                                                            </div>
+                                                                            <div class="wc-text-wrap">
+                                                                                <div class="wc-rich-content-description"> When you’re sick, the lining of your nasal cavities swell with excess fluid, making it difficult to breathe—especially when you’re lying down. This, in turn, may cause you to lose sleep and become sleep deprived, which can further suppress immune functionality. To get the rest you need, try Breathe Right<sup>®&nbsp;</sup>nasal strips to get instant relief from nighttime nasal congestion. </div>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="wc-clear-both" style="height: 0px !important"></div>
+                                                        </div>
+                                                        <div class="wc-fragment" data-channel-product-name="Breathe Right Extra Strength Nasal Strip" data-compiler-v="2017.20.2.57" data-cpi="prod6000594" data-gtin="00757145102556" data-language-code="en" data-module-brand="Breathe Right" data-module-code="breatheright" data-module-name="Breathe Right" data-mpn="10255" data-produced="2017-10-22 17:38" data-section-caption="ALLERGIES AND NASAL CONGESTION" data-section-tag="features" data-section-template-code="rich-features" data-vendor-name="Breathe Right Extra (26 count)" data-wcpc="1401292478964" id="wc-features-1b497587">
+                                                            <h2>ALLERGIES AND NASAL CONGESTION</h2>
+                                                            <div class="wc-aplus-body">
+                                                                <div class="wc-reset">
+                                                                    <ul class="wc-rich-features wc-rich-content-orientation-right-aligned wc-first wc-last wc-no-line-seperator">
+                                                                        <li class="wc-rich-feature-item wc-text-placement-true wc-odd-0 wc-first wc-has-media wc-thumb-large ">
+                                                                            <div class="wc-media-wrap">
+                                                                                <div class="wc-media-inner-wrap"> <img alt="" class="wc-media wc-image" data-asset-type="image" data-asset-url="/_cp/products/1400862335642/tab-e39276f6-711d-4bb4-b08c-1ba873736e52/1dae1ec6-c82e-4d2e-81f9-7290ec3ab785.jpg" data-asset-wrapper="rich-features" data-height="6" data-width="900" height="6" module-id="breatheright" src="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-e39276f6-711d-4bb4-b08c-1ba873736e52/1dae1ec6-c82e-4d2e-81f9-7290ec3ab785.jpg.w960.jpg" title="" wcpc="1401292478964" width="900"> </div>
+                                                                            </div>
+                                                                            <div class="wc-text-wrap"> </div>
+                                                                        </li>
+                                                                        <li class="wc-rich-feature-item wc-text-placement-false wc-even-1 wc-has-media wc-thumb-medium wc-last ">
+                                                                            <div class="wc-media-wrap">
+                                                                                <div class="wc-media-inner-wrap"> <img alt="" class="wc-media wc-image" data-asset-type="image" data-asset-url="/_cp/products/1400862335642/tab-e39276f6-711d-4bb4-b08c-1ba873736e52/c287afce-cf8c-4776-8252-112d819427af.jpg" data-asset-wrapper="rich-features" data-height="223" data-width="274" height="223" module-id="breatheright" src="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-e39276f6-711d-4bb4-b08c-1ba873736e52/c287afce-cf8c-4776-8252-112d819427af.jpg.w960.jpg" title="" wcpc="1401292478964" width="274"> </div>
+                                                                            </div>
+                                                                            <div class="wc-text-wrap">
+                                                                                <div class="wc-rich-content-description"> When allergens are present, your immune system responds by releasing chemicals that create inflammation in your nose. This can cause nasal congestion, sneezing, and a runny nose. Breathe Right<sup>®</sup> nasal strips provide drug-free relief from nasal congestion caused by allergies. By gently opening the nasal passages, Breathe Right<sup>®</sup> nasal strips deliver instant relief for an allergy-induced stuffy nose. </div>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="wc-clear-both" style="height: 0px !important"></div>
+                                                        </div>
+                                                        <div class="wc-fragment" data-channel-product-name="Breathe Right Extra Strength Nasal Strip" data-compiler-v="2017.20.2.57" data-cpi="prod6000594" data-gtin="00757145102556" data-language-code="en" data-module-brand="Breathe Right" data-module-code="breatheright" data-module-name="Breathe Right" data-mpn="10255" data-produced="2017-10-22 17:38" data-section-caption="DEVIATED SEPTUM AND NASAL CONGESTION" data-section-tag="features" data-section-template-code="rich-features" data-vendor-name="Breathe Right Extra (26 count)" data-wcpc="1401292478964" id="wc-features-a4220ce3">
+                                                            <h2>DEVIATED SEPTUM AND NASAL CONGESTION</h2>
+                                                            <div class="wc-aplus-body">
+                                                                <div class="wc-reset">
+                                                                    <ul class="wc-rich-features wc-rich-content-orientation-right-aligned wc-first wc-last wc-no-line-seperator">
+                                                                        <li class="wc-rich-feature-item wc-text-placement-true wc-odd-0 wc-first wc-has-media wc-thumb-large ">
+                                                                            <div class="wc-media-wrap">
+                                                                                <div class="wc-media-inner-wrap"> <img alt="" class="wc-media wc-image" data-asset-type="image" data-asset-url="/_cp/products/1400862335642/tab-ed0ce773-a0d6-4ade-b444-7d5bacc5680e/b29dff2a-2869-49c5-ae13-03b95693eb21.jpg" data-asset-wrapper="rich-features" data-height="6" data-width="900" height="6" module-id="breatheright" src="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-ed0ce773-a0d6-4ade-b444-7d5bacc5680e/b29dff2a-2869-49c5-ae13-03b95693eb21.jpg.w960.jpg" title="" wcpc="1401292478964" width="900"> </div>
+                                                                            </div>
+                                                                            <div class="wc-text-wrap"> </div>
+                                                                        </li>
+                                                                        <li class="wc-rich-feature-item wc-text-placement-false wc-even-1 wc-has-media wc-thumb-medium wc-last ">
+                                                                            <div class="wc-media-wrap">
+                                                                                <div class="wc-media-inner-wrap"> <img alt="" class="wc-media wc-image" data-asset-type="image" data-asset-url="/_cp/products/1400862335642/tab-ed0ce773-a0d6-4ade-b444-7d5bacc5680e/027a4b68-07ca-42fa-a188-175f437512b7.jpg" data-asset-wrapper="rich-features" data-height="222" data-width="274" height="222" module-id="breatheright" src="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-ed0ce773-a0d6-4ade-b444-7d5bacc5680e/027a4b68-07ca-42fa-a188-175f437512b7.jpg.w960.jpg" title="" wcpc="1401292478964" width="274"> </div>
+                                                                            </div>
+                                                                            <div class="wc-text-wrap">
+                                                                                <div class="wc-rich-content-description"> People who suffer from a deviated septum are generally all too familiar with breathing problems. The septum is the cartilage that separates the nostrils. A deviated septum makes it harder to breathe through one or both sides of your nose. Breathe Right<sup>®</sup> nasal strips can open blocked nasal passages and make it easier to breathe freely. </div>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="wc-clear-both" style="height: 0px !important"></div>
+                                                        </div>
+                                                        <div class="wc-fragment" data-channel-product-name="Breathe Right Extra Strength Nasal Strip" data-compiler-v="2017.20.2.57" data-cpi="prod6000594" data-gtin="00757145102556" data-language-code="en" data-module-brand="Breathe Right" data-module-code="breatheright" data-module-name="Breathe Right" data-mpn="10255" data-produced="2017-10-22 17:38" data-section-caption="BREATHE RIGHT® PRODUCTS" data-section-tag="features" data-section-template-code="rich-features" data-vendor-name="Breathe Right Extra (26 count)" data-wcpc="1401292478964" id="wc-features-683abd82">
+                                                            <h2>BREATHE RIGHT® PRODUCTS</h2>
+                                                            <div class="wc-aplus-body">
+                                                                <div class="wc-reset">
+                                                                    <ul class="wc-rich-features wc-rich-content-orientation-right-aligned wc-first wc-no-line-seperator">
+                                                                        <li class="wc-rich-feature-item wc-text-placement-true wc-odd-0 wc-first wc-has-media wc-thumb-large ">
+                                                                            <div class="wc-media-wrap">
+                                                                                <div class="wc-media-inner-wrap"> <img alt="" class="wc-media wc-image" data-asset-type="image" data-asset-url="/_cp/products/1400862335642/tab-00369fbc-542f-4328-99a3-6570bd74f25b/0ace0c2b-35b9-477d-b6ad-e7938d25300e.jpg" data-asset-wrapper="rich-features" data-height="6" data-width="900" height="6" module-id="breatheright" src="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-00369fbc-542f-4328-99a3-6570bd74f25b/0ace0c2b-35b9-477d-b6ad-e7938d25300e.jpg.w960.jpg" title="" wcpc="1401292478964" width="900"> </div>
+                                                                            </div>
+                                                                            <div class="wc-text-wrap">
+                                                                                <div class="wc-rich-content-description"> Which Breathe Right<sup>®</sup> nasal strip is right for you? Browse the different Breathe Right<sup>®</sup>products that will help you breathe better so you can sleep, feel better and wake up rested the next day. </div>
+                                                                            </div>
+                                                                        </li>
+                                                                        <li class="wc-rich-feature-item wc-text-placement-true wc-even-1 wc-has-media wc-thumb-large ">
+                                                                            <div class="wc-media-wrap">
+                                                                                <div class="wc-media-inner-wrap"> <img alt="" class="wc-media wc-image" data-asset-type="image" data-asset-url="/_cp/products/1400862335642/tab-00369fbc-542f-4328-99a3-6570bd74f25b/6e59ffb9-5b09-4824-bf34-d009452a60df.jpg" data-asset-wrapper="rich-features" data-height="345" data-width="675" height="345" module-id="breatheright" src="https://smedia.webcollage.net/rwvfp/wc/cp/21683380/module/breatheright/_cp/products/1400862335642/tab-00369fbc-542f-4328-99a3-6570bd74f25b/6e59ffb9-5b09-4824-bf34-d009452a60df.jpg.w960.jpg" title="" wcpc="1401292478964" width="675"> </div>
+                                                                            </div>
+                                                                            <div class="wc-text-wrap"> </div>
+                                                                        </li>
+                                                                        <li class="wc-rich-feature-item wc-text-placement-true wc-odd-0 wc-last ">
+                                                                            <div class="wc-text-wrap">
+                                                                                <div class="wc-rich-content-description"> <br><sub>Trademarks are owned by or licensed to the GSK group of companies. &nbsp;<br>©2016 GSK group of companies or its licensor. All rights reserved. Read and follow label directions.</sub> </div>
+                                                                            </div>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="wc-reset">
+                                                                    <ul class="wc-rich-features wc-rich-content-orientation-zigzag wc-last wc-no-line-seperator"> </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="wc-clear-both" style="height: 0px !important"></div>
+                                                        </div>
+                                                        <div class="wc-powered-by-tagline wc-bottom-powered-by-tagline"><span>The information above is powered by <img alt="Webcollage" src="https://scontent.webcollage.net/_wc/default-defs/resources/common/webcollage.png?v=2017.20.2.57"></span></div>
+                                                        <div id="wc-fragment-terminator" style="width: 100% !important; clear: both !important; height: 0px !important;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div><div class="desc-heading" id="selfServeQuestions" style="visibility: hidden;">Questions &amp; Answers <span class="sr-only">for self serve</span></div></div><section id="VPD_Questions" arialabelledby="questions" class="vpd-titlebdr tab-pane tabaccordion review-space" style="display: none;"><div id="questionsContentPlaceHolder"></div><p class="alert-info p20"><i>Many of these answers are provided by manufacturers or other customers. Walgreens does not review, verify, or endorse those answers, which represent the sole opinions of those parties.</i></p></section></div></div>
                 </div>
                 <div class="tabs-panel" id="panel2">
                     <h4>Reviews</h4>
-                    <div class="media-object stack-for-small">
-                        <div class="media-object-section">
-                            <img class="thumbnail" src="http://placehold.it/200x200">
+                    <!--<div class="media-object stack-for-small">-->
+                        <!--<div class="media-object-section">-->
+                            <!--<img class="thumbnail" src="http://placehold.it/200x200">-->
+                        <!--</div>-->
+                        <!--<div class="media-object-section">-->
+                            <!--<h5>Mike Stevenson</h5>-->
+                            <!--<p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="media-object stack-for-small">-->
+                        <!--<div class="media-object-section">-->
+                            <!--<img class="thumbnail" src="http://placehold.it/200x200">-->
+                        <!--</div>-->
+                        <!--<div class="media-object-section">-->
+                            <!--<h5>Mike Stevenson</h5>-->
+                            <!--<p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="media-object stack-for-small">-->
+                        <!--<div class="media-object-section">-->
+                            <!--<img class="thumbnail" src="http://placehold.it/200x200">-->
+                        <!--</div>-->
+                        <!--<div class="media-object-section">-->
+                            <!--<h5>Mike Stevenson</h5>-->
+                            <!--<p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you</p>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <section id="VPD_Reviews" arialabelledby="reviews" class="vpd-titlebdr tab-pane tabaccordion review-space">
+                        <div id="reviewsContentPlaceHolder">
+                            <div id="BVRRSearchContainer">
+                                <div class="bv-cleanslate bv-cv2-cleanslate">
+                                    <div data-bv-v="contentSearch:1" class="bv-shared bv-core-container-507">
+                                        <!--[if lt IE 7]>
+                                        <div class="bv-compat bvie6 bvie-lt8 bvie">
+                                        <![endif]--> <!--[if IE 7]>
+                                        <div class="bv-compat bvie7 bvie-lt8 bvie">
+                                        <![endif]--> <!--[if IE 8]>
+                                        <div class="bv-compat bvie8 bvie">
+                                        <![endif]--> <!--[if IE 9]>
+                                        <div class="bv-compat bvie9 bvie">
+                                        <![endif]--> <!--[if gt IE 9]> <!--><div class="bv-compat"> <!--<![endif]-->
+                                        <div class="bv-content-search">
+                                            <div class="bv-masthead">
+                                                <div class="bv-masthead-product bv-summary-bar">
+                                                    <div class="bv-secondary-summary">
+                                                        <dl class="bv-stars-container" role="presentation">
+                                                            <dd class="bv-rating-ratio" role="presentation">  <a href="#" class="bv-rating-stars-container bv-focusable">   <span class="bv-rating-stars bv-rating-stars-off" aria-hidden="true">  ★★★★★  </span> <span class="bv-rating-stars-on bv-rating-stars" style="width:94% !important;" aria-hidden="true">  ★★★★★  </span>     <span class="bv-off-screen">4.7 out of 5 stars. Read reviews.</span>     </a>  </dd>
+                                                            <dd class="bv-rating-ratio-number" role="presentation">  <span class="bv-rating"><span aria-hidden="true">4.7</span></span>   </dd>
+                                                            <dd class="bv-rating-ratio-count" role="presentation"> <span>  <a href="#" class="bv-rating-label bv-text-link bv-focusable">  687 Reviews  <span class="bv-off-screen">This action will navigate to reviews.</span> </a>   </span> </dd>
+                                                        </dl>
+                                                        <div class="bv-percent-recommend-container">     650 out of 679 (96%) reviewers recommend this product    </div>
+                                                    </div>
+                                                </div>
+                                                <div data-bv-v="searchBar:2" class="bv-searchbar">
+                                                    <div class="bv-masthead-search bv-submission">
+                                                        <div class="bv-fieldsets">
+                                                            <div class="bv-expand-filter-button-offset-off">  <label for="bv-text-field-search-contentSearch1" class="bv-off-screen">Search topics and reviews</label> <span class="bv-search-control-icon" aria-hidden="true">ϙ</span> <input id="bv-text-field-search-contentSearch1" class="bv-text bv-focusable bv-search-text" type="text" name="bv-search" placeholder="Search topics and reviews"> <span class="bv-focusable bv-search-clear-icon bv-hidden"> <span aria-hidden="true"> ✘ </span> <span class="bv-off-screen">Close</span> </span> <button type="button" class="bv-content-btn bv-content-search-btn bv-focusable" onclick="return false;"> <span class="bv-search-control-icon" aria-hidden="true">ϙ</span> <span class="bv-off-screen">Search</span> </button> </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <ul data-bv-v="statsPanel:8" class="bv-content-product-stats">
+                                                    <li class="bv-content-product-stats-item bv-content-product-stats-item-first bv-content-product-stats-item-reviews"> <a href="#" class="bv-content-data-count bv-focusable" data-content-type="review">  <span class="bv-content-title">687</span> <span class="bv-content-data-label">Reviews</span> </a> </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="BVRRContainer">
+                                <div class="bv-cleanslate bv-cv2-cleanslate">
+                                    <div data-bv-v="contentList:1" class="bv-shared bv-core-container-507" data-product-id="prod6000594">
+                                        <!--[if lt IE 7]>
+                                        <div class="bv-compat bvie6 bvie-lt8 bvie">
+                                        <![endif]--> <!--[if IE 7]>
+                                        <div class="bv-compat bvie7 bvie-lt8 bvie">
+                                        <![endif]--> <!--[if IE 8]>
+                                        <div class="bv-compat bv-scroll-spy bvie8 bvie">
+                                        <![endif]--> <!--[if IE 9]>
+                                        <div class="bv-compat bv-scroll-spy bvie9 bvie">
+                                        <![endif]--> <!--[if gt IE 9]> <!--><div class="bv-compat bv-scroll-spy" data-bv-target="review"> <!--<![endif]-->
+                                        <meta name="bvDateModified" content="">
+                                        <div class="bv-content-list-container">
+                                            <div class="bv-header">
+                                                <div class="bv-action-bar">
+                                                    <div class="float:left"> <button type="button" class="bv-write-review bv-focusable bv-submission-button" onclick="return false;"> Write a review  <span class="bv-off-screen">. This action will open a modal dialog.</span> </button> </div>
+                                                </div>
+                                                <div class="bv-inline-form-container"></div>
+                                                <div class="bv-section-summary">
+                                                    <table class="bv-section-summary-table bv-table-full-width" role="presentation">
+                                                        <tbody>
+                                                        <tr class="bv-section-summary-inline">
+                                                            <td data-bv-v="inlineHistogram:6" class="bv-inline-histogram bv-section-summary-block">
+                                                                <div class="bv-inline-histogram-ratings">
+                                                                    <div class="bv-inline-histogram-header">
+                                                                        <h3 class="bv-content-title" role="presentation">Rating Snapshot</h3>
+                                                                    </div>
+                                                                    <table role="presentation">
+                                                                        <caption class="bv-histogram-filter-helper">Select a row below to filter reviews.</caption>
+                                                                        <tbody>
+                                                                        <tr class="bv-inline-histogram-ratings-star-container" title="Select to filter reviews with 5 stars.">
+                                                                            <td class="bv-inline-histogram-ratings-star" data-bv-histogram-rating-value="5"> 5<span class="bv-glyph" aria-hidden="true">★</span> <span class="bv-off-screen">stars</span> </td>
+                                                                            <td class="bv-inline-histogram-ratings-bar" data-bv-histogram-rating-value="5" role="presentation" data-bv-histogram-rating-count="534"> <span class="bv-content-secondary-ratings-container"> <span class="bv-content-secondary-ratings-value" style="width:78% !important;"></span> </span> </td>
+                                                                            <td class="bv-inline-histogram-ratings-score"> <span aria-hidden="true"> 534 </span> <span class="bv-off-screen"> 534 reviews with 5 stars.  </span> <button type="button" class="bv-focusable bv-off-screen" onclick="return false;">Select to filter reviews with 5 stars.</button> </td>
+                                                                        </tr>
+                                                                        <tr class="bv-inline-histogram-ratings-star-container" title="Select to filter reviews with 4 stars.">
+                                                                            <td class="bv-inline-histogram-ratings-star" data-bv-histogram-rating-value="4"> 4<span class="bv-glyph" aria-hidden="true">★</span> <span class="bv-off-screen">stars</span> </td>
+                                                                            <td class="bv-inline-histogram-ratings-bar" data-bv-histogram-rating-value="4" role="presentation" data-bv-histogram-rating-count="112"> <span class="bv-content-secondary-ratings-container"> <span class="bv-content-secondary-ratings-value" style="width:16% !important;"></span> </span> </td>
+                                                                            <td class="bv-inline-histogram-ratings-score"> <span aria-hidden="true"> 112 </span> <span class="bv-off-screen"> 112 reviews with 4 stars.  </span> <button type="button" class="bv-focusable bv-off-screen" onclick="return false;">Select to filter reviews with 4 stars.</button> </td>
+                                                                        </tr>
+                                                                        <tr class="bv-inline-histogram-ratings-star-container" title="Select to filter reviews with 3 stars.">
+                                                                            <td class="bv-inline-histogram-ratings-star" data-bv-histogram-rating-value="3"> 3<span class="bv-glyph" aria-hidden="true">★</span> <span class="bv-off-screen">stars</span> </td>
+                                                                            <td class="bv-inline-histogram-ratings-bar" data-bv-histogram-rating-value="3" role="presentation" data-bv-histogram-rating-count="15"> <span class="bv-content-secondary-ratings-container"> <span class="bv-content-secondary-ratings-value" style="width:2% !important;"></span> </span> </td>
+                                                                            <td class="bv-inline-histogram-ratings-score"> <span aria-hidden="true"> 15 </span> <span class="bv-off-screen"> 15 reviews with 3 stars.  </span> <button type="button" class="bv-focusable bv-off-screen" onclick="return false;">Select to filter reviews with 3 stars.</button> </td>
+                                                                        </tr>
+                                                                        <tr class="bv-inline-histogram-ratings-star-container" title="Select to filter reviews with 2 stars.">
+                                                                            <td class="bv-inline-histogram-ratings-star" data-bv-histogram-rating-value="2"> 2<span class="bv-glyph" aria-hidden="true">★</span> <span class="bv-off-screen">stars</span> </td>
+                                                                            <td class="bv-inline-histogram-ratings-bar" data-bv-histogram-rating-value="2" role="presentation" data-bv-histogram-rating-count="8"> <span class="bv-content-secondary-ratings-container"> <span class="bv-content-secondary-ratings-value" style="width:1% !important;"></span> </span> </td>
+                                                                            <td class="bv-inline-histogram-ratings-score"> <span aria-hidden="true"> 8 </span> <span class="bv-off-screen"> 8 reviews with 2 stars.  </span> <button type="button" class="bv-focusable bv-off-screen" onclick="return false;">Select to filter reviews with 2 stars.</button> </td>
+                                                                        </tr>
+                                                                        <tr class="bv-inline-histogram-ratings-star-container" title="Select to filter reviews with 1 star.">
+                                                                            <td class="bv-inline-histogram-ratings-star" data-bv-histogram-rating-value="1"> 1<span class="bv-glyph" aria-hidden="true">★</span> <span class="bv-off-screen">stars</span> </td>
+                                                                            <td class="bv-inline-histogram-ratings-bar" data-bv-histogram-rating-value="1" role="presentation" data-bv-histogram-rating-count="18"> <span class="bv-content-secondary-ratings-container"> <span class="bv-content-secondary-ratings-value" style="width:3% !important;"></span> </span> </td>
+                                                                            <td class="bv-inline-histogram-ratings-score"> <span aria-hidden="true"> 18 </span> <span class="bv-off-screen"> 18 reviews with 1 star.  </span> <button type="button" class="bv-focusable bv-off-screen" onclick="return false;">Select to filter reviews with 1 star.</button> </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                            </td>
+                                                            <td data-bv-v="secondaryRatingSummary:7" class="bv-secondary-rating-summary bv-section-summary-block">
+                                                                <div class="bv-secondary-rating-summary-header">
+                                                                    <h3 class="bv-content-title" role="presentation">Average Customer Ratings</h3>
+                                                                </div>
+                                                                <table class="bv-secondary-rating-summary-list" role="presentation">
+                                                                    <tbody>
+                                                                    <tr class="bv-secondary-rating-summary-stars">
+                                                                        <td class="bv-secondary-rating-summary-id bv-td">Overall</td>
+                                                                        <td class="bv-rating-ratio bv-td"> <span class="bv-rating-stars-container"> <span class="bv-rating-stars bv-rating-stars-off" aria-hidden="true"> ★★★★★ </span> <span style="width:94% !important;" class="bv-rating-stars bv-rating-stars-on" aria-hidden="true"> ★★★★★ </span> </span> <span class="bv-secondary-rating-summary-rating" aria-label="average rating value is 4.7 of 5."> 4.7 </span> </td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="bv-control-bar">
+                                                    <div data-bv-v="ugcCount:4" class="bv-control-bar-count">
+                                                        <span class="bv-content-pagination-pages-current">     1–8 of 687 Reviews       &nbsp;</span>
+                                                    </div>
+                                                    <div data-bv-v="contentSort:1" class="bv-control-bar-sort">
+                                                        <div class="bv-dropdown">
+                                                            <div class="bv-dropdown-target">  <button type="button" class="bv-focusable" aria-haspopup="true" role="menuitem" onclick="return false;"> <span class="bv-dropdown-title"> Sort </span> <span class="bv-dropdown-arrow" aria-hidden="true" role="presentation"> ▼ </span> <span class="bv-off-screen">Menu</span> </button> </div>
+                                                            <label for="bv-dropdown-select-1" class="bv-off-screen" aria-hidden="true"> Sort by </label>
+                                                            <select id="bv-dropdown-select-1" class="bv-select-cleanslate bv-dropdown-select" aria-hidden="true">
+                                                                <option value="relevancy" selected=""> Most Relevant </option>
+                                                                <option value="mostHelpful"> Most Helpful </option>
+                                                                <option value="positive"> Highest to Lowest Rating </option>
+                                                                <option value="negative"> Lowest to Highest Rating </option>
+                                                                <option value="mostRecent"> Most Recent </option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div data-bv-v="relevancyLink:5" class="bv-relevancy-link-target bv-relevancy-link-target-visible">
+                                                        <span class="bv-sort-relevancy"> <button type="button" class="bv-relevancy-popup-target bv-focusable" onclick="return false;"> <span aria-hidden="true">?</span> <span class="bv-off-screen">Display a popup with information about Relevancy Sort.</span> </button> </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div data-bv-v="contentFilter:3" class="bv-content-filter bv-filter-controls-hidden bv-active-filters-hidden">
+                                                <div data-bv-v="FilterControls:41" class="bv-filter-controls">
+                                                    <div class="bv-filters bv-hidden" role="menubar">
+                                                        <div data-bv-v="FilterSelect:42" class="bv-content-filter-select">
+                                                            <div class="bv-dropdown" data-bv-filter-for="Rating">
+                                                                <div class="bv-dropdown-target"> <button type="button" class="bv-focusable" role="menuitem" aria-haspopup="true" aria-owns="bv-content-filter-dropdown-Rating" onclick="return false;"> <span class="bv-dropdown-arrow" aria-hidden="true" role="presentation"> ▼ </span> <span class="bv-dropdown-title">Rating</span> <span class="bv-off-screen">Menu</span> </button> </div>
+                                                                <label for="bv-dropdown-select-42" class="bv-off-screen"> Filter by </label>
+                                                                <select id="bv-dropdown-select-42" class="bv-select-cleanslate bv-dropdown-select">
+                                                                    <option value="1"> 1 star </option>
+                                                                    <option value="2"> 2 stars </option>
+                                                                    <option value="3"> 3 stars </option>
+                                                                    <option value="4"> 4 stars </option>
+                                                                    <option value="5"> 5 stars </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <div data-bv-v="FilterSelect:43" class="bv-content-filter-select">
+                                                            <div class="bv-dropdown" data-bv-filter-for="Locale">
+                                                                <div class="bv-dropdown-target"> <button type="button" class="bv-focusable" role="menuitem" aria-haspopup="true" aria-owns="bv-content-filter-dropdown-ContentLocale" onclick="return false;"> <span class="bv-dropdown-arrow" aria-hidden="true" role="presentation"> ▼ </span> <span class="bv-dropdown-title">Locale</span> <span class="bv-off-screen">Menu</span> </button> </div>
+                                                                <label for="bv-dropdown-select-43" class="bv-off-screen"> Filter by </label>
+                                                                <select id="bv-dropdown-select-43" class="bv-select-cleanslate bv-dropdown-select">
+                                                                    <option value="en*"> English </option>
+                                                                    <option value="en_AU"> English (Australia) </option>
+                                                                    <option value="en_CA"> English (Canada) </option>
+                                                                    <option value="en_GB"> English (United Kingdom) </option>
+                                                                    <option value="en_US"> English (United States) </option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div data-bv-v="ActiveFilters:44" class="bv-active-filters bv-hidden">
+                                                    <span class="bv-active-filters-list-title">Active Filters</span>
+                                                    <ul class="bv-active-filters-list">
+                                                        <li data-bv-filter-headerid="Rating" class="bv-active-filters-list-item bv-filter-hidden">  <button type="button" data-bv-filter-option="1" class="bv-active-filter-button bv-focusable bv-hidden" title="Rating" onclick="return false;"> 1 star <span class="bv-close-icon" aria-hidden="true"> ✘ </span> <span class="bv-off-screen">Remove Filter</span> </button>  <button type="button" data-bv-filter-option="2" class="bv-active-filter-button bv-focusable bv-hidden" title="Rating" onclick="return false;"> 2 stars <span class="bv-close-icon" aria-hidden="true"> ✘ </span> <span class="bv-off-screen">Remove Filter</span> </button>  <button type="button" data-bv-filter-option="3" class="bv-active-filter-button bv-focusable bv-hidden" title="Rating" onclick="return false;"> 3 stars <span class="bv-close-icon" aria-hidden="true"> ✘ </span> <span class="bv-off-screen">Remove Filter</span> </button>  <button type="button" data-bv-filter-option="4" class="bv-active-filter-button bv-focusable bv-hidden" title="Rating" onclick="return false;"> 4 stars <span class="bv-close-icon" aria-hidden="true"> ✘ </span> <span class="bv-off-screen">Remove Filter</span> </button>  <button type="button" data-bv-filter-option="5" class="bv-active-filter-button bv-focusable bv-hidden" title="Rating" onclick="return false;"> 5 stars <span class="bv-close-icon" aria-hidden="true"> ✘ </span> <span class="bv-off-screen">Remove Filter</span> </button>  </li>
+                                                        <li data-bv-filter-headerid="ContentLocale" class="bv-active-filters-list-item bv-filter-hidden">  <button type="button" data-bv-filter-option="en*" class="bv-active-filter-button bv-focusable bv-hidden" title="Locale" onclick="return false;"> English <span class="bv-close-icon" aria-hidden="true"> ✘ </span> <span class="bv-off-screen">Remove Filter</span> </button>  <button type="button" data-bv-filter-option="en_AU" class="bv-active-filter-button bv-focusable bv-hidden" title="Locale" onclick="return false;"> English (Australia) <span class="bv-close-icon" aria-hidden="true"> ✘ </span> <span class="bv-off-screen">Remove Filter</span> </button>  <button type="button" data-bv-filter-option="en_CA" class="bv-active-filter-button bv-focusable bv-hidden" title="Locale" onclick="return false;"> English (Canada) <span class="bv-close-icon" aria-hidden="true"> ✘ </span> <span class="bv-off-screen">Remove Filter</span> </button>  <button type="button" data-bv-filter-option="en_GB" class="bv-active-filter-button bv-focusable bv-hidden" title="Locale" onclick="return false;"> English (United Kingdom) <span class="bv-close-icon" aria-hidden="true"> ✘ </span> <span class="bv-off-screen">Remove Filter</span> </button>  <button type="button" data-bv-filter-option="en_US" class="bv-active-filter-button bv-focusable bv-hidden" title="Locale" onclick="return false;"> English (United States) <span class="bv-close-icon" aria-hidden="true"> ✘ </span> <span class="bv-off-screen">Remove Filter</span> </button>  </li>
+                                                        <li class="bv-active-filters-list-item"> <button type="button" class="bv-active-filter-button-clear bv-focusable" onclick="return false;"> <span aria-hidden="true">Clear All</span> <span class="bv-close-icon" aria-hidden="true"> ✘ </span> <span class="bv-off-screen">Clear All Filters</span> </button> </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <ol data-bv-v="contentItemCollection:2" class="bv-content-list bv-content-list-Reviews bv-focusable" tabindex="0">
+                                                <li data-bv-v="contentItem:9" class="bv-content-item bv-content-top-review bv-content-review" itemprop="review" itemscope="" itemtype="http://schema.org/Review" data-content-id="Reviews-62872572">
+                                                    <meta itemprop="itemReviewed" content="Extra Strength Nasal Strip">
+                                                    <div class="bv-content-item-avatar-offset bv-content-item-avatar-offset-on">
+                                                        <div class="bv-content-container">
+                                                            <div class="bv-content-core ">
+                                                                <div class="bv-content-header">
+                                                                    <div class="bv-author-avatar">   <span title="Avatar image" class="bv-author-no-avatar bv-author-gender-Male" aria-hidden="true"> ♂ </span>   </div>
+                                                                    <div class="bv-content-data-summary">
+                                                                        <div class="bv-content-header-meta">
+                                                                    <span class="bv-content-rating bv-rating-ratio" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                                                                        <meta itemprop="ratingValue" content="5">
+                                                                        <meta itemprop="bestRating" content="5">
+                                                                        <span class="bv-rating-stars-container"> <abbr title="5 out of 5 stars." class="bv-rating bv-rating-stars bv-rating-stars-off" aria-hidden="true"> ★★★★★ </abbr> <abbr title="5 out of 5 stars." style="width:100% !important;" class="bv-rating-max bv-rating-stars bv-rating-stars-on" aria-hidden="true"> ★★★★★ </abbr> <span class="bv-off-screen">5 out of 5 stars.</span> </span>
+                                                                    </span>
+                                                                            <div class="bv-content-meta-wrapper">
+                                                                                <div class="bv-content-meta" role="presentation">
+                                                                                    <div class="bv-content-reference-data bv-content-author-name">
+                                                                                <span data-bv-v="avatar:12" class="bv-author">
+                                                                                    <span class="bv-avatar-author-name" itemprop="author">
+                                                                                        <h3>GAAAASP</h3>
+                                                                                    </span>
+                                                                                </span>
+                                                                                        <div class="bv-content-datetime" role="presentation">
+                                                                                            <meta itemprop="dateCreated" content="2013-01-03">
+                                                                                            <meta itemprop="datePublished" content="2017-10-26">
+                                                                                            <span class="bv-content-datetime-dot" aria-hidden="true">·</span> <span class="bv-content-datetime-stamp">5 years ago &nbsp;</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="bv-content-title-container">
+                                                                            <h4 class="bv-content-title" itemprop="headline">    My Husband and I Don't Go To Sleep Without Them!   </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="bv-content-details-offset-off">
+                                                                    <div class="bv-content-summary">
+                                                                        <div class="bv-content-summary-body" itemprop="reviewBody">
+                                                                            <div class="bv-content-summary-body-text">
+                                                                                <p>My husband has snored for years. Awful! In the last few years, I have gained way too much weight and I too now snore. When my complains, I remind him, "What do you think I've been putting up with for the last 4 decades?" Long story short, we now each use a Breathe Right Extra every night. And voila! No snoring! No complaints! No problem! In fact we are so sold on this product that last week we were completely out and made a trek late in the night to a drugstore to buy another box before we hit the hay. P.S. I am very unclear about the difference between "Extra" and the one which had "Four Points." Which one is the strongest with the most pull???</p>
+                                                                            </div>
+                                                                            <div class="bv-content-data">
+                                                                                <div class="bv-content-product-questions">  </div>
+                                                                                <div class="bv-content-tag-dimensions">  </div>
+                                                                                <dl class="bv-content-data-recommend-yes" role="presentation">
+                                                                                    <dt class="bv-content-data-label-container" role="presentation"> <span class="bv-content-data-icon" aria-hidden="true">✔</span> <span class="bv-content-data-label">Yes</span>, </dt>
+                                                                                    <dd class="bv-content-data-value" role="presentation">  I recommend this product. </dd>
+                                                                                </dl>
+                                                                                <div class="bv-content-data-syndication">
+                                                                                    <div class="bv-syndication-summary">
+                                                                                        <div class="bv-brand-logo">  <img class="bv-brand-logo-image" src="assets/images/BV.png" alt="breatheright.com">  </div>
+                                                                                        <span class="bv-badge-syndicated">Originally posted on breatheright.com</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bv-inline-form-container"></div>
+                                                        <div data-bv-v="secondaryContentList:10" class="bv-secondary-content-list">
+                                                            <ol data-bv-v="secondaryContentItemCollection:11" class="bv-content-list bv-content-list-ClientResponses">
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li data-bv-v="contentItem:13" class="bv-content-item bv-content-top-review bv-content-review" itemprop="review" itemscope="" itemtype="http://schema.org/Review" data-content-id="Reviews-62873018">
+                                                    <meta itemprop="itemReviewed" content="Extra Strength Nasal Strip">
+                                                    <div class="bv-content-item-avatar-offset bv-content-item-avatar-offset-on">
+                                                        <div class="bv-content-container">
+                                                            <div class="bv-content-core ">
+                                                                <div class="bv-content-header">
+                                                                    <div class="bv-author-avatar">   <span title="Avatar image" class="bv-author-no-avatar bv-author-gender-Male" aria-hidden="true"> ♂ </span>   </div>
+                                                                    <div class="bv-content-data-summary">
+                                                                        <div class="bv-content-header-meta">
+                                                                    <span class="bv-content-rating bv-rating-ratio" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                                                                        <meta itemprop="ratingValue" content="2">
+                                                                        <meta itemprop="bestRating" content="5">
+                                                                        <span class="bv-rating-stars-container"> <abbr title="2 out of 5 stars." class="bv-rating bv-rating-stars bv-rating-stars-off" aria-hidden="true"> ★★★★★ </abbr> <abbr title="2 out of 5 stars." style="width:40% !important;" class="bv-rating-max bv-rating-stars bv-rating-stars-on" aria-hidden="true"> ★★★★★ </abbr> <span class="bv-off-screen">2 out of 5 stars.</span> </span>
+                                                                    </span>
+                                                                            <div class="bv-content-meta-wrapper">
+                                                                                <div class="bv-content-meta" role="presentation">
+                                                                                    <div class="bv-content-reference-data bv-content-author-name">
+                                                                                <span data-bv-v="avatar:16" class="bv-author">
+                                                                                    <span class="bv-avatar-author-name" itemprop="author">
+                                                                                        <h3>John44</h3>
+                                                                                    </span>
+                                                                                </span>
+                                                                                        <div class="bv-content-datetime" role="presentation">
+                                                                                            <meta itemprop="dateCreated" content="2014-03-05">
+                                                                                            <meta itemprop="datePublished" content="2017-10-26">
+                                                                                            <span class="bv-content-datetime-dot" aria-hidden="true">·</span> <span class="bv-content-datetime-stamp">4 years ago &nbsp;</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="bv-content-title-container">
+                                                                            <h4 class="bv-content-title" itemprop="headline">    Sticky Residue Left on Nose   </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="bv-content-details-offset-off">
+                                                                    <div class="bv-content-summary">
+                                                                        <div class="bv-content-summary-body" itemprop="reviewBody">
+                                                                            <div class="bv-content-summary-body-text">
+                                                                                <p>I've been a Breathe Right customer for quite a spell and usually find the strips easy to use and very effective in doing what they promise they will do. Sometime ago, I donâ€™t recall how long, they came out with a new look which was a bit wider and a little shorter than what I had become accustom to. Iâ€™ve purchased the new strip many times and have come to despise them because they tend to come unglued from my nose during the night and they leave a sticky residue (i.e., glue) on my nose thatâ€™s very difficult to remove. I donâ€™t see a good alternative out there anyplace, so I guess it is back to nose drops and sprays for me.</p>
+                                                                            </div>
+                                                                            <div class="bv-content-data">
+                                                                                <div class="bv-content-product-questions">  </div>
+                                                                                <div class="bv-content-tag-dimensions">  </div>
+                                                                                <dl class="bv-content-data-recommend-no" role="presentation">
+                                                                                    <dt class="bv-content-data-label-container" role="presentation"> <span class="bv-content-data-icon" aria-hidden="true">✘</span> <span class="bv-content-data-label">No</span>, </dt>
+                                                                                    <dd class="bv-content-data-value" role="presentation">  I do not recommend this product. </dd>
+                                                                                </dl>
+                                                                                <div class="bv-content-data-syndication">
+                                                                                    <div class="bv-syndication-summary">
+                                                                                        <div class="bv-brand-logo">  <img class="bv-brand-logo-image" src="assets/images/BV.png" alt="breatheright.com">  </div>
+                                                                                        <span class="bv-badge-syndicated">Originally posted on breatheright.com</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bv-inline-form-container"></div>
+                                                        <div data-bv-v="secondaryContentList:14" class="bv-secondary-content-list">
+                                                            <ol data-bv-v="secondaryContentItemCollection:15" class="bv-content-list bv-content-list-ClientResponses">
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li data-bv-v="contentItem:17" class="bv-content-item bv-content-top-review bv-content-review" itemprop="review" itemscope="" itemtype="http://schema.org/Review" data-content-id="Reviews-62872325">
+                                                    <meta itemprop="itemReviewed" content="Extra Strength Nasal Strip">
+                                                    <div class="bv-content-item-avatar-offset bv-content-item-avatar-offset-on">
+                                                        <div class="bv-content-container">
+                                                            <div class="bv-content-core ">
+                                                                <div class="bv-content-header">
+                                                                    <div class="bv-author-avatar">   <span title="Avatar image" class="bv-author-no-avatar bv-author-gender-Male" aria-hidden="true"> ♂ </span>   </div>
+                                                                    <div class="bv-content-data-summary">
+                                                                        <div class="bv-content-header-meta">
+                                                                    <span class="bv-content-rating bv-rating-ratio" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                                                                        <meta itemprop="ratingValue" content="5">
+                                                                        <meta itemprop="bestRating" content="5">
+                                                                        <span class="bv-rating-stars-container"> <abbr title="5 out of 5 stars." class="bv-rating bv-rating-stars bv-rating-stars-off" aria-hidden="true"> ★★★★★ </abbr> <abbr title="5 out of 5 stars." style="width:100% !important;" class="bv-rating-max bv-rating-stars bv-rating-stars-on" aria-hidden="true"> ★★★★★ </abbr> <span class="bv-off-screen">5 out of 5 stars.</span> </span>
+                                                                    </span>
+                                                                            <div class="bv-content-meta-wrapper">
+                                                                                <div class="bv-content-meta" role="presentation">
+                                                                                    <div class="bv-content-reference-data bv-content-author-name">
+                                                                                <span data-bv-v="avatar:20" class="bv-author">
+                                                                                    <span class="bv-avatar-author-name" itemprop="author">
+                                                                                        <h3>Tennjersey</h3>
+                                                                                    </span>
+                                                                                </span>
+                                                                                        <div class="bv-content-datetime" role="presentation">
+                                                                                            <meta itemprop="dateCreated" content="2012-05-25">
+                                                                                            <meta itemprop="datePublished" content="2017-10-26">
+                                                                                            <span class="bv-content-datetime-dot" aria-hidden="true">·</span> <span class="bv-content-datetime-stamp">5 years ago &nbsp;</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="bv-content-title-container">
+                                                                            <h4 class="bv-content-title" itemprop="headline">    Changed my nights   </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="bv-content-details-offset-off">
+                                                                    <div class="bv-content-summary">
+                                                                        <div class="bv-content-summary-body" itemprop="reviewBody">
+                                                                            <div class="bv-content-summary-body-text">
+                                                                                <p>I used to snore almost every night. It bothered me, but bothered my wife a lot more. She'd push me, roll me over, or wake me but stuck with it for years. Breathe Right Extra strip made all the difference immediately. I hardly ever snore now. I sleep better, wake more refreshed, and my loyal spouse enjoys her sleep a lot more than in the past. I told my brother about the strips because I know he's also a snorer. He claims he can now breathe through his nose when he sleeps and is also snoring much less. For something so small, simple and easy to use it is amazing how effective these strips have turned out to be.</p>
+                                                                            </div>
+                                                                            <div class="bv-content-data">
+                                                                                <div class="bv-content-product-questions">  </div>
+                                                                                <div class="bv-content-tag-dimensions">  </div>
+                                                                                <dl class="bv-content-data-recommend-yes" role="presentation">
+                                                                                    <dt class="bv-content-data-label-container" role="presentation"> <span class="bv-content-data-icon" aria-hidden="true">✔</span> <span class="bv-content-data-label">Yes</span>, </dt>
+                                                                                    <dd class="bv-content-data-value" role="presentation">  I recommend this product. </dd>
+                                                                                </dl>
+                                                                                <div class="bv-content-data-syndication">
+                                                                                    <div class="bv-syndication-summary">
+                                                                                        <div class="bv-brand-logo">  <img class="bv-brand-logo-image" src="assets/images/BV.png" alt="breatheright.com">  </div>
+                                                                                        <span class="bv-badge-syndicated">Originally posted on breatheright.com</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bv-inline-form-container"></div>
+                                                        <div data-bv-v="secondaryContentList:18" class="bv-secondary-content-list">
+                                                            <ol data-bv-v="secondaryContentItemCollection:19" class="bv-content-list bv-content-list-ClientResponses">
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li data-bv-v="contentItem:21" class="bv-content-item bv-content-top-review bv-content-review" itemprop="review" itemscope="" itemtype="http://schema.org/Review" data-content-id="Reviews-62872667">
+                                                    <meta itemprop="itemReviewed" content="Extra Strength Nasal Strip">
+                                                    <div class="bv-content-item-avatar-offset bv-content-item-avatar-offset-on">
+                                                        <div class="bv-content-container">
+                                                            <div class="bv-content-core ">
+                                                                <div class="bv-content-header">
+                                                                    <div class="bv-author-avatar">   <span title="Avatar image" class="bv-author-no-avatar bv-author-gender-Male" aria-hidden="true"> ♂ </span>   </div>
+                                                                    <div class="bv-content-data-summary">
+                                                                        <div class="bv-content-header-meta">
+                                                                    <span class="bv-content-rating bv-rating-ratio" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                                                                        <meta itemprop="ratingValue" content="2">
+                                                                        <meta itemprop="bestRating" content="5">
+                                                                        <span class="bv-rating-stars-container"> <abbr title="2 out of 5 stars." class="bv-rating bv-rating-stars bv-rating-stars-off" aria-hidden="true"> ★★★★★ </abbr> <abbr title="2 out of 5 stars." style="width:40% !important;" class="bv-rating-max bv-rating-stars bv-rating-stars-on" aria-hidden="true"> ★★★★★ </abbr> <span class="bv-off-screen">2 out of 5 stars.</span> </span>
+                                                                    </span>
+                                                                            <div class="bv-content-meta-wrapper">
+                                                                                <div class="bv-content-meta" role="presentation">
+                                                                                    <div class="bv-content-reference-data bv-content-author-name">
+                                                                                <span data-bv-v="avatar:24" class="bv-author">
+                                                                                    <span class="bv-avatar-author-name" itemprop="author">
+                                                                                        <h3>sslk</h3>
+                                                                                    </span>
+                                                                                </span>
+                                                                                        <div class="bv-content-datetime" role="presentation">
+                                                                                            <meta itemprop="dateCreated" content="2013-11-04">
+                                                                                            <meta itemprop="datePublished" content="2017-10-26">
+                                                                                            <span class="bv-content-datetime-dot" aria-hidden="true">·</span> <span class="bv-content-datetime-stamp">4 years ago &nbsp;</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="bv-content-title-container">
+                                                                            <h4 class="bv-content-title" itemprop="headline">    Too many strips don;t stick   </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="bv-content-details-offset-off">
+                                                                    <div class="bv-content-summary">
+                                                                        <div class="bv-content-summary-body" itemprop="reviewBody">
+                                                                            <div class="bv-content-summary-body-text">
+                                                                                <p>Out of 10 strips, only 6 worked on my first try at this product. Then I saw a box that gave a bonus of 4 making 14 strips PLUS the product was 50% stronger. Since it is drug free, I reasoned the adhesive was stronger, so I bought two boxes because, when they stick, they work. Well, I am at the end of the first box. So far, only ONE strip actually was strong enough to stay on all nights. Then I tried 3 before one stuck most of the night. Tonight, the box is gone because NONE of the strips stuck. The first came right off. The rest just slowly (WITHIN A MINUTE) loosened and flung out. I won't buy any more.</p>
+                                                                            </div>
+                                                                            <div class="bv-content-data">
+                                                                                <div class="bv-content-product-questions">  </div>
+                                                                                <div class="bv-content-tag-dimensions">  </div>
+                                                                                <dl class="bv-content-data-recommend-no" role="presentation">
+                                                                                    <dt class="bv-content-data-label-container" role="presentation"> <span class="bv-content-data-icon" aria-hidden="true">✘</span> <span class="bv-content-data-label">No</span>, </dt>
+                                                                                    <dd class="bv-content-data-value" role="presentation">  I do not recommend this product. </dd>
+                                                                                </dl>
+                                                                                <div class="bv-content-data-syndication">
+                                                                                    <div class="bv-syndication-summary">
+                                                                                        <div class="bv-brand-logo">  <img class="bv-brand-logo-image" src="assets/images/BV.png" alt="breatheright.com">  </div>
+                                                                                        <span class="bv-badge-syndicated">Originally posted on breatheright.com</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bv-inline-form-container"></div>
+                                                        <div data-bv-v="secondaryContentList:22" class="bv-secondary-content-list">
+                                                            <ol data-bv-v="secondaryContentItemCollection:23" class="bv-content-list bv-content-list-ClientResponses">
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li data-bv-v="contentItem:25" class="bv-content-item bv-content-top-review bv-content-review" itemprop="review" itemscope="" itemtype="http://schema.org/Review" data-content-id="Reviews-62872719">
+                                                    <meta itemprop="itemReviewed" content="Extra Strength Nasal Strip">
+                                                    <div class="bv-content-item-avatar-offset bv-content-item-avatar-offset-on">
+                                                        <div class="bv-content-container">
+                                                            <div class="bv-content-core ">
+                                                                <div class="bv-content-header">
+                                                                    <div class="bv-author-avatar">   <span title="Avatar image" class="bv-author-no-avatar bv-author-gender-Male" aria-hidden="true"> ♂ </span>   </div>
+                                                                    <div class="bv-content-data-summary">
+                                                                        <div class="bv-content-header-meta">
+                                                                    <span class="bv-content-rating bv-rating-ratio" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                                                                        <meta itemprop="ratingValue" content="5">
+                                                                        <meta itemprop="bestRating" content="5">
+                                                                        <span class="bv-rating-stars-container"> <abbr title="5 out of 5 stars." class="bv-rating bv-rating-stars bv-rating-stars-off" aria-hidden="true"> ★★★★★ </abbr> <abbr title="5 out of 5 stars." style="width:100% !important;" class="bv-rating-max bv-rating-stars bv-rating-stars-on" aria-hidden="true"> ★★★★★ </abbr> <span class="bv-off-screen">5 out of 5 stars.</span> </span>
+                                                                    </span>
+                                                                            <div class="bv-content-meta-wrapper">
+                                                                                <div class="bv-content-meta" role="presentation">
+                                                                                    <div class="bv-content-reference-data bv-content-author-name">
+                                                                                <span data-bv-v="avatar:28" class="bv-author">
+                                                                                    <span class="bv-avatar-author-name" itemprop="author">
+                                                                                        <h3>Rissa2428</h3>
+                                                                                    </span>
+                                                                                </span>
+                                                                                        <div class="bv-content-datetime" role="presentation">
+                                                                                            <meta itemprop="dateCreated" content="2013-12-05">
+                                                                                            <meta itemprop="datePublished" content="2017-10-26">
+                                                                                            <span class="bv-content-datetime-dot" aria-hidden="true">·</span> <span class="bv-content-datetime-stamp">4 years ago &nbsp;</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="bv-content-title-container">
+                                                                            <h4 class="bv-content-title" itemprop="headline">    Absolutely Amazing Product!   </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="bv-content-details-offset-off">
+                                                                    <div class="bv-content-summary">
+                                                                        <div class="bv-content-summary-body" itemprop="reviewBody">
+                                                                            <div class="bv-content-summary-body-text">
+                                                                                <p>I received the Breathe Right Extra sample in the mail yesterday and was excited to try it last night. I have a deviated septum and can hardly breath out of the right side of my nose. Instantly after applying the strip before bed I was able to breath. The strip kept my breathing freely throughout the night and I can say it was the best night sleep ive had in a long time. I am definitely going to be purchasing more of the breath right strips. I would have never known about them without the sample. Thank you for the chance to try this great product and I am proud to say I will be a loyal customer!</p>
+                                                                            </div>
+                                                                            <div class="bv-content-data">
+                                                                                <div class="bv-content-product-questions">  </div>
+                                                                                <div class="bv-content-tag-dimensions">  </div>
+                                                                                <dl class="bv-content-data-recommend-yes" role="presentation">
+                                                                                    <dt class="bv-content-data-label-container" role="presentation"> <span class="bv-content-data-icon" aria-hidden="true">✔</span> <span class="bv-content-data-label">Yes</span>, </dt>
+                                                                                    <dd class="bv-content-data-value" role="presentation">  I recommend this product. </dd>
+                                                                                </dl>
+                                                                                <div class="bv-content-data-syndication">
+                                                                                    <div class="bv-syndication-summary">
+                                                                                        <div class="bv-brand-logo">  <img class="bv-brand-logo-image" src="assets/images/BV.png" alt="breatheright.com">  </div>
+                                                                                        <span class="bv-badge-syndicated">Originally posted on breatheright.com</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bv-inline-form-container"></div>
+                                                        <div data-bv-v="secondaryContentList:26" class="bv-secondary-content-list">
+                                                            <ol data-bv-v="secondaryContentItemCollection:27" class="bv-content-list bv-content-list-ClientResponses">
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li data-bv-v="contentItem:29" class="bv-content-item bv-content-top-review bv-content-review" itemprop="review" itemscope="" itemtype="http://schema.org/Review" data-content-id="Reviews-62872824">
+                                                    <meta itemprop="itemReviewed" content="Extra Strength Nasal Strip">
+                                                    <div class="bv-content-item-avatar-offset bv-content-item-avatar-offset-on">
+                                                        <div class="bv-content-container">
+                                                            <div class="bv-content-core ">
+                                                                <div class="bv-content-header">
+                                                                    <div class="bv-author-avatar">   <span title="Avatar image" class="bv-author-no-avatar bv-author-gender-Male" aria-hidden="true"> ♂ </span>   </div>
+                                                                    <div class="bv-content-data-summary">
+                                                                        <div class="bv-content-header-meta">
+                                                                    <span class="bv-content-rating bv-rating-ratio" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                                                                        <meta itemprop="ratingValue" content="2">
+                                                                        <meta itemprop="bestRating" content="5">
+                                                                        <span class="bv-rating-stars-container"> <abbr title="2 out of 5 stars." class="bv-rating bv-rating-stars bv-rating-stars-off" aria-hidden="true"> ★★★★★ </abbr> <abbr title="2 out of 5 stars." style="width:40% !important;" class="bv-rating-max bv-rating-stars bv-rating-stars-on" aria-hidden="true"> ★★★★★ </abbr> <span class="bv-off-screen">2 out of 5 stars.</span> </span>
+                                                                    </span>
+                                                                            <div class="bv-content-meta-wrapper">
+                                                                                <div class="bv-content-meta" role="presentation">
+                                                                                    <div class="bv-content-reference-data bv-content-author-name">
+                                                                                <span data-bv-v="avatar:32" class="bv-author">
+                                                                                    <span class="bv-avatar-author-name" itemprop="author">
+                                                                                        <h3>Traci25</h3>
+                                                                                    </span>
+                                                                                </span>
+                                                                                        <div class="bv-content-datetime" role="presentation">
+                                                                                            <meta itemprop="dateCreated" content="2013-12-16">
+                                                                                            <meta itemprop="datePublished" content="2017-10-26">
+                                                                                            <span class="bv-content-datetime-dot" aria-hidden="true">·</span> <span class="bv-content-datetime-stamp">4 years ago &nbsp;</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="bv-content-title-container">
+                                                                            <h4 class="bv-content-title" itemprop="headline">    Good start- bad ending   </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="bv-content-details-offset-off">
+                                                                    <div class="bv-content-summary">
+                                                                        <div class="bv-content-summary-body" itemprop="reviewBody">
+                                                                            <div class="bv-content-summary-body-text">
+                                                                                <p>I noticed immediately after placing the Breathe Right strip on that it was opening up my air ways. However, after about an hour in bed, I felt the strip start to come undone. The ends started to unstick and it quit working. If they can get the ends to stick as well as the middle, it would be an effective product. My husband tried one too, but it didn't seem to help him much at all. However, it could have been due to he had problems positioning it on at first and I think the putting on and taking off several times caused the adhesive not work as well and thus the product not working for him.</p>
+                                                                            </div>
+                                                                            <div class="bv-content-data">
+                                                                                <div class="bv-content-product-questions">  </div>
+                                                                                <div class="bv-content-tag-dimensions">  </div>
+                                                                                <dl class="bv-content-data-recommend-no" role="presentation">
+                                                                                    <dt class="bv-content-data-label-container" role="presentation"> <span class="bv-content-data-icon" aria-hidden="true">✘</span> <span class="bv-content-data-label">No</span>, </dt>
+                                                                                    <dd class="bv-content-data-value" role="presentation">  I do not recommend this product. </dd>
+                                                                                </dl>
+                                                                                <div class="bv-content-data-syndication">
+                                                                                    <div class="bv-syndication-summary">
+                                                                                        <div class="bv-brand-logo">  <img class="bv-brand-logo-image" src="assets/images/BV.png" alt="breatheright.com">  </div>
+                                                                                        <span class="bv-badge-syndicated">Originally posted on breatheright.com</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bv-inline-form-container"></div>
+                                                        <div data-bv-v="secondaryContentList:30" class="bv-secondary-content-list">
+                                                            <ol data-bv-v="secondaryContentItemCollection:31" class="bv-content-list bv-content-list-ClientResponses">
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li data-bv-v="contentItem:33" class="bv-content-item bv-content-top-review bv-content-review" itemprop="review" itemscope="" itemtype="http://schema.org/Review" data-content-id="Reviews-62872336">
+                                                    <meta itemprop="itemReviewed" content="Extra Strength Nasal Strip">
+                                                    <div class="bv-content-item-avatar-offset bv-content-item-avatar-offset-on">
+                                                        <div class="bv-content-container">
+                                                            <div class="bv-content-core ">
+                                                                <div class="bv-content-header">
+                                                                    <div class="bv-author-avatar">   <span title="Avatar image" class="bv-author-no-avatar bv-author-gender-Male" aria-hidden="true"> ♂ </span>   </div>
+                                                                    <div class="bv-content-data-summary">
+                                                                        <div class="bv-content-header-meta">
+                                                                    <span class="bv-content-rating bv-rating-ratio" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                                                                        <meta itemprop="ratingValue" content="5">
+                                                                        <meta itemprop="bestRating" content="5">
+                                                                        <span class="bv-rating-stars-container"> <abbr title="5 out of 5 stars." class="bv-rating bv-rating-stars bv-rating-stars-off" aria-hidden="true"> ★★★★★ </abbr> <abbr title="5 out of 5 stars." style="width:100% !important;" class="bv-rating-max bv-rating-stars bv-rating-stars-on" aria-hidden="true"> ★★★★★ </abbr> <span class="bv-off-screen">5 out of 5 stars.</span> </span>
+                                                                    </span>
+                                                                            <div class="bv-content-meta-wrapper">
+                                                                                <div class="bv-content-meta" role="presentation">
+                                                                                    <div class="bv-content-reference-data bv-content-author-name">
+                                                                                <span data-bv-v="avatar:36" class="bv-author">
+                                                                                    <span class="bv-avatar-author-name" itemprop="author">
+                                                                                        <h3>SeanMart</h3>
+                                                                                    </span>
+                                                                                </span>
+                                                                                        <div class="bv-content-datetime" role="presentation">
+                                                                                            <meta itemprop="dateCreated" content="2012-05-24">
+                                                                                            <meta itemprop="datePublished" content="2017-10-26">
+                                                                                            <span class="bv-content-datetime-dot" aria-hidden="true">·</span> <span class="bv-content-datetime-stamp">5 years ago &nbsp;</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="bv-content-title-container">
+                                                                            <h4 class="bv-content-title" itemprop="headline">    Better than the Advanced or Original Breathe Right Strips   </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="bv-content-details-offset-off">
+                                                                    <div class="bv-content-summary">
+                                                                        <div class="bv-content-summary-body" itemprop="reviewBody">
+                                                                            <div class="bv-content-summary-body-text">
+                                                                                <p>I have allergies and used to have to medicate myself prior to sleeping, which only worked part of the time and caused me to snore. My snoring really bothered my mate and caused us both sleepless nights. I started using the Original Breathe Right strips several years ago and they helped. The Extra Strips are excellent and seems to work best for me. They stay put all night long and seem to do more to open my nasal passages than the Original. I tried the Advanced and they didn't seem to work as well or stay in place during the night, so I wouldn't recommend them. Just be careful removing the Extra Strips and go slow because I have pulled more off my nose than the strip when trying to remove them quickly.</p>
+                                                                            </div>
+                                                                            <div class="bv-content-data">
+                                                                                <div class="bv-content-product-questions">  </div>
+                                                                                <div class="bv-content-tag-dimensions">  </div>
+                                                                                <dl class="bv-content-data-recommend-yes" role="presentation">
+                                                                                    <dt class="bv-content-data-label-container" role="presentation"> <span class="bv-content-data-icon" aria-hidden="true">✔</span> <span class="bv-content-data-label">Yes</span>, </dt>
+                                                                                    <dd class="bv-content-data-value" role="presentation">  I recommend this product. </dd>
+                                                                                </dl>
+                                                                                <div class="bv-content-data-syndication">
+                                                                                    <div class="bv-syndication-summary">
+                                                                                        <div class="bv-brand-logo">  <img class="bv-brand-logo-image" src="assets/images/BV.png" alt="breatheright.com">  </div>
+                                                                                        <span class="bv-badge-syndicated">Originally posted on breatheright.com</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bv-inline-form-container"></div>
+                                                        <div data-bv-v="secondaryContentList:34" class="bv-secondary-content-list">
+                                                            <ol data-bv-v="secondaryContentItemCollection:35" class="bv-content-list bv-content-list-ClientResponses">
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li data-bv-v="contentItem:37" class="bv-content-item bv-content-top-review bv-content-review" itemprop="review" itemscope="" itemtype="http://schema.org/Review" data-content-id="Reviews-62872605">
+                                                    <meta itemprop="itemReviewed" content="Extra Strength Nasal Strip">
+                                                    <div class="bv-content-item-avatar-offset bv-content-item-avatar-offset-on">
+                                                        <div class="bv-content-container">
+                                                            <div class="bv-content-core ">
+                                                                <div class="bv-content-header">
+                                                                    <div class="bv-author-avatar">   <span title="Avatar image" class="bv-author-no-avatar bv-author-gender-Male" aria-hidden="true"> ♂ </span>   </div>
+                                                                    <div class="bv-content-data-summary">
+                                                                        <div class="bv-content-header-meta">
+                                                                    <span class="bv-content-rating bv-rating-ratio" itemprop="reviewRating" itemscope="" itemtype="http://schema.org/Rating">
+                                                                        <meta itemprop="ratingValue" content="5">
+                                                                        <meta itemprop="bestRating" content="5">
+                                                                        <span class="bv-rating-stars-container"> <abbr title="5 out of 5 stars." class="bv-rating bv-rating-stars bv-rating-stars-off" aria-hidden="true"> ★★★★★ </abbr> <abbr title="5 out of 5 stars." style="width:100% !important;" class="bv-rating-max bv-rating-stars bv-rating-stars-on" aria-hidden="true"> ★★★★★ </abbr> <span class="bv-off-screen">5 out of 5 stars.</span> </span>
+                                                                    </span>
+                                                                            <div class="bv-content-meta-wrapper">
+                                                                                <div class="bv-content-meta" role="presentation">
+                                                                                    <div class="bv-content-reference-data bv-content-author-name">
+                                                                                <span data-bv-v="avatar:40" class="bv-author">
+                                                                                    <span class="bv-avatar-author-name" itemprop="author">
+                                                                                        <h3>cass</h3>
+                                                                                    </span>
+                                                                                </span>
+                                                                                        <div class="bv-content-datetime" role="presentation">
+                                                                                            <meta itemprop="dateCreated" content="2013-05-25">
+                                                                                            <meta itemprop="datePublished" content="2017-10-26">
+                                                                                            <span class="bv-content-datetime-dot" aria-hidden="true">·</span> <span class="bv-content-datetime-stamp">4 years ago &nbsp;</span>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="bv-content-title-container">
+                                                                            <h4 class="bv-content-title" itemprop="headline">    works great   </h4>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="bv-content-details-offset-off">
+                                                                    <div class="bv-content-summary">
+                                                                        <div class="bv-content-summary-body" itemprop="reviewBody">
+                                                                            <div class="bv-content-summary-body-text">
+                                                                                <p>After getting a sample for this product in the mail, I tried it out and was shocked at how well it worked. I wondered for awhile how well this product actually worked, but didn't care to waste more money on another product that claims to work. After using it that first time, I was hooked. I slept better than I have in a long time and with my severe allergies, it sure does work wonders. I am willing to pay the cost for a good night sleep and have already gone to buy boxes. Love this product and know someone else will to. It also helps my snoring, which is great for the husband. grin-</p>
+                                                                            </div>
+                                                                            <div class="bv-content-data">
+                                                                                <div class="bv-content-product-questions">  </div>
+                                                                                <div class="bv-content-tag-dimensions">  </div>
+                                                                                <dl class="bv-content-data-recommend-yes" role="presentation">
+                                                                                    <dt class="bv-content-data-label-container" role="presentation"> <span class="bv-content-data-icon" aria-hidden="true">✔</span> <span class="bv-content-data-label">Yes</span>, </dt>
+                                                                                    <dd class="bv-content-data-value" role="presentation">  I recommend this product. </dd>
+                                                                                </dl>
+                                                                                <div class="bv-content-data-syndication">
+                                                                                    <div class="bv-syndication-summary">
+                                                                                        <div class="bv-brand-logo">  <img class="bv-brand-logo-image" src="assets/images/BV.png" alt="breatheright.com">  </div>
+                                                                                        <span class="bv-badge-syndicated">Originally posted on breatheright.com</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="bv-inline-form-container"></div>
+                                                        <div data-bv-v="secondaryContentList:38" class="bv-secondary-content-list">
+                                                            <ol data-bv-v="secondaryContentItemCollection:39" class="bv-content-list bv-content-list-ClientResponses">
+                                                            </ol>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ol>
+                                            <div data-bv-v="loadMore:8" class="bv-content-pagination">
+                                                <div class="bv-content-pagination-container">   <button type="button" class="bv-content-btn bv-content-btn-pages bv-content-btn-pages-load-more bv-focusable" onclick="return false;"> <span class="bv-content-btn-pages-load-more-text">  Load More </span> </button>   </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="media-object-section">
-                            <h5>Mike Stevenson</h5>
-                            <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>
-                        </div>
-                    </div>
-                    <div class="media-object stack-for-small">
-                        <div class="media-object-section">
-                            <img class="thumbnail" src="http://placehold.it/200x200">
-                        </div>
-                        <div class="media-object-section">
-                            <h5>Mike Stevenson</h5>
-                            <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you</p>
-                        </div>
-                    </div>
-                    <div class="media-object stack-for-small">
-                        <div class="media-object-section">
-                            <img class="thumbnail" src="http://placehold.it/200x200">
-                        </div>
-                        <div class="media-object-section">
-                            <h5>Mike Stevenson</h5>
-                            <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you</p>
-                        </div>
-                    </div>
+                    </section>
                     <label>
                         My Review
                         <textarea placeholder="None"></textarea>

@@ -1,6 +1,32 @@
 @charset "UTF-8";
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
+#descriptionContentPlaceHolder ul {
+    padding-left:2rem;
+}
+
+#warningsContentPlaceHolder ul {
+    padding-left:2rem;
+}
+
+.wc-text-wrap {
+    margin-top:2rem;
+    padding-left:2rem;
+}
+
+.desc-heading {
+    font-size:xx-large;
+}
+
+.panel-body strong {
+    font-size:x-large;
+}
+
+/*.body-text1 {*/
+    /*padding-left:2rem;*/
+/*}*/
+
+
 button,
 img,
 legend {
@@ -1195,7 +1221,7 @@ h6 {
         font-size: 3rem
     }
     h2 {
-        font-size: 2.5rem
+        font-size: 2rem
     }
     h3 {
         font-size: 1.8rem

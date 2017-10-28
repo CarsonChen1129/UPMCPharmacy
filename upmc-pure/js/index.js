@@ -954,5 +954,49 @@ $(document).ready(function () {
 
     $( "#nav-search" ).hide();
 
+    $("#logged-in").hide();
+    // $("#nav-logged-in").hide();
+
+    var navLogIn = '<li id="nav-logged-in" class="hide-imgs hide avatar-sticky">\n' +
+        '                <a href="login.html">\n' +
+        '                    <img class="avatar" src="assets/images/IMG_9354.jpg">\n' +
+        '                </a>\n' +
+        '                <ul class="dropdown-content">\n' +
+        '                    <li><a href="login.html">Log Out</a></li>\n' +
+        '                </ul>\n' +
+        '            </li>';
+    var navNotLogIn = '<li id="nav-not-logged-in" class="hide-imgs hide avatar-sticky">\n' +
+        '                <a href="login.html">\n' +
+        '                    <i class="avatar fa fa-user-circle-o" aria-hidden="true"></i>\n' +
+        '                </a>\n' +
+        '                <ul class="dropdown-content">\n' +
+        '                    <li><a href="login.html">Log In</a></li>\n' +
+        '                    <li><a href="login.html">Register</a></li>\n' +
+        '                </ul>\n' +
+        '            </li>';
+
+
+    if (typeof(Storage) !== "undefined") {
+        // Store
+        // localStorage.setItem("logged", false);
+        // localStorage.removeItem("logged");
+        // Retrieve
+       var log = localStorage.getItem("logged");
+       console.log(log);
+
+       if(log){
+           $("#logged-in").show();
+           $("#not-logged-in").hide();
+
+           // $("#nav-logged-in").show();
+           // $("#nav-not-logged-in").hide();
+           // var element = $(navLogIn);
+           // $("nav-account").html(element);
+       }
+    } else {
+
+    }
+
+
 });
 

@@ -45,13 +45,23 @@
     </nav>
     <nav class="header-right-nav">
       <ul class="header-list">
-        <li>
+        <li id="not-logged-in">
+          <a href="login.html">
+            <i class="avatar fa fa-user-circle-o" aria-hidden="true"></i>
+            <span>Your Account</span>
+          </a>
+          <ul class="dropdown-content">
+            <li><a href="login.html">Log In</a></li>
+            <li><a href="login.html">Register</a></li>
+          </ul>
+        </li>
+        <li id="logged-in">
           <a href="login.html">
             <img class="avatar" src="assets/images/IMG_9354.jpg"/>
             <span>Your Account</span>
           </a>
           <ul class="dropdown-content">
-            <li><a href="login.html">Log Out</a></li>
+            <li><a href="#">Log Out</a></li>
           </ul>
         </li>
         <li>
@@ -76,7 +86,7 @@
 <nav class="nav-bar">
   <ul class="nav-list">
     <li class="hide-imgs hide logo-sticky">
-      <a href="index.html">
+      <a href="">
         <img src="assets/images/upmc-1.png">
       </a>
     </li>
@@ -90,54 +100,64 @@
       </ul>
     </li>
     <li class="menu-item" >
-      <a href="">Prescription</a>
+      <a href="error.html">Prescription</a>
       <ul class="dropdown-content">
-        <li><a href="#">Prescription Status</a></li>
-        <li><a href="#">Request New Prescription</a></li>
-        <li><a href="#">Refill Prescriptions</a></li>
-        <li><a href="#">Auto Refill</a></li>
-        <li><a href="#">Print Prescription Records</a></li>
-        <li><a href="#">Drug Information</a></li>
+        <li><a href="error.html">Prescription Status</a></li>
+        <li><a href="error.html">Request New Prescription</a></li>
+        <li><a href="error.html">Refill Prescriptions</a></li>
+        <li><a href="error.html">Auto Refill</a></li>
+        <li><a href="error.html">Print Prescription Records</a></li>
+        <li><a href="error.html">Drug Information</a></li>
       </ul>
     </li>
     <li class="menu-item">
-      <a href="">Contact Lenses</a>
+      <a href="error.html">Contact Lenses</a>
       <ul class="dropdown-content">
-        <li><a href="#">Recorder Contact Lenses</a></li>
-        <li><a href="#">Shop All Contact Lenses</a></li>
-        <li><a href="#">Solutions, Drops & Cases</a></li>
-        <li><a href="#">Eye Health Supplements</a></li>
+        <li><a href="error.html">Recorder Contact Lenses</a></li>
+        <li><a href="error.html">Shop All Contact Lenses</a></li>
+        <li><a href="error.html">Solutions, Drops & Cases</a></li>
+        <li><a href="error.html">Eye Health Supplements</a></li>
       </ul>
     </li>
     <li class="menu-item">
-      <a href="">Health Info & Services</a>
+      <a href="error.html">Health Info & Services</a>
       <ul class="dropdown-content">
-        <li><a href="#">Appointment Scheduler</a></li>
-        <li><a href="#">Healthcare Clinic</a></li>
-        <li><a href="#">Flu Shots & Immunizations</a></li>
-        <li><a href="#">Medicare Information</a></li>
-        <li><a href="#">Health Apps & Devices</a></li>
-        <li><a href="#">Health Answers</a></li>
+        <li><a href="error.html">Appointment Scheduler</a></li>
+        <li><a href="error.html">Healthcare Clinic</a></li>
+        <li><a href="error.html">Flu Shots & Immunizations</a></li>
+        <li><a href="error.html">Medicare Information</a></li>
+        <li><a href="error.html">Health Apps & Devices</a></li>
+        <li><a href="error.html">Health Answers</a></li>
       </ul>
     </li>
     <li class="menu-item">
-      <a href="">Online Doctor®</a>
+      <a href="error.html">Online Doctor®</a>
     </li>
     <li class="menu-item">
-      <a href="">Weekly Deals</a>
+      <a href="error.html">Weekly Deals</a>
     </li>
     <li class="hide-imgs hide search-sticky">
       <a id="search-button">
         <img class="cart-icon" src="assets/icons/search.png"/>
       </a>
     </li>
-    <li class="hide-imgs hide avatar-sticky">
+    <!--<li id="nav-account">-->
+    <!--</li>-->
+    <!--<li id="nav-not-logged-in" class="hide-imgs hide avatar-sticky">-->
+    <!--<a href="login.html">-->
+    <!--<i class="avatar fa fa-user-circle-o" aria-hidden="true"></i>-->
+    <!--</a>-->
+    <!--<ul class="dropdown-content">-->
+    <!--<li><a href="login.html">Log In</a></li>-->
+    <!--<li><a href="login.html">Register</a></li>-->
+    <!--</ul>-->
+    <!--</li>-->
+    <li id="nav-logged-in" class="hide-imgs hide avatar-sticky">
       <a href="login.html">
-        <i class="avatar fa fa-user-circle-o" aria-hidden="true"></i>
+        <img class="avatar" src="assets/images/IMG_9354.jpg">
       </a>
       <ul class="dropdown-content">
-        <li><a href="login.html">Log In</a></li>
-        <li><a href="login.html">Register</a></li>
+        <li><a href="login.html">Log Out</a></li>
       </ul>
     </li>
     <li class="hide-imgs hide cart-sticky">
@@ -162,19 +182,22 @@
   </section>
 </nav>
 <main>
+  <section class="empty-banner">
+    <div>Order Review</div>
+  </section>
   <section class="product-list wrapper" style="padding-bottom: 5rem">
     <div class="basket">
       <div class="checkout-deliverymethod">
         <div class="l-align-left h-tightSpacing js-opcHeading">
           <div class="padding-left-bcb h-display-flex" id="header">
             <h2 class="bravo h-zeroMargin cont-to-deliverymethod">1 <span class="h1-light-font">| delivery method </span> </h2>
-            <div class="padding-left-bcbcount"> (1 of 4) </div> <span class="js-expandableListheader h-standardSpacingLeft "> <button class="btn btn-default btn-sm btn-edit h-zeroMargin" aria-label="edit delivery method">edit</button> </span> </div>
+            <div class="padding-left-bcbcount"> (1 of 4) </div> <span class="js-expandableListheader h-standardSpacingLeft "> <button class="btn btn-default btn-sm btn-edit h-zeroMargin" aria-label="edit delivery method"><a href="cart.html">edit</a></button> </span> </div>
         </div>
         <hr class="h-zeroMargin line-display-block" id="line">
         <div id="reviewDeliveryMethodCard" class="h-standardSpacingLeft h-standardPaddingLeft">
           <div class="h-bcbSpacingBottom">
             <div class="h-tightSpacingBottom h-bg-grayLighter h-standardPaddingLeft h-standardPaddingRight h-tightPadding h-img-rounded h-checkoutSpacingTop">
-              <div> <span class="form--text h-text-bold">standard shipping</span> <span class="h-text-greenDark h-text-bold">get it by Tue, Oct 31 </span> </div>
+              <div> <span class="form--text h-text-bold">standard shipping</span> <span class="h-text-greenDark h-text-bold">get it by <span id="ship-date">Tue, Oct 31</span></span> </div>
             </div>
             <div class="product-review"> <img class="product-review--image" src="assets/images/15068149.jpeg" alt="Nasacort® Allergy 24HR Multi-Symptom Nasal Spray - 2ct 120 sprays">
               <div class="product-review--detail">
@@ -225,7 +248,7 @@
         <div class="l-align-left h-tightSpacing js-opcHeading">
           <div class="padding-left-bcb h-display-flex">
             <h2 class="bravo h-zeroMargin cont-to-delivery" tabindex="-1">2 <span class="h1-light-font">| shipping address</span></h2>
-            <div class="padding-left-bcbcount"> (2 of 4) </div> <span id="deliveryExpandListHeader" class="h-standardSpacingLeft "> <button class="btn btn-default btn-sm btn-edit h-zeroMargin">edit</button> </span>
+            <div class="padding-left-bcbcount"> (2 of 4) </div> <span id="deliveryExpandListHeader" class="h-standardSpacingLeft "> <button class="btn btn-default btn-sm btn-edit h-zeroMargin"><a href="checkout.html">edit</a></button> </span>
           </div>
         </div>
         <hr class="h-zeroMargin line-display-block">
@@ -233,7 +256,7 @@
           <ul class="h-display-flex-top h-standardSpacing l-col-xs-block-1 l-col-sm-block-1 l-col-md-block-2 l-col-lg-block-2" id="summaryShippingBlock">
             <li class="h-standardSpacingBottom"> <b class="h-text-bold">shipping to</b>
               <section style="font-size: small">
-                <p>body292&nbsp;body292</p>
+                <p>Jane&nbsp;Doe</p>
                 <p>40404 Shady Ave Apt XXXX</p>
                 <p></p>
                 <p>Pittsburgh, PA&nbsp;15206-4801</p>
@@ -248,7 +271,7 @@
         <div class="l-align-left h-tightSpacing">
           <div class="padding-left-bcb h-display-flex">
             <h2 class="bravo h-zeroMargin cont-to-payment" tabindex="-1">3 <span class="h1-light-font">| payment </span></h2>
-            <div class="padding-left-bcbcount"> (3 of 4) </div> <span id="paymentExpandListHeader" class="h-standardSpacingLeft"> <button class="btn btn-default btn-sm btn-edit h-zeroMargin" aria-label="edit payment">edit</button> </span> </div>
+            <div class="padding-left-bcbcount"> (3 of 4) </div> <span id="paymentExpandListHeader" class="h-standardSpacingLeft"> <button class="btn btn-default btn-sm btn-edit h-zeroMargin" aria-label="edit payment"><a href="checkout.html">edit</a></button> </span> </div>
         </div>
         <hr class="h-zeroMargin line-display-block">
         <div id="reviewPaymentCard" class="h-standardSpacingLeft h-standardPaddingLeft">
@@ -264,7 +287,7 @@
         <div class="l-align-left h-tightSpacing js-opcHeading">
           <div class="padding-left-bcb h-display-flex">
             <h2 class="bravo h-zeroMargin cont-to-delivery" tabindex="-1">4 <span class="h1-light-font">| billing address</span></h2>
-            <div class="padding-left-bcbcount"> (4 of 4) </div> <span class="h-standardSpacingLeft "> <button class="btn btn-default btn-sm btn-edit h-zeroMargin">edit</button> </span>
+            <div class="padding-left-bcbcount"> (4 of 4) </div> <span class="h-standardSpacingLeft "> <button class="btn btn-default btn-sm btn-edit h-zeroMargin"><a href="checkout.html">edit</a></button> </span>
           </div>
         </div>
         <hr class="h-zeroMargin line-display-block">
@@ -272,7 +295,7 @@
           <ul class="h-display-flex-top h-standardSpacing l-col-xs-block-1 l-col-sm-block-1 l-col-md-block-2 l-col-lg-block-2">
             <li class="h-standardSpacingBottom"> <b class="h-text-bold">billing to</b>
               <section style="font-size: small">
-                <p>body292&nbsp;body292</p>
+                <p>Jane&nbsp;Doe</p>
                 <p>40404 Shady Ave Apt XXXX</p>
                 <p></p>
                 <p>Pittsburgh, PA&nbsp;15206-4801</p>
@@ -285,8 +308,8 @@
       <hr class="h-zeroMargin line-display-block">
       <div class="order--summary-wrapper summary-bgColorChange l-col-xs-12 l-row">
         <div class="l-col-xs-12 h-checkoutSpacingTop">
-          <button type="submit" class="btn btn-lg h-tightSpacingTop" style="float: left;">continue shopping</button>
-          <button type="submit" class="btn btn-lg btn-primary h-tightSpacingTop" style="float: right;">place my order</button>
+          <button type="submit" class="btn btn-lg h-tightSpacingTop" style="float: left;"><a href="category.html">continue shopping</a></button>
+          <button type="submit" class="btn btn-lg btn-primary h-tightSpacingTop" style="float: right;"><a href="success.html">place my order</a></button>
         </div>
       </div>
     </div>
@@ -324,12 +347,7 @@
         </div>
       </div>
     </aside>
-
-
   </section>
-
-
-
 </main>
 <footer class="footer">
   <div class="block-wrapper">
@@ -461,6 +479,15 @@
   $('.cancel-modal').click(function () {
     $(".modal").removeClass("modal-shown");
   });
+  var days = ['Sun', 'Mon', 'Tues', 'Wed', 'Thu', 'Fri', 'Sat'];
+  var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+  ];
+  var date = new Date();
+  date.setDate(date.getDate() + 3);
+  var nameOfDay = days[date.getDay()];
+  var nameOfMonth = months[date.getMonth()];
+  document.getElementById("ship-date").innerHTML = nameOfDay+", "+nameOfMonth+" "+(date.getDate());
 </script>
 </html>
 

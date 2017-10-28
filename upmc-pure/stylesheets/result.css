@@ -3,7 +3,7 @@
 
 p {
   font-family: 'Muli', sans-serif;
-  font-size: 100%;
+  font-size: 120%;
 }
 
 .banner-font {
@@ -43,18 +43,6 @@ p {
 
 .button-color {
   background-color: #771B61;
-}
-
-.pic-margin {
-  margin: 5px 5px 5px 5px;
-}
-
-.add-to-cart-margin-bottom {
-  margin-bottom: 8px;
-}
-
-.quantity-button-margin {
-  margin-left: 21%;
 }
 
 
