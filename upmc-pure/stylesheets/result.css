@@ -25,8 +25,8 @@ p {
   margin-left: 128px;
 }
 
-.sort-margin-right {
-  margin-right: 128px;
+.sort-margin {
+  margin: 15px 8px;
 }
 
 .product-margin-left {
@@ -45,4 +45,107 @@ p {
   background-color: #771B61;
 }
 
+<<<<<<< HEAD
+=======
+.pic-margin {
+  margin: 5px 5px 5px 5px;
+}
+
+.add-to-cart-margin-bottom {
+  margin-bottom: 8px;
+}
+
+.quantity-button-margin {
+  margin-left: 21%;
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #771B61; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    opacity: 0.9;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-family: 'Muli', sans-serif;
+    font-size: 15px;
+    color: #FFFFFF;
+    display: block;
+    transition: 0.2s
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #000000;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.advance-filter-button {
+  background-color: #8F4497;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 3px;
+  margin-bottom: 0px;
+  font-weight: 5px;
+}
+
+.advance-filter-button:hover {
+  background-color: #757575;
+}
+
+.add-to-cart-button {
+  background-color: #8F4497;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+
+.add-to-cart-button:hover {
+  background-color: #757575;
+}
+
+.quantity-button {
+  background-color: #8F4497;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 3px;
+}
+
+.quantity-button:hover {
+  background-color: #757575;
+}
+>>>>>>> origin/master
 
