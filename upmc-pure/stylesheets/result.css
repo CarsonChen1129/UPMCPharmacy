@@ -3,7 +3,7 @@
 
 p {
   font-family: 'Muli', sans-serif;
-  font-size: 120%;
+  font-size: 110%;
 }
 
 .banner-font {
@@ -45,8 +45,6 @@ p {
   background-color: #771B61;
 }
 
-<<<<<<< HEAD
-=======
 .pic-margin {
   margin: 5px 5px 5px 5px;
 }
@@ -56,8 +54,9 @@ p {
 }
 
 .quantity-button-margin {
-  margin-left: 21%;
+  margin-left: 22%;
 }
+
 
 /* The side navigation menu */
 .sidenav {
@@ -111,7 +110,7 @@ p {
 }
 
 .advance-filter-button {
-  background-color: #8F4497;
+  background-color: #771B61;
   color: white;
   border: none;
   padding: 8px 12px;
@@ -125,7 +124,7 @@ p {
 }
 
 .add-to-cart-button {
-  background-color: #8F4497;
+  background-color: #771B61;
   color: white;
   border: none;
   padding: 8px 12px;
@@ -137,7 +136,7 @@ p {
 }
 
 .quantity-button {
-  background-color: #8F4497;
+  background-color: #771B61;/*prev: 8F4497*/
   color: white;
   border: none;
   padding: 10px 15px;
@@ -147,5 +146,4 @@ p {
 .quantity-button:hover {
   background-color: #757575;
 }
->>>>>>> origin/master
 
