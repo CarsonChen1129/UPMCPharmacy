@@ -233,7 +233,7 @@ width: 80%;
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-h3 {
+.cont_form_sign_up h3 {
 	display: block;
     font-size: 1em;
     -webkit-margin-before: 1em;
