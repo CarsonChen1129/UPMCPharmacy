@@ -193,6 +193,18 @@ p {
   background-color: #757575;
 }
 
+.modal-button {
+  background-color: #771B61;
+  color: white;
+  border: none;
+  padding: 9px 15px;
+  border-radius: 3px;
+}
+
+.modal-button:hover {
+  background-color: #757575;
+}
+
 /*From product-detail.css*/
 /*breadcrumbs*/
 .breadcrumbs {
