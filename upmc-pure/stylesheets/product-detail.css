@@ -1630,7 +1630,6 @@ p+.stat {
 [type=url],
 [type=color],
 [type=number],
-[type=search],
 textarea {
     display: block;
     box-sizing: border-box;
@@ -3336,7 +3335,7 @@ table.hover tr:nth-of-type(even):hover {
     box-shadow: 0 0 6px 1px rgba(33, 153, 232, .5)
 }
 
-.column img {
+#sample-imgs img {
     width:6rem !important;
     height:6rem !important;
 }
