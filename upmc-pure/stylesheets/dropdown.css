@@ -19,7 +19,7 @@ Different state of .custom-dropdown
 
 
 .custom-dropdown__select--emerald {
-  background-color: #8F4497;
+  background-color: #9A30AD;
   color: #fff;
 }
 
@@ -63,7 +63,7 @@ Different state of .custom-dropdown
 
   /* Emerald dropdown style */
   .custom-dropdown--emerald::before {
-    background-color: #8F4497;
+    background-color: #9A30AD;
   }
 
   .custom-dropdown--emerald::after {

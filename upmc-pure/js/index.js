@@ -957,23 +957,20 @@ $(document).ready(function () {
     $("#logged-in").hide();
     // $("#nav-logged-in").hide();
 
-    var navLogIn = '<li id="nav-logged-in" class="hide-imgs hide avatar-sticky">\n' +
-        '                <a href="login.html">\n' +
-        '                    <img class="avatar" src="assets/images/IMG_9354.jpg">\n' +
-        '                </a>\n' +
-        '                <ul class="dropdown-content">\n' +
-        '                    <li><a href="login.html">Log Out</a></li>\n' +
-        '                </ul>\n' +
-        '            </li>';
-    var navNotLogIn = '<li id="nav-not-logged-in" class="hide-imgs hide avatar-sticky">\n' +
-        '                <a href="login.html">\n' +
-        '                    <i class="avatar fa fa-user-circle-o" aria-hidden="true"></i>\n' +
-        '                </a>\n' +
-        '                <ul class="dropdown-content">\n' +
-        '                    <li><a href="login.html">Log In</a></li>\n' +
-        '                    <li><a href="login.html">Register</a></li>\n' +
-        '                </ul>\n' +
-        '            </li>';
+    var navLogIn = `<a href="login.html">
+                    <img class="avatar" src="assets/images/IMG_9354.jpg">
+                </a>
+                <ul class="dropdown-content">
+                    <li id="nav-logout-button"><a href="">Log Out</a></li>
+                </ul>
+    `;
+    var navNotLogIn = `<a href="login.html">
+                    <i class="avatar fa fa-user-circle-o" aria-hidden="true"></i>
+                </a>
+                <ul class="dropdown-content">
+                    <li><a href="login.html">Log In</a></li>
+                    <li><a href="login.html">Register</a></li>
+                </ul>`;
 
 
     if (typeof(Storage) !== "undefined") {
@@ -990,13 +987,23 @@ $(document).ready(function () {
 
            // $("#nav-logged-in").show();
            // $("#nav-not-logged-in").hide();
-           // var element = $(navLogIn);
-           // $("nav-account").html(element);
+           document.getElementById('nav-account').innerHTML = navLogIn;
+       } else {
+           document.getElementById('nav-account').innerHTML = navNotLogIn;
        }
     } else {
 
     }
 
 
+    $("#logout-button").on( "click", function() {
+        localStorage.removeItem("logged");
+        location.reload(true);
+    });
+
+    $("#nav-logout-button").on( "click", function() {
+        localStorage.removeItem("logged");
+        location.reload(true);
+    });
 });
 

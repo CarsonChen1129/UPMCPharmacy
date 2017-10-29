@@ -34,7 +34,6 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" type="image/x-icon" href="assets/icons/upmc-icons/favicon.ico">
     <link rel="stylesheet" href="stylesheets/category.css"> <!--Need to put at the first-->
-    <link rel="stylesheet" href="stylesheets/productpage.css"> 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-purple.css">
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
@@ -75,7 +74,7 @@
                         <span>Your Account</span>
                     </a>
                     <ul class="dropdown-content">
-                        <li><a href="#">Log Out</a></li>
+                        <li id="logout-button"><a href="#">Log Out</a></li>
                     </ul>
                 </li>
                 <li>
@@ -101,7 +100,7 @@
 <nav class="nav-bar">
     <ul class="nav-list">
         <li class="hide-imgs hide logo-sticky">
-            <a href="">
+            <a href="index.html">
                 <img src="assets/images/upmc-1.png">
             </a>
         </li>
@@ -156,24 +155,7 @@
                 <img class="cart-icon" src="assets/icons/search.png"/>
             </a>
         </li>
-        <!--<li id="nav-account">-->
-        <!--</li>-->
-        <!--<li id="nav-not-logged-in" class="hide-imgs hide avatar-sticky">-->
-        <!--<a href="login.html">-->
-        <!--<i class="avatar fa fa-user-circle-o" aria-hidden="true"></i>-->
-        <!--</a>-->
-        <!--<ul class="dropdown-content">-->
-        <!--<li><a href="login.html">Log In</a></li>-->
-        <!--<li><a href="login.html">Register</a></li>-->
-        <!--</ul>-->
-        <!--</li>-->
-        <li id="nav-logged-in" class="hide-imgs hide avatar-sticky">
-            <a href="login.html">
-                <img class="avatar" src="assets/images/IMG_9354.jpg">
-            </a>
-            <ul class="dropdown-content">
-                <li><a href="login.html">Log Out</a></li>
-            </ul>
+        <li id="nav-account" class="hide-imgs hide avatar-sticky">
         </li>
         <li class="hide-imgs hide cart-sticky">
             <a href="cart.html">
@@ -199,25 +181,25 @@
 
 <main>
     <!-- Path -->
-<!--     <nav>
-        <ul style ="display: inline-block;list-style-type: none;">
-            <li style ="display: inline-block;list-style-type: none;">
-                <a href="index.html">
-                    <p class="w3-medium w3-padding-16 main-font w3-hover-opacity">Home</p>
-                </a>
-            </li>
-            <li style ="display: inline-block;list-style-type: none;">
-                <a href="category.html">
-                    <p class="w3-medium w3-padding-16 main-font w3-hover-opacity"> > Shop</p>
-                </a>
-            </li> 
-            <li style ="display: inline-block;list-style-type: none;">
-                <a href="category.html">
-                    <p class="w3-medium w3-padding-16 main-font w3-hover-opacity"> > Health & Medicine</p>
-                </a>
-            </li>
-        </ul>
-    </nav> -->
+    <!--     <nav>
+            <ul style ="display: inline-block;list-style-type: none;">
+                <li style ="display: inline-block;list-style-type: none;">
+                    <a href="index.html">
+                        <p class="w3-medium w3-padding-16 main-font w3-hover-opacity">Home</p>
+                    </a>
+                </li>
+                <li style ="display: inline-block;list-style-type: none;">
+                    <a href="category.html">
+                        <p class="w3-medium w3-padding-16 main-font w3-hover-opacity"> > Shop</p>
+                    </a>
+                </li>
+                <li style ="display: inline-block;list-style-type: none;">
+                    <a href="category.html">
+                        <p class="w3-medium w3-padding-16 main-font w3-hover-opacity"> > Health & Medicine</p>
+                    </a>
+                </li>
+            </ul>
+        </nav> -->
     <div>
         <nav>
             <ul class="breadcrumbs">
@@ -321,7 +303,6 @@
     </div>
     <div class="w3-padding-16"></div>
 </main>
-
 <footer class="footer">
     <div class="block-wrapper">
         <div class="footer-subscribe">
@@ -370,19 +351,19 @@
 
                     <ul>
                         <li>
-                            <a href="">Payment</a>
+                            <a href="policy.html">Payment</a>
                         </li>
                         <li>
-                            <a href="">Shipping</a>
+                            <a href="policy.html">Shipping</a>
                         </li>
                         <li>
-                            <a href="">Collect in store</a>
+                            <a href="policy.html">Collect in store</a>
                         </li>
                         <li>
-                            <a href="">Track orders</a>
+                            <a href="policy.html">Track orders</a>
                         </li>
                         <li>
-                            <a href="">Exchange & returns</a>
+                            <a href="policy.html">Exchange & returns</a>
                         </li>
                     </ul>
                 </div>
@@ -441,7 +422,6 @@
         </div>
     </div>
 </footer>
-
 </body>
 </html>
 

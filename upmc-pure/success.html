@@ -44,13 +44,23 @@
         </nav>
         <nav class="header-right-nav">
             <ul class="header-list">
-                <li>
+                <li id="not-logged-in">
+                    <a href="login.html">
+                        <i class="avatar fa fa-user-circle-o" aria-hidden="true"></i>
+                        <span>Your Account</span>
+                    </a>
+                    <ul class="dropdown-content">
+                        <li><a href="login.html">Log In</a></li>
+                        <li><a href="login.html">Register</a></li>
+                    </ul>
+                </li>
+                <li id="logged-in">
                     <a href="login.html">
                         <img class="avatar" src="assets/images/IMG_9354.jpg"/>
                         <span>Your Account</span>
                     </a>
                     <ul class="dropdown-content">
-                        <li><a href="login.html">Log Out</a></li>
+                        <li id="logout-button"><a href="#">Log Out</a></li>
                     </ul>
                 </li>
                 <li>
@@ -130,14 +140,7 @@
                 <img class="cart-icon" src="assets/icons/search.png"/>
             </a>
         </li>
-        <li class="hide-imgs hide avatar-sticky">
-            <a href="login.html">
-                <i class="avatar fa fa-user-circle-o" aria-hidden="true"></i>
-            </a>
-            <ul class="dropdown-content">
-                <li><a href="login.html">Log In</a></li>
-                <li><a href="login.html">Register</a></li>
-            </ul>
+        <li id="nav-account" class="hide-imgs hide avatar-sticky">
         </li>
         <li class="hide-imgs hide cart-sticky">
             <a href="cart.html">
@@ -343,6 +346,18 @@
                                                 </tr>
                                                 </tbody>
                                             </table>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            </tbody>
+        </table>
 </main>
 <footer class="footer">
     <div class="block-wrapper">
@@ -392,19 +407,19 @@
 
                     <ul>
                         <li>
-                            <a href="">Payment</a>
+                            <a href="policy.html">Payment</a>
                         </li>
                         <li>
-                            <a href="">Shipping</a>
+                            <a href="policy.html">Shipping</a>
                         </li>
                         <li>
-                            <a href="">Collect in store</a>
+                            <a href="policy.html">Collect in store</a>
                         </li>
                         <li>
-                            <a href="">Track orders</a>
+                            <a href="policy.html">Track orders</a>
                         </li>
                         <li>
-                            <a href="">Exchange & returns</a>
+                            <a href="policy.html">Exchange & returns</a>
                         </li>
                     </ul>
                 </div>

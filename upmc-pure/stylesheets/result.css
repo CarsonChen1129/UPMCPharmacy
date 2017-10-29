@@ -1,5 +1,51 @@
 @import url("https://fonts.googleapis.com/css?family=Lobster");
 @import url("https://fonts.googleapis.com/css?family=Muli");
+/*@import url("https://fonts.googleapis.com/css?family=Lobster");*/
+/*@import url("https://fonts.googleapis.com/css?family=Muli");*/
+
+/*p {*/
+  /*font-family: 'Muli', sans-serif;*/
+  /*font-size: 120%;*/
+/*}*/
+
+/*.banner-font {*/
+  /*font-family: "Lobster", serif;*/
+/*}*/
+
+/*.banner-font-padding {*/
+  /*height: 90px;*/
+  /*width: 90px;*/
+  /*background-color: white;*/
+  /*display: block;*/
+/*}*/
+
+/*.main-font {*/
+  /*font-family: 'Muli', sans-serif;*/
+/*}*/
+
+/*.path-margin-left {*/
+  /*margin-left: 128px;*/
+/*}*/
+
+/*.sort-margin-right {*/
+  /*margin-right: 128px;*/
+/*}*/
+
+/*.product-margin-left {*/
+  /*margin-left: 96px;*/
+/*}*/
+
+/*.product-margin-right {*/
+  /*margin-right: 96px;*/
+/*}*/
+
+/*.input-margin {*/
+  /*margin: 0px 5px;*/
+/*}*/
+
+/*.button-color {*/
+  /*background-color: #771B61;*/
+/*}*/
 
 p {
   font-family: 'Muli', sans-serif;
@@ -60,53 +106,53 @@ p {
 
 /* The side navigation menu */
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
-    top: 0;
-    left: 0;
-    background-color: #771B61; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 60px; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
-    opacity: 0.9;
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #771B61; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  opacity: 0.9;
 }
 
 /* The navigation menu links */
 .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-family: 'Muli', sans-serif;
-    font-size: 15px;
-    color: #FFFFFF;
-    display: block;
-    transition: 0.2s
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-family: 'Muli', sans-serif;
+  font-size: 15px;
+  color: #FFFFFF;
+  display: block;
+  transition: 0.2s
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .offcanvas a:focus{
-    color: #000000;
+  color: #000000;
 }
 
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
 }
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
-    transition: margin-left .5s;
+  transition: margin-left .5s;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
 
 .advance-filter-button {
@@ -150,107 +196,107 @@ p {
 /*From productpage.css*/
 /*breadcrumbs*/
 .breadcrumbs {
-    list-style: none;
-    margin: 0 0 1rem
+  list-style: none;
+  margin: 0 0 1rem
 }
 .breadcrumbs li {
-    float: left;
-    color: #0a0a0a;
-    font-size: .9rem;
-    cursor: default;
-    text-transform: uppercase;
-    line-height: 4;
-    font-weight: bold;
+  float: left;
+  color: #0a0a0a;
+  font-size: .9rem;
+  cursor: default;
+  text-transform: uppercase;
+  line-height: 4;
+  font-weight: bold;
 }
 .breadcrumbs li:not(:last-child)::after {
-    color: #cacaca;
-    content: "/";
-    margin: 0 .75rem;
-    position: relative;
-    top: 1px;
-    opacity: 1
+  color: #cacaca;
+  content: "/";
+  margin: 0 .75rem;
+  position: relative;
+  top: 1px;
+  opacity: 1
 }
 .breadcrumbs a {
-    color: #4e0650;
-    font-size: 0.9rem;
+  color: #4e0650;
+  font-size: 0.9rem;
 }
 .breadcrumbs a:hover {
-    text-decoration: underline
+  text-decoration: underline
 }
 .breadcrumbs .disabled {
-    color: #cacaca
+  color: #cacaca
 }
 
 .show-for-sr {
-    position: absolute!important;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0)
+  position: absolute!important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0)
 }
 /*row*/
 .row {
-    max-width: 75rem;
-    margin-left: auto;
-    margin-right: auto
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto
 }
 .row::after,
 .row::before {
-    content: ' ';
-    display: table
+  content: ' ';
+  display: table
 }
 .row::after {
-    clear: both
+  clear: both
 }
 .row .row {
-    margin-left: -.9375rem;
-    margin-right: -.9375rem
+  margin-left: -.9375rem;
+  margin-right: -.9375rem
 }
 .row .row.collapse {
-    margin-left: 0;
-    margin-right: 0
+  margin-left: 0;
+  margin-right: 0
 }
 .row.small-uncollapse>.column,
 .row.small-uncollapse>.columns {
-    padding-left: 30px;
-    padding-right: 30px
+  padding-left: 30px;
+  padding-right: 30px
 }
 @media screen and (min-width: 40em) {
-    .row.medium-collapse>.column,
-    .row.medium-collapse>.columns {
-        padding-left: 0;
-        padding-right: 0
-    }
-    .row.medium-uncollapse>.column,
-    .row.medium-uncollapse>.columns {
-        padding-left: 30px;
-        padding-right: 30px
-    }
+  .row.medium-collapse>.column,
+  .row.medium-collapse>.columns {
+    padding-left: 0;
+    padding-right: 0
+  }
+  .row.medium-uncollapse>.column,
+  .row.medium-uncollapse>.columns {
+    padding-left: 30px;
+    padding-right: 30px
+  }
 }
 @media screen and (min-width: 64em) {
-    .row.large-collapse>.column,
-    .row.large-collapse>.columns {
-        padding-left: 0;
-        padding-right: 0
-    }
-    .row.large-uncollapse>.column,
-    .row.large-uncollapse>.columns {
-        padding-left: 30px;
-        padding-right: 30px
-    }
+  .row.large-collapse>.column,
+  .row.large-collapse>.columns {
+    padding-left: 0;
+    padding-right: 0
+  }
+  .row.large-uncollapse>.column,
+  .row.large-uncollapse>.columns {
+    padding-left: 30px;
+    padding-right: 30px
+  }
 }
 .row.expanded {
-    max-width: none
+  max-width: none
 }
 
 .columns {
-    width: 100%;
-    float: left;
-    padding-left: .9375rem;
-    padding-right: .9375rem
+  width: 100%;
+  float: left;
+  padding-left: .9375rem;
+  padding-right: .9375rem
 }
 .column:last-child,
 .columns:last-child {
-    float: right
+  float: right
 }
 
