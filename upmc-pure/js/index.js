@@ -1005,5 +1005,17 @@ $(document).ready(function () {
         localStorage.removeItem("logged");
         location.reload(true);
     });
+
+    $("#search-item").keyup(function(event) {
+        if (event.keyCode === 13) {
+            location.href = "search-result.html";
+        }
+    });
+
+    $("#search-item-nav").keyup(function(event) {
+        if (event.keyCode === 13) {
+            location.href = "search-result.html";
+        }
+    });
 });
 
