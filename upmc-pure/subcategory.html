@@ -33,6 +33,7 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" type="image/x-icon" href="assets/icons/upmc-icons/favicon.ico">
     <link rel="stylesheet" href="stylesheets/category.css"> <!--Need to put at the first-->
+    <link rel="stylesheet" href="stylesheets/productpage.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-purple.css">
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
@@ -196,7 +197,7 @@
 
 <main>
     <!-- Path -->
-    <nav>
+<!--     <nav>
         <ul style ="display: inline-block;list-style-type: none;">
             <li style ="display: inline-block;list-style-type: none;">
                 <a href="index.html">
@@ -214,11 +215,23 @@
                 </a>
             </li>
         </ul>
-    </nav>
+    </nav> -->
+
+    <div class="row columns">
+        <nav aria-label="You are here:" role="navigation">
+            <ul class="breadcrumbs">
+                <li ><a href="index.html">Home</a></li>
+                <li ><a href="category.html">Health & Medicine</a></li>
+                <li>
+                    <span class="show-for-sr">Current: </span> Allergy & Asthma
+                </li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- Banner -->
     <div class="w3-display-container w3-content w3-center" style="max-width:1500px">
-        <img src="assets/images/img-subcategory/allergy&asthma.jpg" width="100%" height="480">
+        <img src="assets/images/img-subcategory/allergy&asthma.png" width="100%" height="480">
         <div class="w3-display-middle w3-padding-large w3-wide w3-center w3-black" style="opacity: 0.75">
             <h1 class="w3-xxxlarge w3-animate-bottom banner-font">Allergy</h1>
             <h1 class="w3-xxlarge w3-animate-bottom banner-font"> & </h1>
@@ -234,7 +247,7 @@
             <div class="w3-card-2 pic-margin">
                 <img src="assets/images/img-subcategory/allergy-asthma-for-children.jpg" style="width:100%">
                 <div class="w3-container">
-                    <p>Allergy & Asthma for Children</p>
+                    <p class="main-font-style">Allergy & Asthma for Children</p>
                 </div>
             </div>
         </a>
@@ -243,7 +256,7 @@
             <div class="w3-card-2 pic-margin">
                 <img src="assets/images/img-subcategory/allergy-sinus-medicine.jpg" style="width:100%">
                 <div class="w3-container">
-                    <p>Allergy & Sinus Medicine</p>
+                    <p class="main-font-style">Allergy & Sinus Medicine</p>
                 </div>
             </div>
         </a>
@@ -252,7 +265,7 @@
             <div class="w3-card-2 pic-margin">
                 <img src="assets/images/img-subcategory/allergy-eye-drops.jpg" style="width:100%">
                 <div class="w3-container">
-                    <p>Allergy Eye Drops</p>
+                    <p class="main-font-style">Allergy Eye Drops</p>
                 </div>
             </div>
         </a>
@@ -265,7 +278,7 @@
             <div class="w3-card-2 pic-margin">
                 <img src="assets/images/img-subcategory/asthma-treatment.jpg" style="width:100%">
                 <div class="w3-container">
-                    <p>Asthma Treatment</p>
+                    <p class="main-font-style">Asthma Treatment</p>
                 </div>
             </div>
         </a>
@@ -274,7 +287,7 @@
             <div class="w3-card-2 pic-margin">
                 <img src="assets/images/img-subcategory/humidifiers-purifiers-vaporizers.jpg" style="width:100%">
                 <div class="w3-container">
-                    <p>Humidifiers, Purifiers & Vaporizers</p>
+                    <p class="main-font-style">Humidifiers, Purifiers & Vaporizers</p>
                 </div>
             </div>
         </a>
@@ -283,7 +296,7 @@
             <div class="w3-card-2 pic-margin">
                 <img src="assets/images/img-subcategory/nasal-care.jpg" style="width:100%">
                 <div class="w3-container">
-                    <p>Nasal Care</p>
+                    <p class="main-font-style">Nasal Care</p>
                 </div>
             </div>
         </a>

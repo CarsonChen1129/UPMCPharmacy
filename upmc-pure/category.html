@@ -34,6 +34,7 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" type="image/x-icon" href="assets/icons/upmc-icons/favicon.ico">
     <link rel="stylesheet" href="stylesheets/category.css"> <!--Need to put at the first-->
+    <link rel="stylesheet" href="stylesheets/productpage.css"> 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-purple.css">
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
@@ -198,25 +199,35 @@
 
 <main>
     <!-- Path -->
-    <nav>
+<!--     <nav>
         <ul style ="display: inline-block;list-style-type: none;">
             <li style ="display: inline-block;list-style-type: none;">
                 <a href="index.html">
                     <p class="w3-medium w3-padding-16 main-font w3-hover-opacity">Home</p>
                 </a>
             </li>
-            <!--             <li style ="display: inline-block;list-style-type: none;">
-                            <a href="category.html">
-                                <p class="w3-medium w3-padding-16 main-font w3-hover-opacity"> > Shop</p>
-                            </a>
-                        </li> -->
+            <li style ="display: inline-block;list-style-type: none;">
+                <a href="category.html">
+                    <p class="w3-medium w3-padding-16 main-font w3-hover-opacity"> > Shop</p>
+                </a>
+            </li> 
             <li style ="display: inline-block;list-style-type: none;">
                 <a href="category.html">
                     <p class="w3-medium w3-padding-16 main-font w3-hover-opacity"> > Health & Medicine</p>
                 </a>
             </li>
         </ul>
-    </nav>
+    </nav> -->
+    <div>
+        <nav>
+            <ul class="breadcrumbs">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <span class="show-for-sr">Current: </span> Health & Medicine
+                </li>
+            </ul>
+        </nav>
+    </div>
 
     <!-- Banner -->
     <div class="w3-display-container w3-content w3-center" style="max-width:1500px">
@@ -236,7 +247,7 @@
             <div class="w3-card-4 pic-margin">
                 <img src="assets/images/img-category/allergy.jpg" style="width:100%">
                 <div class="w3-container">
-                    <p>Allergy & Asthma</p>
+                    <p class="main-font-style">Allergy & Asthma</p>
                 </div>
             </div>
         </a>
@@ -245,7 +256,7 @@
             <div class="w3-card-2 pic-margin">
                 <img src="assets/images/img-category/bracessupports.jpg" style="width:100%">
                 <div class="w3-container">
-                    <p>Braces & Supports</p>
+                    <p class="main-font-style">Braces & Supports</p>
                 </div>
             </div>
         </a>
@@ -254,7 +265,7 @@
             <div class="w3-card-2 pic-margin">
                 <img src="assets/images/img-category/cough.jpg" style="width:100%">
                 <div class="w3-container">
-                    <p>Cough, Cold & Flu</p>
+                    <p class="main-font-style">Cough, Cold & Flu</p>
                 </div>
             </div>
         </a>
@@ -263,7 +274,7 @@
             <div class="w3-card-2 pic-margin">
                 <img src="assets/images/img-category/digestive.jpg" style="width:100%">
                 <div class="w3-container">
-                    <p>Digestive Health</p>
+                    <p class="main-font-style">Digestive Health</p>
                 </div>
             </div>
         </a>
@@ -276,7 +287,7 @@
             <div class="w3-card-2 pic-margin">
                 <img src="assets/images/img-category/firstAid.jpg" style="width:100%">
                 <div class="w3-container">
-                    <p>First Aid</p>
+                    <p class="main-font-style">First Aid</p>
                 </div>
             </div>
         </a>
@@ -285,7 +296,7 @@
             <div class="w3-card-2 pic-margin">
                 <img src="assets/images/img-category/painfever.jpg" style="width:100%">
                 <div class="w3-container">
-                    <p>Pain & Fever</p>
+                    <p class="main-font-style">Pain & Fever</p>
                 </div>
             </div>
         </a>
@@ -294,7 +305,7 @@
             <div class="w3-card-2 pic-margin">
                 <img src="assets/images/img-category/sleep&snore.jpg" style="width:100%">
                 <div class="w3-container">
-                    <p>Sleeping & Snoring</p>
+                    <p class="main-font-style">Sleeping & Snoring</p>
                 </div>
             </div>
         </a>
@@ -303,14 +314,14 @@
             <div class="w3-card-4 pic-margin">
                 <img src="assets/images/img-category/stopsmoking.jpg" style="width:100%">
                 <div class="w3-container">
-                    <p>Stop Smoking</p>
+                    <p class="main-font-style">Stop Smoking</p>
                 </div>
             </div>
         </a>
     </div>
-
     <div class="w3-padding-16"></div>
 </main>
+
 <footer class="footer">
     <div class="block-wrapper">
         <div class="footer-subscribe">

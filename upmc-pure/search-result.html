@@ -42,10 +42,10 @@
     <link rel="stylesheet" href="stylesheets/dropdown.css">
     <link rel="stylesheet" href="stylesheets/w3.css">
     <link rel="stylesheet" href="stylesheets/w3-theme-purple.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheets/index.css">
     <link rel="stylesheet" href="lib/jquery-ui-1.12.1/jquery-ui.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="lib/jquery-3.2.1.js"></script>
     <script src="lib/jquery-ui-1.12.1/jquery-ui.js"></script>
     <script src="js/index.js"></script>
@@ -235,7 +235,7 @@ function closeNav() {
 
 <main>
     <!--Path-->
-    <nav>
+<!--     <nav>
         <ul style ="display: inline-block;list-style-type: none;">
             <li style ="display: inline-block;list-style-type: none;">
                 <a href="index.html">
@@ -248,7 +248,19 @@ function closeNav() {
                 </a>
             </li>
         </ul>
-    </nav>
+    </nav> -->
+    <!--For consistency-->
+    <div class="row columns">
+        <nav aria-label="You are here:" role="navigation">
+            <ul class="breadcrumbs">
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <span class="show-for-sr">Current: </span> Search Result for "Nasal"
+                </li>
+            </ul>
+        </nav>
+    </div>
+
     <!-- Result-->
     <div class = "w3-center">
         <h3 class="w3-medium main-font">39 products</h3>

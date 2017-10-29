@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Lobster");
 @import url("https://fonts.googleapis.com/css?family=Muli");
 
-p {
+.main-font-style {
   font-family: 'Muli', sans-serif;
-  font-size: 135%;
+  font-size: 120% !important;
   text-align: center;
   margin: 15px 0px 15px 0px;
+  font-weight: normal !important;
 }
 
 .banner-font {
@@ -31,3 +32,5 @@ p {
 .product-margin-right {
   margin-right: 96px;
 }
+
+

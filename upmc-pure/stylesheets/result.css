@@ -41,7 +41,7 @@ p {
   margin: 0px 5px;
 }
 
-.button-color {
+.modal-color {
   background-color: #771B61;
 }
 
@@ -145,5 +145,112 @@ p {
 
 .quantity-button:hover {
   background-color: #757575;
+}
+
+/*From productpage.css*/
+/*breadcrumbs*/
+.breadcrumbs {
+    list-style: none;
+    margin: 0 0 1rem
+}
+.breadcrumbs li {
+    float: left;
+    color: #0a0a0a;
+    font-size: .9rem;
+    cursor: default;
+    text-transform: uppercase;
+    line-height: 4;
+    font-weight: bold;
+}
+.breadcrumbs li:not(:last-child)::after {
+    color: #cacaca;
+    content: "/";
+    margin: 0 .75rem;
+    position: relative;
+    top: 1px;
+    opacity: 1
+}
+.breadcrumbs a {
+    color: #4e0650;
+    font-size: 0.9rem;
+}
+.breadcrumbs a:hover {
+    text-decoration: underline
+}
+.breadcrumbs .disabled {
+    color: #cacaca
+}
+
+.show-for-sr {
+    position: absolute!important;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0)
+}
+/*row*/
+.row {
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto
+}
+.row::after,
+.row::before {
+    content: ' ';
+    display: table
+}
+.row::after {
+    clear: both
+}
+.row .row {
+    margin-left: -.9375rem;
+    margin-right: -.9375rem
+}
+.row .row.collapse {
+    margin-left: 0;
+    margin-right: 0
+}
+.row.small-uncollapse>.column,
+.row.small-uncollapse>.columns {
+    padding-left: 30px;
+    padding-right: 30px
+}
+@media screen and (min-width: 40em) {
+    .row.medium-collapse>.column,
+    .row.medium-collapse>.columns {
+        padding-left: 0;
+        padding-right: 0
+    }
+    .row.medium-uncollapse>.column,
+    .row.medium-uncollapse>.columns {
+        padding-left: 30px;
+        padding-right: 30px
+    }
+}
+@media screen and (min-width: 64em) {
+    .row.large-collapse>.column,
+    .row.large-collapse>.columns {
+        padding-left: 0;
+        padding-right: 0
+    }
+    .row.large-uncollapse>.column,
+    .row.large-uncollapse>.columns {
+        padding-left: 30px;
+        padding-right: 30px
+    }
+}
+.row.expanded {
+    max-width: none
+}
+
+.columns {
+    width: 100%;
+    float: left;
+    padding-left: .9375rem;
+    padding-right: .9375rem
+}
+.column:last-child,
+.columns:last-child {
+    float: right
 }
 

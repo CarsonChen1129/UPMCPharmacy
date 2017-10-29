@@ -206,18 +206,18 @@
 
 <main>
     <!--Path-->
-    <nav>
+<!--    <nav>
         <ul style ="display: inline-block;list-style-type: none;">
             <li style ="display: inline-block;list-style-type: none;">
                 <a href="index.html">
                     <p class="w3-medium w3-padding-16 main-font w3-hover-opacity">Home</p>
                 </a>
             </li>
-            <!--             <li style ="display: inline-block;list-style-type: none;">
-                            <a href="category.html">
-                                <p class="w3-medium w3-padding-16 main-font w3-hover-opacity"> > Shop</p>
-                            </a>
-                        </li> -->
+           <li style ="display: inline-block;list-style-type: none;">
+                <a href="category.html">
+                    <p class="w3-medium w3-padding-16 main-font w3-hover-opacity"> > Shop</p>
+                </a>
+            </li> 
             <li style ="display: inline-block;list-style-type: none;">
                 <a href="category.html">
                     <p class="w3-medium w3-padding-16 main-font w3-hover-opacity"> > Health & Medicine</p>
@@ -235,6 +235,21 @@
             </li>
         </ul>
     </nav>
+-->
+    <!--for consistency-->
+    <div class="row columns">
+        <nav aria-label="You are here:" role="navigation">
+            <ul class="breadcrumbs">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="category.html">Health & Medicine</a></li>
+                <li><a href="subcategory.html">Allergy & Asthma</a></li>
+                <li>
+                    <span class="show-for-sr">Current: </span> Nasal Care
+                </li>
+            </ul>
+        </nav>
+    </div>
+
     <!-- Result-->
     <div class = "w3-center">
         <h3 class="w3-medium main-font">75 products</h3>
@@ -287,9 +302,9 @@
                 <!-- Modal content -->
                 <div id="add-to-cart-model" class="w3-modal">
                     <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="width: 40%">
-                        <div class="w3-container w3-purple w3-large w3-margin-top">
+                        <div class="w3-container modal-color w3-large w3-margin-top">
                             <span onclick="document.getElementById('add-to-cart-model').style.display='none'"
-                                  class="w3-button w3-purple w3-large w3-right">&times;
+                                  class="w3-button modal-color w3-large w3-right">&times;
                             </span>
                         </div>
                         <div class="w3-container">
@@ -304,7 +319,7 @@
                             <button class="w3-button w3-left w3-white w3-border main-font"
                                     onclick="document.getElementById('add-to-cart-model').style.display='none'">Continue to Shopping</button>
                             <a href="cart.html">
-                                <button class="w3-button w3-right w3-purple w3-border main-font">Go to my Shopping Cart</button>
+                                <button class="w3-button w3-right w3-border main-font w3-purple">Go to my Shopping Cart</button>
                             </a>
                         </div>
                     </div>
