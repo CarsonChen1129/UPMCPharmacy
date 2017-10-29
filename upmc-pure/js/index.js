@@ -8,6 +8,7 @@ $(document).ready(function () {
         }else {
             $(".nav-bar").removeClass('sticky');
             $(".hide-imgs").addClass('hide');
+            $("#nav-search").hide();
         }
     });
 
