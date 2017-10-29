@@ -51,213 +51,229 @@
     <script src="lib/jquery-ui-1.12.1/jquery-ui.js"></script>
     <script src="js/index.js"></script>
 </head>
-<body>
 
-<!--Header-->
-<header>
-    <section class="header-wrapper">
-        <nav class="header-left-nav">
-            <ul class="header-list">
-                <li><a href="http://www.upmc.com/contact/Pages/default.aspx">Contact us</a></li>
-                <li><a href="http://www.upmc.com/Services/Pages/default.aspx">Services</a></li>
-                <li><a href="http://www.upmc.com/Services/pharmacy/Pages/default.aspx">Find a store</a></li>
-                <li><a href="tel:1-800-533-8762">1-800-533-8762(UPMC)</a></li>
-            </ul>
-        </nav>
-        <nav class="header-right-nav">
-            <ul class="header-list">
-                <li id="not-logged-in">
-                    <a href="login.html">
-                        <i class="avatar fa fa-user-circle-o" aria-hidden="true"></i>
-                        <span>Your Account</span>
-                    </a>
-                    <ul class="dropdown-content">
-                        <li><a href="login.html">Log In</a></li>
-                        <li><a href="login.html">Register</a></li>
-                    </ul>
-                </li>
-                <li id="logged-in">
-                    <a href="login.html">
-                        <img class="avatar" src="assets/images/IMG_9354.jpg"/>
-                        <span>Your Account</span>
-                    </a>
-                    <ul class="dropdown-content">
-                        <li><a href="#">Log Out</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="cart.html">
-                        <img class="cart-icon" src="assets/icons/shopping-cart.png"/>
-                        <span>Shopping Bag</span>
+
+<!--Side Filter-->
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">On Sale</a>
+    <a href="#">Brand</a>
+    <a href="#">Top Rated</a>
+    <a href="#">Product Type</a>
+    <a href="#">Quantity</a>
+    <a href="#">Concern</a>
+    <a href="#">Lifestage</a>
+    <a href="#">Free Shipping</a>
+    <a href="#">New Arrival</a>
+    <a href="#">Online Only</a>
+</div>
+
+<script type="text/javascript">
+    /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "12%";
+        document.getElementById("main").style.marginLeft = "12%";
+    }
+
+    /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+
+</script>
+
+<div id="main">
+    <!--Header-->
+    <header>
+        <section class="header-wrapper">
+            <nav class="header-left-nav">
+                <ul class="header-list">
+                    <li><a href="http://www.upmc.com/contact/Pages/default.aspx">Contact us</a></li>
+                    <li><a href="http://www.upmc.com/Services/Pages/default.aspx">Services</a></li>
+                    <li><a href="http://www.upmc.com/Services/pharmacy/Pages/default.aspx">Find a store</a></li>
+                    <li><a href="tel:1-800-533-8762">1-800-533-8762(UPMC)</a></li>
+                </ul>
+            </nav>
+            <nav class="header-right-nav">
+                <ul class="header-list">
+                    <li id="not-logged-in">
+                        <a href="login.html">
+                            <i class="avatar fa fa-user-circle-o" aria-hidden="true"></i>
+                            <span>Your Account</span>
+                        </a>
                         <ul class="dropdown-content">
-                            <li><a href="cart.html">View Cart</a></li>
-                            <li><a href="cart.html">Check Out</a></li>
+                            <li><a href="login.html">Log In</a></li>
+                            <li><a href="login.html">Register</a></li>
                         </ul>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </section>
-    <section class="img-wrapper">
-        <a href="index.html">
-            <img class="logo center" src="assets/images/upmc-1.png">
-        </a>
-    </section>
-</header>
-<!--Nav-->
-<nav class="nav-bar">
-    <ul class="nav-list">
-        <li class="hide-imgs hide logo-sticky">
-            <a href="">
-                <img src="assets/images/upmc-1.png">
+                    </li>
+                    <li id="logged-in">
+                        <a href="login.html">
+                            <img class="avatar" src="assets/images/IMG_9354.jpg"/>
+                            <span>Your Account</span>
+                        </a>
+                        <ul class="dropdown-content">
+                            <li id="logout-button"><a href="#">Log Out</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="cart.html">
+                            <img class="cart-icon" src="assets/icons/shopping-cart.png"/>
+                            <span>Shopping Bag</span>
+                            <ul class="dropdown-content">
+                                <li><a href="cart.html">View Cart</a></li>
+                                <li><a href="cart.html">Check Out</a></li>
+                            </ul>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section class="img-wrapper">
+            <a href="index.html">
+                <img class="logo center" src="assets/images/upmc-1.png">
             </a>
-        </li>
-        <li class="menu-item">
-            <a href="category.html">Shop</a>
-            <ul class="dropdown-content">
-                <li><a href="category.html">Health & Medicine</a></li>
-                <li><a href="category.html">Vitamins</a></li>
-                <li><a href="category.html">Personal Care</a></li>
-                <li><a href="category.html">Home Health Care</a></li>
-            </ul>
-        </li>
-        <li class="menu-item" >
-            <a href="error.html">Prescription</a>
-            <ul class="dropdown-content">
-                <li><a href="error.html">Prescription Status</a></li>
-                <li><a href="error.html">Request New Prescription</a></li>
-                <li><a href="error.html">Refill Prescriptions</a></li>
-                <li><a href="error.html">Auto Refill</a></li>
-                <li><a href="error.html">Print Prescription Records</a></li>
-                <li><a href="error.html">Drug Information</a></li>
-            </ul>
-        </li>
-        <li class="menu-item">
-            <a href="error.html">Contact Lenses</a>
-            <ul class="dropdown-content">
-                <li><a href="error.html">Recorder Contact Lenses</a></li>
-                <li><a href="error.html">Shop All Contact Lenses</a></li>
-                <li><a href="error.html">Solutions, Drops & Cases</a></li>
-                <li><a href="error.html">Eye Health Supplements</a></li>
-            </ul>
-        </li>
-        <li class="menu-item">
-            <a href="error.html">Health Info & Services</a>
-            <ul class="dropdown-content">
-                <li><a href="error.html">Appointment Scheduler</a></li>
-                <li><a href="error.html">Healthcare Clinic</a></li>
-                <li><a href="error.html">Flu Shots & Immunizations</a></li>
-                <li><a href="error.html">Medicare Information</a></li>
-                <li><a href="error.html">Health Apps & Devices</a></li>
-                <li><a href="error.html">Health Answers</a></li>
-            </ul>
-        </li>
-        <li class="menu-item">
-            <a href="error.html">Online Doctor®</a>
-        </li>
-        <li class="menu-item">
-            <a href="error.html">Weekly Deals</a>
-        </li>
-        <li class="hide-imgs hide search-sticky">
-            <a id="search-button">
-                <img class="cart-icon" src="assets/icons/search.png"/>
-            </a>
-        </li>
-        <!--<li id="nav-account">-->
-        <!--</li>-->
-        <!--<li id="nav-not-logged-in" class="hide-imgs hide avatar-sticky">-->
-        <!--<a href="login.html">-->
-        <!--<i class="avatar fa fa-user-circle-o" aria-hidden="true"></i>-->
-        <!--</a>-->
-        <!--<ul class="dropdown-content">-->
-        <!--<li><a href="login.html">Log In</a></li>-->
-        <!--<li><a href="login.html">Register</a></li>-->
-        <!--</ul>-->
-        <!--</li>-->
-        <li id="nav-logged-in" class="hide-imgs hide avatar-sticky">
-            <a href="login.html">
-                <img class="avatar" src="assets/images/IMG_9354.jpg">
-            </a>
-            <ul class="dropdown-content">
-                <li><a href="login.html">Log Out</a></li>
-            </ul>
-        </li>
-        <li class="hide-imgs hide cart-sticky">
-            <a href="cart.html">
-                <img class="cart-icon" src="assets/icons/shopping-cart.png"/>
-            </a>
-            <ul class="dropdown-content">
-                <li><a href="cart.html">View Cart</a></li>
-                <li><a href="cart.html">Check Out</a></li>
-            </ul>
-        </li>
-    </ul>
-    <div class="purple-banner"></div>
-    <section class="nav-search" id="nav-search">
-        <div class="search-area">
-            <div class="search-box">
-                <label for="search-item-nav"></label>
-                <input id="search-item-nav" class="search-input" type="search" placeholder="Search products by name or keywords">
-                <a href="search-result.html"><button>Search</button></a>
+        </section>
+    </header>
+    <nav class="nav-bar">
+        <ul class="nav-list">
+            <li class="hide-imgs hide logo-sticky">
+                <a href="index.html">
+                    <img src="assets/images/upmc-1.png">
+                </a>
+            </li>
+            <li class="menu-item">
+                <a href="category.html">Shop</a>
+                <ul class="dropdown-content">
+                    <li><a href="category.html">Health & Medicine</a></li>
+                    <li><a href="category.html">Vitamins</a></li>
+                    <li><a href="category.html">Personal Care</a></li>
+                    <li><a href="category.html">Home Health Care</a></li>
+                </ul>
+            </li>
+            <li class="menu-item" >
+                <a href="error.html">Prescription</a>
+                <ul class="dropdown-content">
+                    <li><a href="error.html">Prescription Status</a></li>
+                    <li><a href="error.html">Request New Prescription</a></li>
+                    <li><a href="error.html">Refill Prescriptions</a></li>
+                    <li><a href="error.html">Auto Refill</a></li>
+                    <li><a href="error.html">Print Prescription Records</a></li>
+                    <li><a href="error.html">Drug Information</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="error.html">Contact Lenses</a>
+                <ul class="dropdown-content">
+                    <li><a href="error.html">Recorder Contact Lenses</a></li>
+                    <li><a href="error.html">Shop All Contact Lenses</a></li>
+                    <li><a href="error.html">Solutions, Drops & Cases</a></li>
+                    <li><a href="error.html">Eye Health Supplements</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="error.html">Health Info & Services</a>
+                <ul class="dropdown-content">
+                    <li><a href="error.html">Appointment Scheduler</a></li>
+                    <li><a href="error.html">Healthcare Clinic</a></li>
+                    <li><a href="error.html">Flu Shots & Immunizations</a></li>
+                    <li><a href="error.html">Medicare Information</a></li>
+                    <li><a href="error.html">Health Apps & Devices</a></li>
+                    <li><a href="error.html">Health Answers</a></li>
+                </ul>
+            </li>
+            <li class="menu-item">
+                <a href="error.html">Online Doctor®</a>
+            </li>
+            <li class="menu-item">
+                <a href="error.html">Weekly Deals</a>
+            </li>
+            <li class="hide-imgs hide search-sticky">
+                <a id="search-button">
+                    <img class="cart-icon" src="assets/icons/search.png"/>
+                </a>
+            </li>
+            <li id="nav-account" class="hide-imgs hide avatar-sticky">
+            </li>
+            <li class="hide-imgs hide cart-sticky">
+                <a href="cart.html">
+                    <img class="cart-icon" src="assets/icons/shopping-cart.png"/>
+                </a>
+                <ul class="dropdown-content">
+                    <li><a href="cart.html">View Cart</a></li>
+                    <li><a href="cart.html">Check Out</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="purple-banner"></div>
+        <section class="nav-search" id="nav-search">
+            <div class="search-area">
+                <div class="search-box">
+                    <label for="search-item-nav"></label>
+                    <input id="search-item-nav" class="search-input" type="search" placeholder="Search products by name or keywords">
+                    <a href="search-result.html"><button>Search</button></a>
+                </div>
             </div>
+        </section>
+    </nav>
+
+    <main>
+        <!--Path-->
+        <!--    <nav>
+                <ul style ="display: inline-block;list-style-type: none;">
+                    <li style ="display: inline-block;list-style-type: none;">
+                        <a href="index.html">
+                            <p class="w3-medium w3-padding-16 main-font w3-hover-opacity">Home</p>
+                        </a>
+                    </li>
+                   <li style ="display: inline-block;list-style-type: none;">
+                        <a href="category.html">
+                            <p class="w3-medium w3-padding-16 main-font w3-hover-opacity"> > Shop</p>
+                        </a>
+                    </li>
+                    <li style ="display: inline-block;list-style-type: none;">
+                        <a href="category.html">
+                            <p class="w3-medium w3-padding-16 main-font w3-hover-opacity"> > Health & Medicine</p>
+                        </a>
+                    </li>
+                    <li style ="display: inline-block;list-style-type: none;">
+                        <a href="subcategory.html">
+                            <p class="w3-medium w3-padding-16 main-font w3-hover-opacity">> Allergy & Asthma</p>
+                        </a>
+                    </li>
+                    <li style ="display: inline-block;list-style-type: none;">
+                        <a href="">
+                            <p class="w3-medium w3-padding-16 main-font w3-hover-opacity">> Nasal Care</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        -->
+        <!--for consistency-->
+        <div class="row columns">
+            <nav aria-label="You are here:" role="navigation">
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="category.html">Health & Medicine</a></li>
+                    <li><a href="subcategory.html">Allergy & Asthma</a></li>
+                    <li>
+                        <span class="show-for-sr">Current: </span> Nasal Care
+                    </li>
+                </ul>
+            </nav>
         </div>
-    </section>
-</nav>
 
-<main>
-    <!--Path-->
-    <!--    <nav>
-            <ul style ="display: inline-block;list-style-type: none;">
-                <li style ="display: inline-block;list-style-type: none;">
-                    <a href="index.html">
-                        <p class="w3-medium w3-padding-16 main-font w3-hover-opacity">Home</p>
-                    </a>
-                </li>
-               <li style ="display: inline-block;list-style-type: none;">
-                    <a href="category.html">
-                        <p class="w3-medium w3-padding-16 main-font w3-hover-opacity"> > Shop</p>
-                    </a>
-                </li>
-                <li style ="display: inline-block;list-style-type: none;">
-                    <a href="category.html">
-                        <p class="w3-medium w3-padding-16 main-font w3-hover-opacity"> > Health & Medicine</p>
-                    </a>
-                </li>
-                <li style ="display: inline-block;list-style-type: none;">
-                    <a href="subcategory.html">
-                        <p class="w3-medium w3-padding-16 main-font w3-hover-opacity">> Allergy & Asthma</p>
-                    </a>
-                </li>
-                <li style ="display: inline-block;list-style-type: none;">
-                    <a href="">
-                        <p class="w3-medium w3-padding-16 main-font w3-hover-opacity">> Nasal Care</p>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    -->
-    <!--for consistency-->
-    <div class="row columns">
-        <nav aria-label="You are here:" role="navigation">
-            <ul class="breadcrumbs">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="category.html">Health & Medicine</a></li>
-                <li><a href="subcategory.html">Allergy & Asthma</a></li>
-                <li>
-                    <span class="show-for-sr">Current: </span> Nasal Care
-                </li>
-            </ul>
-        </nav>
-    </div>
+        <!-- Result-->
+        <div class = "w3-center">
+            <h3 class="w3-medium main-font">75 products</h3>
+        </div>
 
-    <!-- Result-->
-    <div class = "w3-center">
-        <h3 class="w3-medium main-font">75 products</h3>
-    </div>
+        <!--Sort by-->
+        <div>
+            <!-- Use any element to open the sidenav -->
+            <button class="advance-filter-button w3-left w3-small main-font" onclick="openNav()">Advanced Filter</button>
 
-    <!--Sort by-->
-    <div>
-        <span class="custom-dropdown custom-dropdown--emerald w3-right">
+            <span class="custom-dropdown custom-dropdown--emerald w3-right">
             <select class="custom-dropdown__select custom-dropdown__select--emerald main-font w3-small">
                 <option>Relevance</option>
                 <option>Price: Low to High</option>
@@ -265,471 +281,473 @@
                 <option>Average Customer Review</option>
             </select>
         </span>
-        <p class="w3-right w3-medium w3-margin-top">Sort By</p>
-    </div>
+            <p class="w3-right w3-medium w3-margin-top">Sort By</p>
+        </div>
 
-    <script>
-        (function(){
-            var customSelects = document.querySelectorAll(".custom-dropdown__select");
-        })()
-    </script>
+        <script>
+            (function(){
+                var customSelects = document.querySelectorAll(".custom-dropdown__select");
+                for(var i=0; i<customSelects.length; i++){
+                    if (customSelects[i].hasAttribute("disabled")){
+                        customSelects[i].parentNode.className += " custom-dropdown--disabled";
+                    }
+                }
+            })()
+        </script>
 
-    <!--Products-->
-    <!--row1-->
-    <div class="w3-row-padding">
-        <div class="w3-quarter">
-            <div class="w3-card-2 pic-margin">
-                <a href="product-detail.html">
-                    <img id="product-detail" src="assets/images/img-category-result/breath-right-nasal-strips.jpg" style="width:100%">
-                </a>
-                <div class="w3-container">
-                    <p>$ 13.49</p>
-                    <p>Breath Right Extra Nasal Strips</p>
-                </div>
-                <!--Add quantity buttons-->
-                <div class="w3-margin-top quantity-button-margin">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
-                    <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
-                </div>
-                <div style="clear: both;"></div>
-                <!--Add to cart button-->
-                <div class = "w3-center w3-margin">
-                    <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
-                </div>
+        <!--Products-->
+        <!--row1-->
+        <div class="w3-row-padding">
+            <div class="w3-quarter">
+                <div class="w3-card-2 pic-margin">
+                    <a href="product-detail.html">
+                        <img id="product-detail" src="assets/images/img-category-result/breath-right-nasal-strips.jpg" style="width:100%">
+                    </a>
+                    <div class="w3-container">
+                        <p>$ 13.49</p>
+                        <p>Breath Right Extra Nasal Strips</p>
+                    </div>
+                    <!--Add quantity buttons-->
+                    <div class="w3-margin-top quantity-button-margin">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
+                        <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <!--Add to cart button-->
+                    <div class = "w3-center w3-margin">
+                        <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
+                    </div>
 
-                <!-- The Modal -->
-                <!-- Modal content -->
-                <div id="add-to-cart-model" class="w3-modal">
-                    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="width: 40%">
-                        <div class="w3-container modal-color w3-large w3-margin-top">
+                    <!-- The Modal -->
+                    <!-- Modal content -->
+                    <div id="add-to-cart-model" class="w3-modal">
+                        <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="width: 40%">
+                            <div class="w3-container modal-color w3-large w3-margin-top">
                             <span onclick="document.getElementById('add-to-cart-model').style.display='none'"
                                   class="w3-button modal-color w3-large w3-right">&times;
                             </span>
-                        </div>
-                        <div class="w3-container">
-                            <h3 class="main-font">Successfully add to your shopping cart.</h3>
-                            <h5 class="main-font">Product Details:</h5>
-                            <p class="main-font">Price: $13.49</p>
-                            <p class="main-font">Quantity: 1</p>
-                            <p class="main-font">Product Name: Breath Right Extra Nasal Strips</p>
-                        </div>
+                            </div>
+                            <div class="w3-container">
+                                <h3 class="main-font">Successfully add to your shopping cart.</h3>
+                                <h5 class="main-font">Product Details:</h5>
+                                <p class="main-font">Price: $13.49</p>
+                                <p class="main-font">Quantity: 1</p>
+                                <p class="main-font">Product Name: Breath Right Extra Nasal Strips</p>
+                            </div>
 
-                        <div class="w3-container w3-light-grey w3-padding">
-                            <button class="w3-button w3-left w3-white w3-border main-font"
-                                    onclick="document.getElementById('add-to-cart-model').style.display='none'">Continue to Shopping</button>
-                            <a href="cart.html">
-                                <button class="w3-button w3-right w3-border main-font w3-purple">Go to my Shopping Cart</button>
-                            </a>
+                            <div class="w3-container w3-light-grey w3-padding">
+                                <button class="w3-button w3-left w3-white w3-border main-font"
+                                        onclick="document.getElementById('add-to-cart-model').style.display='none'">Continue to Shopping</button>
+                                <a href="cart.html">
+                                    <button class="w3-button w3-right w3-border main-font w3-purple">Go to my Shopping Cart</button>
+                                </a>
+                            </div>
                         </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="w3-quarter">
+                <div class="w3-card-2 pic-margin">
+                    <a href="product-detail.html">
+                        <img src="assets/images/img-category-result/simple-saline-nasal-mist.jpg" style="width:100%">
+                    </a>
+                    <div class="w3-container">
+                        <p>$ 9.99</p>
+                        <p>Simply Saline Sterile Nasal Mist</p>
+                    </div>
+                    <!--Add quantity buttons-->
+                    <div class="w3-center w3-margin-top quantity-button-margin">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
+                        <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <!--Add to cart button-->
+                    <div class = "w3-center w3-margin">
+                        <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
                     </div>
                 </div>
             </div>
 
-        </div>
+            <div class="w3-quarter">
+                <div class="w3-card-2 pic-margin">
+                    <a href="product-detail.html">
+                        <img src="assets/images/img-category-result/cvs-fluticasone-nasal-spray.jpg" style="width:100%">
+                    </a>
+                    <div class="w3-container">
+                        <p>$ 18.99</p>
+                        <p>CVS Fluticasone Nasal Spray</p>
+                    </div>
+                    <!--Add quantity buttons-->
+                    <div class="w3-center w3-margin-top quantity-button-margin">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
+                        <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <!--Add to cart button-->
+                    <div class = "w3-center w3-margin">
+                        <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
 
-        <div class="w3-quarter">
-            <div class="w3-card-2 pic-margin">
-                <a href="product-detail.html">
-                    <img src="assets/images/img-category-result/simple-saline-nasal-mist.jpg" style="width:100%">
-                </a>
-                <div class="w3-container">
-                    <p>$ 9.99</p>
-                    <p>Simply Saline Sterile Nasal Mist</p>
-                </div>
-                <!--Add quantity buttons-->
-                <div class="w3-center w3-margin-top quantity-button-margin">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
-                    <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
-                </div>
-                <div style="clear: both;"></div>
-                <!--Add to cart button-->
-                <div class = "w3-center w3-margin">
-                    <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
+            <div class="w3-quarter">
+                <div class="w3-card-2 pic-margin">
+                    <a href="product-detail.html">
+                        <img src="assets/images/img-category-result/cvs-decongestant.jpg" style="width:100%">
+                    </a>
+                    <div class="w3-container">
+                        <p>$ 5.79</p>
+                        <p>CVS Nasal Decongstant Inhaler</p>
+                    </div>
+                    <!--Add quantity buttons-->
+                    <div class="w3-center w3-margin-top quantity-button-margin">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
+                        <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <!--Add to cart button-->
+                    <div class = "w3-center w3-margin">
+                        <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="w3-padding-16"></div>
 
-        <div class="w3-quarter">
-            <div class="w3-card-2 pic-margin">
-                <a href="product-detail.html">
-                    <img src="assets/images/img-category-result/cvs-fluticasone-nasal-spray.jpg" style="width:100%">
-                </a>
-                <div class="w3-container">
-                    <p>$ 18.99</p>
-                    <p>CVS Fluticasone Nasal Spray</p>
+        <!--row2-->
+        <div class="w3-row-padding">
+            <div class="w3-quarter">
+                <div class="w3-card-2 pic-margin">
+                    <a href="product-detail.html">
+                        <img src="assets/images/img-category-result/breath-right-nasal-strips.jpg" style="width:100%">
+                    </a>
+                    <div class="w3-container">
+                        <p>$ 13.49</p>
+                        <p>Breath Right Extra Nasal Strips</p>
+                    </div>
+                    <!--Add quantity buttons-->
+                    <div class="w3-center w3-margin-top quantity-button-margin">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
+                        <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <!--Add to cart button-->
+                    <div class = "w3-center w3-margin">
+                        <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
+                    </div>
                 </div>
-                <!--Add quantity buttons-->
-                <div class="w3-center w3-margin-top quantity-button-margin">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
-                    <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
+            </div>
+
+            <div class="w3-quarter">
+                <div class="w3-card-2 pic-margin">
+                    <a href="product-detail.html">
+                        <img src="assets/images/img-category-result/simple-saline-nasal-mist.jpg" style="width:100%">
+                    </a>
+                    <div class="w3-container">
+                        <p>$ 9.99</p>
+                        <p>Simply Saline Sterile Nasal Mist</p>
+                    </div>
+                    <!--Add quantity buttons-->
+                    <div class="w3-center w3-margin-top quantity-button-margin">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
+                        <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <!--Add to cart button-->
+                    <div class = "w3-center w3-margin">
+                        <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
+                    </div>
                 </div>
-                <div style="clear: both;"></div>
-                <!--Add to cart button-->
-                <div class = "w3-center w3-margin">
-                    <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
+            </div>
+
+            <div class="w3-quarter">
+                <div class="w3-card-2 pic-margin">
+                    <a href="product-detail.html">
+                        <img src="assets/images/img-category-result/cvs-fluticasone-nasal-spray.jpg" style="width:100%">
+                    </a>
+                    <div class="w3-container">
+                        <p>$ 18.99</p>
+                        <p>CVS Fluticasone Nasal Spray</p>
+                    </div>
+                    <!--Add quantity buttons-->
+                    <div class="w3-center w3-margin-top quantity-button-margin">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
+                        <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <!--Add to cart button-->
+                    <div class = "w3-center w3-margin">
+                        <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-quarter">
+                <div class="w3-card-2 pic-margin">
+                    <a href="product-detail.html">
+                        <img src="assets/images/img-category-result/cvs-decongestant.jpg" style="width:100%">
+                    </a>
+                    <div class="w3-container">
+                        <p>$ 5.79</p>
+                        <p>CVS Nasal Decongstant Inhaler</p>
+                    </div>
+                    <!--Add quantity buttons-->
+                    <div class="w3-center w3-margin-top quantity-button-margin">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
+                        <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <!--Add to cart button-->
+                    <div class = "w3-center w3-margin">
+                        <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="w3-padding-16"></div>
 
-        <div class="w3-quarter">
-            <div class="w3-card-2 pic-margin">
-                <a href="product-detail.html">
-                    <img src="assets/images/img-category-result/cvs-decongestant.jpg" style="width:100%">
-                </a>
-                <div class="w3-container">
-                    <p>$ 5.79</p>
-                    <p>CVS Nasal Decongstant Inhaler</p>
+        <!--row3-->
+        <div class="w3-row-padding">
+            <div class="w3-quarter">
+                <div class="w3-card-2 pic-margin">
+                    <a href="product-detail.html">
+                        <img src="assets/images/img-category-result/breath-right-nasal-strips.jpg" style="width:100%">
+                    </a>
+                    <div class="w3-container">
+                        <p>$ 13.49</p>
+                        <p>Breath Right Extra Nasal Strips</p>
+                    </div>
+                    <!--Add quantity buttons-->
+                    <div class="w3-center w3-margin-top quantity-button-margin">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
+                        <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <!--Add to cart button-->
+                    <div class = "w3-center w3-margin">
+                        <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
+                    </div>
                 </div>
-                <!--Add quantity buttons-->
-                <div class="w3-center w3-margin-top quantity-button-margin">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
-                    <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
+            </div>
+
+            <div class="w3-quarter">
+                <div class="w3-card-2 pic-margin">
+                    <a href="product-detail.html">
+                        <img src="assets/images/img-category-result/simple-saline-nasal-mist.jpg" style="width:100%">
+                    </a>
+                    <div class="w3-container">
+                        <p>$ 9.99</p>
+                        <p>Simply Saline Sterile Nasal Mist</p>
+                    </div>
+                    <!--Add quantity buttons-->
+                    <div class="w3-center w3-margin-top quantity-button-margin">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
+                        <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <!--Add to cart button-->
+                    <div class = "w3-center w3-margin">
+                        <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
+                    </div>
                 </div>
-                <div style="clear: both;"></div>
-                <!--Add to cart button-->
-                <div class = "w3-center w3-margin">
-                    <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
+            </div>
+
+            <div class="w3-quarter">
+                <div class="w3-card-2 pic-margin">
+                    <a href="product-detail.html">
+                        <img src="assets/images/img-category-result/cvs-fluticasone-nasal-spray.jpg" style="width:100%">
+                    </a>
+                    <div class="w3-container">
+                        <p>$ 18.99</p>
+                        <p>CVS Fluticasone Nasal Spray</p>
+                    </div>
+                    <!--Add quantity buttons-->
+                    <div class="w3-center w3-margin-top quantity-button-margin">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
+                        <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <!--Add to cart button-->
+                    <div class = "w3-center w3-margin">
+                        <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-quarter">
+                <div class="w3-card-2 pic-margin">
+                    <a href="product-detail.html">
+                        <img src="assets/images/img-category-result/cvs-decongestant.jpg" style="width:100%">
+                    </a>
+                    <div class="w3-container">
+                        <p>$ 5.79</p>
+                        <p>CVS Nasal Decongstant Inhaler</p>
+                    </div>
+                    <!--Add quantity buttons-->
+                    <div class="w3-center w3-margin-top quantity-button-margin">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
+                        <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
+                        <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <!--Add to cart button-->
+                    <div class = "w3-center w3-margin">
+                        <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="w3-padding-16"></div>
+        <div class="w3-padding-16"></div>
 
-    <!--row2-->
-    <div class="w3-row-padding">
-        <div class="w3-quarter">
-            <div class="w3-card-2 pic-margin">
-                <a href="product-detail.html">
-                    <img src="assets/images/img-category-result/breath-right-nasal-strips.jpg" style="width:100%">
-                </a>
-                <div class="w3-container">
-                    <p>$ 13.49</p>
-                    <p>Breath Right Extra Nasal Strips</p>
-                </div>
-                <!--Add quantity buttons-->
-                <div class="w3-center w3-margin-top quantity-button-margin">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
-                    <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
-                </div>
-                <div style="clear: both;"></div>
-                <!--Add to cart button-->
-                <div class = "w3-center w3-margin">
-                    <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
+        <!-- Pages -->
+        <hr>
+        <div class="w3-center">
+            <div class="w3-center w3-padding-32">
+                <div class="w3-bar">
+                    <a href="#" class="w3-bar-item w3-button w3-hover-theme">«</a>
+                    <a href="#" class="w3-bar-item w3-button w3-theme w3-hover-theme">1</a>
+                    <a href="#" class="w3-bar-item w3-button w3-hover-theme">2</a>
+                    <a href="#" class="w3-bar-item w3-button w3-hover-theme">3</a>
+                    <a href="#" class="w3-bar-item w3-button w3-hover-theme">...</a>
+                    <a href="#" class="w3-bar-item w3-button w3-hover-theme">10</a>
+                    <a href="#" class="w3-bar-item w3-button w3-hover-theme">»</a>
                 </div>
             </div>
         </div>
+        <br>
+    </main>
+    <footer class="footer">
+        <div class="block-wrapper">
+            <div class="footer-subscribe">
+                <div class="footer-newsletter">
+                    <h3 class="footer-title">Let’s keep the conversation going</h3>
+                    <p>Receive our newsletter and weekly deals.</p>
+                </div>
+                <form method="POST" action="#" class="footer-action clearfix">
+                    <div class="form-input">
+                        <input type="email" name="newsletter-email" placeholder="Email" class="form-text form-email" size="60" maxlength="128">
+                    </div>
+                    <button class="button">Subscribe</button>
+                </form>
 
-        <div class="w3-quarter">
-            <div class="w3-card-2 pic-margin">
-                <a href="product-detail.html">
-                    <img src="assets/images/img-category-result/simple-saline-nasal-mist.jpg" style="width:100%">
-                </a>
-                <div class="w3-container">
-                    <p>$ 9.99</p>
-                    <p>Simply Saline Sterile Nasal Mist</p>
+                <div class="footer-legal">
+                    <p> By subscribing to our newsletter, you agree that your data will be processed in compliance with our <a href="">General Terms and Conditions of Use</a> and our <a href="">Privacy Policy</a>.          </p>
                 </div>
-                <!--Add quantity buttons-->
-                <div class="w3-center w3-margin-top quantity-button-margin">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
-                    <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
-                </div>
-                <div style="clear: both;"></div>
-                <!--Add to cart button-->
-                <div class = "w3-center w3-margin">
-                    <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
-                </div>
-            </div>
-        </div>
 
-        <div class="w3-quarter">
-            <div class="w3-card-2 pic-margin">
-                <a href="product-detail.html">
-                    <img src="assets/images/img-category-result/cvs-fluticasone-nasal-spray.jpg" style="width:100%">
-                </a>
-                <div class="w3-container">
-                    <p>$ 18.99</p>
-                    <p>CVS Fluticasone Nasal Spray</p>
-                </div>
-                <!--Add quantity buttons-->
-                <div class="w3-center w3-margin-top quantity-button-margin">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
-                    <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
-                </div>
-                <div style="clear: both;"></div>
-                <!--Add to cart button-->
-                <div class = "w3-center w3-margin">
-                    <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="w3-quarter">
-            <div class="w3-card-2 pic-margin">
-                <a href="product-detail.html">
-                    <img src="assets/images/img-category-result/cvs-decongestant.jpg" style="width:100%">
-                </a>
-                <div class="w3-container">
-                    <p>$ 5.79</p>
-                    <p>CVS Nasal Decongstant Inhaler</p>
-                </div>
-                <!--Add quantity buttons-->
-                <div class="w3-center w3-margin-top quantity-button-margin">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
-                    <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
-                </div>
-                <div style="clear: both;"></div>
-                <!--Add to cart button-->
-                <div class = "w3-center w3-margin">
-                    <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="w3-padding-16"></div>
-
-    <!--row3-->
-    <div class="w3-row-padding">
-        <div class="w3-quarter">
-            <div class="w3-card-2 pic-margin">
-                <a href="product-detail.html">
-                    <img src="assets/images/img-category-result/breath-right-nasal-strips.jpg" style="width:100%">
-                </a>
-                <div class="w3-container">
-                    <p>$ 13.49</p>
-                    <p>Breath Right Extra Nasal Strips</p>
-                </div>
-                <!--Add quantity buttons-->
-                <div class="w3-center w3-margin-top quantity-button-margin">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
-                    <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
-                </div>
-                <div style="clear: both;"></div>
-                <!--Add to cart button-->
-                <div class = "w3-center w3-margin">
-                    <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="w3-quarter">
-            <div class="w3-card-2 pic-margin">
-                <a href="product-detail.html">
-                    <img src="assets/images/img-category-result/simple-saline-nasal-mist.jpg" style="width:100%">
-                </a>
-                <div class="w3-container">
-                    <p>$ 9.99</p>
-                    <p>Simply Saline Sterile Nasal Mist</p>
-                </div>
-                <!--Add quantity buttons-->
-                <div class="w3-center w3-margin-top quantity-button-margin">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
-                    <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
-                </div>
-                <div style="clear: both;"></div>
-                <!--Add to cart button-->
-                <div class = "w3-center w3-margin">
-                    <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="w3-quarter">
-            <div class="w3-card-2 pic-margin">
-                <a href="product-detail.html">
-                    <img src="assets/images/img-category-result/cvs-fluticasone-nasal-spray.jpg" style="width:100%">
-                </a>
-                <div class="w3-container">
-                    <p>$ 18.99</p>
-                    <p>CVS Fluticasone Nasal Spray</p>
-                </div>
-                <!--Add quantity buttons-->
-                <div class="w3-center w3-margin-top quantity-button-margin">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
-                    <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
-                </div>
-                <div style="clear: both;"></div>
-                <!--Add to cart button-->
-                <div class = "w3-center w3-margin">
-                    <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="w3-quarter">
-            <div class="w3-card-2 pic-margin">
-                <a href="product-detail.html">
-                    <img src="assets/images/img-category-result/cvs-decongestant.jpg" style="width:100%">
-                </a>
-                <div class="w3-container">
-                    <p>$ 5.79</p>
-                    <p>CVS Nasal Decongstant Inhaler</p>
-                </div>
-                <!--Add quantity buttons-->
-                <div class="w3-center w3-margin-top quantity-button-margin">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-minus"></i></a>
-                    <input class="w3-input w3-border w3-left input-margin" type="text" value="1" name="Quantity" style="width: 20%">
-                    <a class="quantity-button w3-small w3-left"><i class="fa fa-plus"></i></a>
-                </div>
-                <div style="clear: both;"></div>
-                <!--Add to cart button-->
-                <div class = "w3-center w3-margin">
-                    <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="w3-padding-16"></div>
-
-    <!-- Pages -->
-    <hr>
-    <div class="w3-center">
-        <div class="w3-center w3-padding-32">
-            <div class="w3-bar">
-                <a href="#" class="w3-bar-item w3-button w3-hover-theme">«</a>
-                <a href="#" class="w3-bar-item w3-button w3-theme w3-hover-theme">1</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-theme">2</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-theme">3</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-theme">...</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-theme">10</a>
-                <a href="#" class="w3-bar-item w3-button w3-hover-theme">»</a>
-            </div>
-        </div>
-    </div>
-    <br>
-</main>
-
-
-<footer class="footer">
-    <div class="block-wrapper">
-        <div class="footer-subscribe">
-            <div class="footer-newsletter">
-                <h3 class="footer-title">Let’s keep the conversation going</h3>
-                <p>Receive our newsletter and weekly deals.</p>
-            </div>
-            <form method="POST" action="#" class="footer-action clearfix">
-                <div class="form-input">
-                    <input type="email" name="newsletter-email" placeholder="Email" class="form-text form-email" size="60" maxlength="128">
-                </div>
-                <button class="button">Subscribe</button>
-            </form>
-
-            <div class="footer-legal">
-                <p> By subscribing to our newsletter, you agree that your data will be processed in compliance with our <a href="">General Terms and Conditions of Use</a> and our <a href="">Privacy Policy</a>.          </p>
             </div>
 
-        </div>
+            <div class="block block-footer-menus first odd" data-personalize-entity-id="block/146">
+                <nav class="footer-nav">
+                    <div class="footer-nav-col">
+                        <h3 class="title-small">Services</h3>
 
-        <div class="block block-footer-menus first odd" data-personalize-entity-id="block/146">
-            <nav class="footer-nav">
-                <div class="footer-nav-col">
-                    <h3 class="title-small">Services</h3>
+                        <ul>
+                            <li>
+                                <a href="http://www.upmc.com/contact/Pages/default.aspx" data-tray-trigger="tray-help">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="http://www.upmc.com/Services/rehab/rehab-institute/for-patients/Pages/faq.aspx">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="http://www.upmc.com/Services/pharmacy/Pages/default.aspx">Find a pharmacy store</a>
+                            </li>
+                            <li>
+                                <a href="https://myupmc.upmc.com/">MyUPMC</a>
+                            </li>
+                            <li>
+                                <a href="http://www.upmc.com/services/urgent-care/pages/default.aspx">Urgent Care</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-col">
+                        <h3 class="title-small">Orders</h3>
 
-                    <ul>
-                        <li>
-                            <a href="http://www.upmc.com/contact/Pages/default.aspx" data-tray-trigger="tray-help">Contact Us</a>
-                        </li>
-                        <li>
-                            <a href="http://www.upmc.com/Services/rehab/rehab-institute/for-patients/Pages/faq.aspx">FAQ</a>
-                        </li>
-                        <li>
-                            <a href="http://www.upmc.com/Services/pharmacy/Pages/default.aspx">Find a pharmacy store</a>
-                        </li>
-                        <li>
-                            <a href="https://myupmc.upmc.com/">MyUPMC</a>
-                        </li>
-                        <li>
-                            <a href="http://www.upmc.com/services/urgent-care/pages/default.aspx">Urgent Care</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-nav-col">
-                    <h3 class="title-small">Orders</h3>
+                        <ul>
+                            <li>
+                                <a href="policy.html">Payment</a>
+                            </li>
+                            <li>
+                                <a href="policy.html">Shipping</a>
+                            </li>
+                            <li>
+                                <a href="policy.html">Collect in store</a>
+                            </li>
+                            <li>
+                                <a href="policy.html">Track orders</a>
+                            </li>
+                            <li>
+                                <a href="policy.html">Exchange & returns</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-col">
+                        <h3 class="title-small">University of Pittsburgh Medical Center(UPMC)</h3>
 
-                    <ul>
-                        <li>
-                            <a href="">Payment</a>
-                        </li>
-                        <li>
-                            <a href="">Shipping</a>
-                        </li>
-                        <li>
-                            <a href="">Collect in store</a>
-                        </li>
-                        <li>
-                            <a href="">Track orders</a>
-                        </li>
-                        <li>
-                            <a href="">Exchange & returns</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-nav-col">
-                    <h3 class="title-small">University of Pittsburgh Medical Center(UPMC)</h3>
+                        <ul>
+                            <li>
+                                <a href="http://www.upmc.com/Services/Pages/default.aspx">Our Clinical Services</a>
+                            </li>
+                            <li>
+                                <a href="http://careers.upmc.com/">Careers</a>
+                            </li>
+                            <li>
+                                <a href="http://www.upmc.com/patients-visitors/paying-bill/services/Pages/apply.aspx">Finance</a>
+                            </li>
+                            <li>
+                                <a href="https://www.upmchealthplan.com/">UPMC Health Plan</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-nav-col">
+                        <h3 class="title-small">Legal</h3>
 
-                    <ul>
-                        <li>
-                            <a href="http://www.upmc.com/Services/Pages/default.aspx">Our Clinical Services</a>
-                        </li>
-                        <li>
-                            <a href="http://careers.upmc.com/">Careers</a>
-                        </li>
-                        <li>
-                            <a href="http://www.upmc.com/patients-visitors/paying-bill/services/Pages/apply.aspx">Finance</a>
-                        </li>
-                        <li>
-                            <a href="https://www.upmchealthplan.com/">UPMC Health Plan</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-nav-col">
-                    <h3 class="title-small">Legal</h3>
+                        <ul>
+                            <li>
+                                <a href="http://www.upmc.com/patients-visitors/privacy-info/Pages/terms-of-use.aspx">Terms and conditions</a>
+                            </li>
+                            <li>
+                                <a href="http://www.upmc.com/patients-visitors/privacy-info/Pages/default.aspx">Privacy & cookies</a>
+                            </li>
+                            <li>
+                                <a href="http://www.upmc.com/patients-visitors/privacy-info/Pages/terms-of-use.aspx#advice">Medical Advice Disclaimer</a>
+                            </li>
+                            <li>
+                                <a href="http://www.upmc.com/patients-visitors/privacy-info/Pages/alerts.aspx">Privacy and Breach Alerts</a>
+                            </li>
+                            <li>
+                                <a href="http://www.upmc.com/patients-visitors/privacy-info/Pages/terms-of-use.aspx">Legal issues</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
 
-                    <ul>
-                        <li>
-                            <a href="http://www.upmc.com/patients-visitors/privacy-info/Pages/terms-of-use.aspx">Terms and conditions</a>
-                        </li>
-                        <li>
-                            <a href="http://www.upmc.com/patients-visitors/privacy-info/Pages/default.aspx">Privacy & cookies</a>
-                        </li>
-                        <li>
-                            <a href="http://www.upmc.com/patients-visitors/privacy-info/Pages/terms-of-use.aspx#advice">Medical Advice Disclaimer</a>
-                        </li>
-                        <li>
-                            <a href="http://www.upmc.com/patients-visitors/privacy-info/Pages/alerts.aspx">Privacy and Breach Alerts</a>
-                        </li>
-                        <li>
-                            <a href="http://www.upmc.com/patients-visitors/privacy-info/Pages/terms-of-use.aspx">Legal issues</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-
-        </div>
-        <div class="block block-footer-social last even" data-personalize-entity-id="block/151">
-            <div class="footer-copyright">
-                <div class="footer-rights">
-                    <p>
-                        United States University of Pittsburgh Medical Center(UPMC) 2017. All rights reserved.    </p>
+            </div>
+            <div class="block block-footer-social last even" data-personalize-entity-id="block/151">
+                <div class="footer-copyright">
+                    <div class="footer-rights">
+                        <p>
+                            United States University of Pittsburgh Medical Center(UPMC) 2017. All rights reserved.    </p>
+                    </div>
                 </div>
             </div>
+            <div class="footer-logo">
+                <img src="assets/images/UPMC-Logo-white.png">
+            </div>
         </div>
-        <div class="footer-logo">
-            <img src="assets/images/UPMC-Logo-white.png">
-        </div>
-    </div>
-</footer>
-
-</body>
+    </footer>
+</div>
 </html>
 
