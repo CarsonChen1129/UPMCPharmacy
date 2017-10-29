@@ -8,7 +8,9 @@ setTimeout(function(){  document.querySelector('.cont_form_login').style.opacity
   
 setTimeout(function(){    
 document.querySelector('.cont_form_sign_up').style.display = "none";
-},200);  
+},200);
+
+    localStorage.setItem("logged", true);
   }
 
 function cambiar_sign_up(at) {
@@ -20,13 +22,11 @@ setTimeout(function(){  document.querySelector('.cont_form_sign_up').style.opaci
 },100);  
 
 setTimeout(function(){   document.querySelector('.cont_form_login').style.display = "none";
-},400);  
+},400);
 
+    localStorage.setItem("logged", true);
 
 }
-
-
-localStorage.setItem("logged", true);
 
 
 function ocultar_login_sign_up() {

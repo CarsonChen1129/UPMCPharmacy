@@ -2985,27 +2985,27 @@ html {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%)
 }
-.sticky-container {
-    position: relative
-}
-.sticky {
-    position: absolute;
-    z-index: 0;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0)
-}
-.sticky.is-stuck {
-    position: fixed;
-    z-index: 5
-}
-.sticky.is-stuck.is-at-top {
-    top: 0
-}
-.sticky.is-anchored {
-    position: absolute;
-    left: auto;
-    right: auto
-}
+/*.sticky-container {*/
+    /*position: relative*/
+/*}*/
+/*.sticky {*/
+    /*position: absolute;*/
+    /*z-index: 0;*/
+    /*-webkit-transform: translate3d(0, 0, 0);*/
+    /*transform: translate3d(0, 0, 0)*/
+/*}*/
+/*.sticky.is-stuck {*/
+    /*position: fixed;*/
+    /*z-index: 5*/
+/*}*/
+/*.sticky.is-stuck.is-at-top {*/
+    /*top: 0*/
+/*}*/
+/*.sticky.is-anchored {*/
+    /*position: absolute;*/
+    /*left: auto;*/
+    /*right: auto*/
+/*}*/
 .reveal-overlay {
     display: none;
     position: fixed;
@@ -3334,6 +3334,11 @@ table.hover tr:nth-of-type(even):hover {
 .thumbnail:focus,
 .thumbnail:hover {
     box-shadow: 0 0 6px 1px rgba(33, 153, 232, .5)
+}
+
+.column img {
+    width:6rem !important;
+    height:6rem !important;
 }
 .title-bar {
     background: #0a0a0a;
