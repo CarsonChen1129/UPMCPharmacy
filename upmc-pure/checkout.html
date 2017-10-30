@@ -170,381 +170,481 @@
     <section class="empty-banner">
         <div>Secure Checkout</div>
     </section>
-    <div id="account-notice" style="font-size:1rem;">If you already have an account, please <a style="text-decoration: underline" href="login.html">log in</a> or <a style="text-decoration: underline" href="login.html">register</a>.</div>
-    <div id="switch-account-notice" style="font-size:1rem;">You are logged in as Jane. Not Jane? Try to <a style="text-decoration: underline" href="login.html">log in</a> or <a style="text-decoration: underline" href="login.html">register</a>.</div>
-    <div id="wrap">
-        <div id="grid">
-            <div class="column column1">
+    <div id="account-notice" style="font-size:1rem;	margin-bottom:5rem;">If you already have an account, please <a style="text-decoration: underline" href="login.html">log in</a> or <a style="text-decoration: underline" href="login.html">register</a>.</div>
+    <div id="switch-account-notice" style="font-size:1rem;margin-bottom:5rem;">You are logged in as Jane. Not Jane? Try to <a style="text-decoration: underline" href="login.html">log in</a> or <a style="text-decoration: underline" href="login.html">register</a>.</div>
+    <div class="forms cf">
+        <h3 class="sectionHead cf"><span>1</span>Shipping Information <a href="#shippingInfo" class="edit">Edit</a></h3>
+        <ul id="shippingInfo" class="shippingInfo cf">
+            <li><label for="first name" class="active">First Name</label>
+                <input type="text" id="first name"/></li>
+            <li><label for="Last Name">Last Name</label>
+                <input type="text" />
+            </li>
+            <li><label for="Address Line 1">Address Line 1</label>
+                <input type="text" />
+            </li>
+            <li><label for="Address Line 2">Address Line 2</label>
+                <input type="text" />
+            </li>
+            <li><label for="City"> City</label>
+                <input type="text" />
+            </li>
+            <li><label for="State">State</label>
+                <input type="text" />
+            </li>
+            <li><label for="Zip Code">Zip Code</label>
+                <input type="text" />
+            </li>
+            <li><label for="Phone Number">Phone Number<span class="example">XXX-XXX-XXXX</span></label>
+                <input type="text" />
+            </li>
+            <li>
+                <input type="submit" value="Continue" class="btn" data-id="paymentInfo"/>
+            </li>
+        </ul>
 
-                <div class="step" id="step1">
-                    <div class="number">
-                        <span>1</span>
-                    </div>
-                    <div class="title">
-                        <h1>Shipping Information</h1>
-                    </div>
-                </div>
-                <div class="content" id="address">
-                    <form class="go-right">
-                        <div>
-                            <input type="name" name="first_name" value="" id="first_name" placeholder="First Name" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your First Name"/><label for="first_name">First Name</label>
-                        </div>
+        <h3 class="sectionHead"><span>2</span>Payment Information <a href="#paymentInfo" class="edit">Edit</a></h3>
+        <!--<div class="almost"><p>Please Fill Out Billing Information</p></div>-->
+        <ul id="paymentInfo" class="billingInfo cf">
+            <li>
+                <img src="assets/images/creditcards/visa.png">
+                <img src="assets/images/creditcards/mastercard.png">
+                <img src="assets/images/creditcards/amex.png">
+                <img src="assets/images/creditcards/discover.png">
+                <img src="assets/images/creditcards/paypa.png">
+                <img src="assets/images/creditcards/google.png">
+            </li>
+            <li><label for="exp month">Expiration Month</label>
+                <input type="text" />
+            </li>
+            <li><label for="exp year">Expiration Year</label>
+                <input type="text" />
+            </li>
+            <li><label for="card number" class="active">Card Number</label>
+                <input type="text" /></li>
+            <li><label for="cvv">CVV</label>
+                <input type="text" />
+            </li>
+            <li>
+                <input type="submit" value="Continue" class="btn" data-id="billingInfo"/>
+            </li>
+        </ul>
 
-                        <div>
-                            <input type="name" name="last_name" value="" id="last_name" placeholder="Last Name" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your Last Name"/><label for="last_name">Last Name</label>
-                        </div>
-                        <div>
-                            <input type="phone" name="telephone" value="" id="telephone" placeholder="Phone(555)-555-5555" data-trigger="change" data-validation-minlength="1" data-type="number" data-required="true" data-error-message="Enter Your Telephone Number"/><label for="telephone">Telephone</label>
-                        </div>
-                        <div>
-                            <input type="text" name="company" value="" id="company" placeholder="Company" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="false"/>
-                            <label for="Company">Company</label>
-                        </div>
-                        <div>
-                            <input type="text" name="address" value="" id="address" placeholder="Address" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing Address"/><label for="Address">Address</label>
-                        </div>
-                        <div>
-                            <input type="text" name="city" value="" id="city" placeholder="City" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing City"/><label for="city">City</label>
-                        </div>
-                        <div>
-                            <div class="state_options">
-                                <div class="select">
-                                    <select id="state">
-                                        <option value="AL">Alabama</option>
-                                        <option value="AK">Alaska</option>
-                                        <option value="AZ">Arizona</option>
-                                        <option value="AR">Arkansas</option>
-                                        <option value="CA">California</option>
-                                        <option value="CO">Colorado</option>
-                                        <option value="CT">Connecticut</option>
-                                        <option value="DE">Delaware</option>
-                                        <option value="DC">District Of Columbia</option>
-                                        <option value="FL">Florida</option>
-                                        <option value="GA">Georgia</option>
-                                        <option value="HI">Hawaii</option>
-                                        <option value="ID">Idaho</option>
-                                        <option value="IL">Illinois</option>
-                                        <option value="IN">Indiana</option>
-                                        <option value="IA">Iowa</option>
-                                        <option value="KS">Kansas</option>
-                                        <option value="KY">Kentucky</option>
-                                        <option value="LA">Louisiana</option>
-                                        <option value="ME">Maine</option>
-                                        <option value="MD">Maryland</option>
-                                        <option value="MA">Massachusetts</option>
-                                        <option value="MI">Michigan</option>
-                                        <option value="MN">Minnesota</option>
-                                        <option value="MS">Mississippi</option>
-                                        <option value="MO">Missouri</option>
-                                        <option value="MT">Montana</option>
-                                        <option value="NE">Nebraska</option>
-                                        <option value="NV">Nevada</option>
-                                        <option value="NH">New Hampshire</option>
-                                        <option value="NJ">New Jersey</option>
-                                        <option value="NM">New Mexico</option>
-                                        <option value="NY">New York</option>
-                                        <option value="NC">North Carolina</option>
-                                        <option value="ND">North Dakota</option>
-                                        <option value="OH">Ohio</option>
-                                        <option value="OK">Oklahoma</option>
-                                        <option value="OR">Oregon</option>
-                                        <option value="PA">Pennsylvania</option>
-                                        <option value="RI">Rhode Island</option>
-                                        <option value="SC">South Carolina</option>
-                                        <option value="SD">South Dakota</option>
-                                        <option value="TN">Tennessee</option>
-                                        <option value="TX">Texas</option>
-                                        <option value="UT">Utah</option>
-                                        <option value="VT">Vermont</option>
-                                        <option value="VA">Virginia</option>
-                                        <option value="WA">Washington</option>
-                                        <option value="WV">West Virginia</option>
-                                        <option value="WI">Wisconsin</option>
-                                        <option value="WY">Wyoming</option>
-                                    </select>
-                                </div>
-                                <label class="state" for="state">State</label>
-                            </div>
-                        </div>
-                        <div>
-                            <input type="text" name="zip" value="" id="zip" placeholder="Zip Code" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing Zip Code"/><label for="zip">Zip Code</label>
-                        </div>
-                        <div>
-                            <div class="country_options">
-                                <div class="select">
-                                    <select id="country">
-                                        <option value = "1">United States</option>
-                                        <option value = "2">United Kingdom</option>
-                                        <option value = "3">Uganda</option>
-                                        <option value = "4">Etc.</option>
-                                    </select>
-                                </div>
-                                <label class="country" for="country">Country</label>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="column column2">
-                <div class="step" id="step4">
-                    <div class="number">
-                        <span>2</span>
-                    </div>
-                    <div class="title">
-                        <h1>Payment Information</h1>
-                    </div>
-                    <div class="modify">
-                        <i class="fa fa-plus-circle"></i>
-                    </div>
-                </div>
-                <div class="content" id="payment">
-                    <img src="assets/images/creditcards/visa.png">
-                    <img src="assets/images/creditcards/mastercard.png">
-                    <img src="assets/images/creditcards/amex.png">
-                    <img src="assets/images/creditcards/discover.png">
-                    <img src="assets/images/creditcards/paypa.png">
-                    <img src="assets/images/creditcards/google.png">
-                    <div class="left">
-                        <form class="go-right">
-                            <div>
-                                <input type="text" name="card_number" value="" id="card_number" placeholder="xxxx-xxxx-xxxx-xxxx" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your Credit Card Number"/><label for="card_number">Card Number</label>
-                            </div>
-                            <div>
-                                <div class="expiry">
-                                    <div class="month_select">
-                                        <select name="exp_month" value="" id="exp_month" placeholder="Jan" data-trigger="change" data-type="name" data-required="true" data-error-message="Enter Your Credit Card Expiration Date">
-                                            <option value = "1">Jan</option>
-                                            <option value = "2">Feb</option>
-                                            <option value = "3">Mar</option>
-                                            <option value = "4">Apr</option>
-                                            <option value = "5">May</option>
-                                            <option value = "6">Jun</option>
-                                            <option value = "7">Jul</option>
-                                            <option value = "8">Aug</option>
-                                            <option value = "9">Sep</option>
-                                            <option value = "10">Oct</option>
-                                            <option value = "11">Nov</option>
-                                            <option value = "12">Dec</option>
-                                        </select>
-                                    </div>
-                                    <div class="year_select">
-                                        <select name="exp_year" value="" id="exp_year" placeholder="" data-trigger="change" data-type="name" data-required="true" data-error-message="Enter Your Credit Card Expiration Date">
+        <!-- Billing Info -->
+        <h3 class="sectionHead"><span>3</span>Billing Information <a href="#billingInfo" class="edit">Edit</a></h3>
+        <!--<div class="almost"></div>-->
+        <ul id="billingInfo" class="billingInfo cf">
+            <li class="same-address">
+                <label><input id="same-address" type="checkbox">Same As Shipping Address</label>
+            </li>
+            <li class="bill-address"><label for="first Name" class="active">First Name</label>
+                <input type="text" /></li>
+            <li class="bill-address"><label for="Last Name">Last Name</label>
+                <input type="text" />
+            </li>
+            <li class="bill-address"><label for="country">Country</label>
+                <input type="text" />
+            </li>
+            <li class="bill-address"><label for="Address Line 1">Address Line 1</label>
+                <input type="text" />
+            </li>
+            <li class="bill-address"><label for="Address Line 2">Address Line 2</label>
+                <input type="text" />
+            </li>
+            <li class="bill-address"><label for="City"> City</label>
+                <input type="text" />
+            </li>
+            <li class="bill-address"><label for="State">State</label>
+                <input type="text" />
+            </li>
+            <li class="bill-address"><label for="Zip Code">Zip Code</label>
+                <input type="text" />
+            </li>
+            <li class="bill-address"><label for="Phone Number">Phone Number<span class="example">XXX-XXX-XXXX</span></label>
+                <input type="text" />
+            </li>
+            <li>
+                <a href="order-review.html"><input type="submit" value="Review Order" class="btn finalize" /></a>
+            </li>
+            <li>
+                <a href="success.html"><input type="submit" value="Place Order" class="btn finalize" /></a>
+            </li>
+        </ul>
 
-                                            <option value = "1">17</option>
-                                            <option value = "2">18</option>
-                                            <option value = "3">19</option>
-                                            <option value = "4">20</option>
-                                            <option value = "5">22</option>
-                                            <option value = "6">23</option>
-                                            <option value = "7">24</option>
-                                            <option value = "8">25</option>
-                                            <option value = "9">26</option>
-                                        </select>
-                                    </div>
-                                    <label class="exp_date" for="Exp_Date">Exp Date</label>
-                                </div>
-                            </div>
-                            <div class="sec_num">
-                                <div>
-                                    <input type="text" name="ccv" value="" id="ccv" placeholder="123" data-trigger="change" data-validation-minlength="3" data-type="name" data-required="true" data-error-message="Enter Your Card Security Code"/><label for="ccv">Security Code</label>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+    </div>
+    <!--<div id="wrap">-->
+        <!--<div id="grid">-->
+            <!--<div class="column column1">-->
 
-            </div>
-
-            <div class="column column3">
-                <div class="step" id="step3">
-                    <div class="number">
-                        <span>3</span>
-                    </div>
-                    <div class="title">
-                        <h1>Billing Information</h1>
-                    </div>
-                </div>
-                <div class="content" id="address">
-                    <form class="go-right">
-                        <div>
-                            <input type="checkbox"/>
-                            <label class="same" for="same_as_shipping">Same As Shipping Address</label><span></span>
-                        </div>
-                        <div>
-                            <input type="name" name="first_name" value="" id="first_name" placeholder="First Name" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your First Name"/><label for="first_name">First Name</label>
-                        </div>
-
-                        <div>
-                            <input type="name" name="last_name" value="" id="last_name" placeholder="Last Name" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your Last Name"/><label for="last_name">Last Name</label>
-                        </div>
-                        <div>
-                            <input type="phone" name="telephone" value="" id="telephone" placeholder="Phone(555)-555-5555" data-trigger="change" data-validation-minlength="1" data-type="number" data-required="true" data-error-message="Enter Your Telephone Number"/><label for="telephone">Telephone</label>
-                        </div>
-                        <div>
-                            <input type="text" name="company" value="" id="company" placeholder="Company" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="false"/>
-                            <label for="Company">Company</label>
-                        </div>
-                        <div>
-                            <input type="text" name="address" value="" id="address" placeholder="Address" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing Address"/><label for="Address">Address</label>
-                        </div>
-                        <div>
-                            <input type="text" name="city" value="" id="city" placeholder="City" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing City"/><label for="city">City</label>
-                        </div>
-                        <div>
-                            <div class="state_options">
-                                <div class="select">
-                                    <select id="state">
-                                        <option value="AL">Alabama</option>
-                                        <option value="AK">Alaska</option>
-                                        <option value="AZ">Arizona</option>
-                                        <option value="AR">Arkansas</option>
-                                        <option value="CA">California</option>
-                                        <option value="CO">Colorado</option>
-                                        <option value="CT">Connecticut</option>
-                                        <option value="DE">Delaware</option>
-                                        <option value="DC">District Of Columbia</option>
-                                        <option value="FL">Florida</option>
-                                        <option value="GA">Georgia</option>
-                                        <option value="HI">Hawaii</option>
-                                        <option value="ID">Idaho</option>
-                                        <option value="IL">Illinois</option>
-                                        <option value="IN">Indiana</option>
-                                        <option value="IA">Iowa</option>
-                                        <option value="KS">Kansas</option>
-                                        <option value="KY">Kentucky</option>
-                                        <option value="LA">Louisiana</option>
-                                        <option value="ME">Maine</option>
-                                        <option value="MD">Maryland</option>
-                                        <option value="MA">Massachusetts</option>
-                                        <option value="MI">Michigan</option>
-                                        <option value="MN">Minnesota</option>
-                                        <option value="MS">Mississippi</option>
-                                        <option value="MO">Missouri</option>
-                                        <option value="MT">Montana</option>
-                                        <option value="NE">Nebraska</option>
-                                        <option value="NV">Nevada</option>
-                                        <option value="NH">New Hampshire</option>
-                                        <option value="NJ">New Jersey</option>
-                                        <option value="NM">New Mexico</option>
-                                        <option value="NY">New York</option>
-                                        <option value="NC">North Carolina</option>
-                                        <option value="ND">North Dakota</option>
-                                        <option value="OH">Ohio</option>
-                                        <option value="OK">Oklahoma</option>
-                                        <option value="OR">Oregon</option>
-                                        <option value="PA">Pennsylvania</option>
-                                        <option value="RI">Rhode Island</option>
-                                        <option value="SC">South Carolina</option>
-                                        <option value="SD">South Dakota</option>
-                                        <option value="TN">Tennessee</option>
-                                        <option value="TX">Texas</option>
-                                        <option value="UT">Utah</option>
-                                        <option value="VT">Vermont</option>
-                                        <option value="VA">Virginia</option>
-                                        <option value="WA">Washington</option>
-                                        <option value="WV">West Virginia</option>
-                                        <option value="WI">Wisconsin</option>
-                                        <option value="WY">Wyoming</option>
-                                    </select>
-                                </div>
-                                <label class="state" for="state">State</label>
-                            </div>
-                        </div>
-                        <div>
-                            <input type="text" name="zip" value="" id="zip" placeholder="Zip Code" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing Zip Code"/><label for="zip">Zip Code</label>
-                        </div>
-                        <div>
-                            <div class="country_options">
-                                <div class="select">
-                                    <select id="country">
-                                        <option value = "1">United States</option>
-                                        <option value = "2">United Kingdom</option>
-                                        <option value = "3">Uganda</option>
-                                        <option value = "4">Etc.</option>
-                                    </select>
-                                </div>
-                                <label class="country" for="country">Country</label>
-                            </div>
-                        </div>
-                    </form>
-                    <div class="right" id="reviewed">
-                        <div id="complete">
-                            <a class="big_button" id="complete" href="order-review.html">Review Order</a>
-                            <!--<span class="sub">By selecting this button you agree to the purchase and subsequent payment for this order.</span>-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!--<div class="column column3">-->
-                <!--<div class="step" id="step4">-->
+                <!--<div class="step" id="step1">-->
                     <!--<div class="number">-->
-                        <!--<span>4</span>-->
+                        <!--<span>1</span>-->
                     <!--</div>-->
                     <!--<div class="title">-->
-                        <!--<h1>Summary</h1>-->
+                        <!--<h1>Shipping Information</h1>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="content" id="address">-->
+                    <!--<form class="go-right">-->
+                        <!--<div>-->
+                            <!--<input type="name" name="first_name" value="" id="first_name" placeholder="First Name" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your First Name"/><label for="first_name">First Name</label>-->
+                        <!--</div>-->
+
+                        <!--<div>-->
+                            <!--<input type="name" name="last_name" value="" id="last_name" placeholder="Last Name" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your Last Name"/><label for="last_name">Last Name</label>-->
+                        <!--</div>-->
+                        <!--<div>-->
+                            <!--<input type="phone" name="telephone" value="" id="telephone" placeholder="Phone(555)-555-5555" data-trigger="change" data-validation-minlength="1" data-type="number" data-required="true" data-error-message="Enter Your Telephone Number"/><label for="telephone">Telephone</label>-->
+                        <!--</div>-->
+                        <!--<div>-->
+                            <!--<input type="text" name="company" value="" id="company" placeholder="Company" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="false"/>-->
+                            <!--<label for="Company">Company</label>-->
+                        <!--</div>-->
+                        <!--<div>-->
+                            <!--<input type="text" name="address" value="" id="address" placeholder="Address" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing Address"/><label for="Address">Address</label>-->
+                        <!--</div>-->
+                        <!--<div>-->
+                            <!--<input type="text" name="city" value="" id="city" placeholder="City" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing City"/><label for="city">City</label>-->
+                        <!--</div>-->
+                        <!--<div>-->
+                            <!--<div class="state_options">-->
+                                <!--<div class="select">-->
+                                    <!--<select id="state">-->
+                                        <!--<option value="AL">Alabama</option>-->
+                                        <!--<option value="AK">Alaska</option>-->
+                                        <!--<option value="AZ">Arizona</option>-->
+                                        <!--<option value="AR">Arkansas</option>-->
+                                        <!--<option value="CA">California</option>-->
+                                        <!--<option value="CO">Colorado</option>-->
+                                        <!--<option value="CT">Connecticut</option>-->
+                                        <!--<option value="DE">Delaware</option>-->
+                                        <!--<option value="DC">District Of Columbia</option>-->
+                                        <!--<option value="FL">Florida</option>-->
+                                        <!--<option value="GA">Georgia</option>-->
+                                        <!--<option value="HI">Hawaii</option>-->
+                                        <!--<option value="ID">Idaho</option>-->
+                                        <!--<option value="IL">Illinois</option>-->
+                                        <!--<option value="IN">Indiana</option>-->
+                                        <!--<option value="IA">Iowa</option>-->
+                                        <!--<option value="KS">Kansas</option>-->
+                                        <!--<option value="KY">Kentucky</option>-->
+                                        <!--<option value="LA">Louisiana</option>-->
+                                        <!--<option value="ME">Maine</option>-->
+                                        <!--<option value="MD">Maryland</option>-->
+                                        <!--<option value="MA">Massachusetts</option>-->
+                                        <!--<option value="MI">Michigan</option>-->
+                                        <!--<option value="MN">Minnesota</option>-->
+                                        <!--<option value="MS">Mississippi</option>-->
+                                        <!--<option value="MO">Missouri</option>-->
+                                        <!--<option value="MT">Montana</option>-->
+                                        <!--<option value="NE">Nebraska</option>-->
+                                        <!--<option value="NV">Nevada</option>-->
+                                        <!--<option value="NH">New Hampshire</option>-->
+                                        <!--<option value="NJ">New Jersey</option>-->
+                                        <!--<option value="NM">New Mexico</option>-->
+                                        <!--<option value="NY">New York</option>-->
+                                        <!--<option value="NC">North Carolina</option>-->
+                                        <!--<option value="ND">North Dakota</option>-->
+                                        <!--<option value="OH">Ohio</option>-->
+                                        <!--<option value="OK">Oklahoma</option>-->
+                                        <!--<option value="OR">Oregon</option>-->
+                                        <!--<option value="PA">Pennsylvania</option>-->
+                                        <!--<option value="RI">Rhode Island</option>-->
+                                        <!--<option value="SC">South Carolina</option>-->
+                                        <!--<option value="SD">South Dakota</option>-->
+                                        <!--<option value="TN">Tennessee</option>-->
+                                        <!--<option value="TX">Texas</option>-->
+                                        <!--<option value="UT">Utah</option>-->
+                                        <!--<option value="VT">Vermont</option>-->
+                                        <!--<option value="VA">Virginia</option>-->
+                                        <!--<option value="WA">Washington</option>-->
+                                        <!--<option value="WV">West Virginia</option>-->
+                                        <!--<option value="WI">Wisconsin</option>-->
+                                        <!--<option value="WY">Wyoming</option>-->
+                                    <!--</select>-->
+                                <!--</div>-->
+                                <!--<label class="state" for="state">State</label>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div>-->
+                            <!--<input type="text" name="zip" value="" id="zip" placeholder="Zip Code" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing Zip Code"/><label for="zip">Zip Code</label>-->
+                        <!--</div>-->
+                        <!--<div>-->
+                            <!--<div class="country_options">-->
+                                <!--<div class="select">-->
+                                    <!--<select id="country">-->
+                                        <!--<option value = "1">United States</option>-->
+                                        <!--<option value = "2">United Kingdom</option>-->
+                                        <!--<option value = "3">Uganda</option>-->
+                                        <!--<option value = "4">Etc.</option>-->
+                                    <!--</select>-->
+                                <!--</div>-->
+                                <!--<label class="country" for="country">Country</label>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</form>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="column column2">-->
+                <!--<div class="step" id="step4">-->
+                    <!--<div class="number">-->
+                        <!--<span>2</span>-->
+                    <!--</div>-->
+                    <!--<div class="title">-->
+                        <!--<h1>Payment Information</h1>-->
                     <!--</div>-->
                     <!--<div class="modify">-->
                         <!--<i class="fa fa-plus-circle"></i>-->
                     <!--</div>-->
                 <!--</div>-->
-                <!--<div class="content" id="final_products">-->
-                    <!--<div class="left" id="ordered">-->
-                        <!--<div class="products">-->
-                            <!--<div class="product_image">-->
-                                <!--<img src="https://www.cvs.com//bizcontent/merchandising/productimages/large/3160401170.jpg"/>-->
+                <!--<div class="content" id="payment">-->
+                    <!--<img src="assets/images/creditcards/visa.png">-->
+                    <!--<img src="assets/images/creditcards/mastercard.png">-->
+                    <!--<img src="assets/images/creditcards/amex.png">-->
+                    <!--<img src="assets/images/creditcards/discover.png">-->
+                    <!--<img src="assets/images/creditcards/paypa.png">-->
+                    <!--<img src="assets/images/creditcards/google.png">-->
+                    <!--<div class="left">-->
+                        <!--<form class="go-right">-->
+                            <!--<div>-->
+                                <!--<input type="text" name="card_number" value="" id="card_number" placeholder="xxxx-xxxx-xxxx-xxxx" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your Credit Card Number"/><label for="card_number">Card Number</label>-->
                             <!--</div>-->
-                            <!--<div class="product_details">-->
-                                <!--<span class="product_name">Natural Made Vitamin E</span>-->
-                                <!--<span class="quantity">1</span>-->
-                                <!--<span class="price">$17.79</span>-->
+                            <!--<div>-->
+                                <!--<div class="expiry">-->
+                                    <!--<div class="month_select">-->
+                                        <!--<select name="exp_month" value="" id="exp_month" placeholder="Jan" data-trigger="change" data-type="name" data-required="true" data-error-message="Enter Your Credit Card Expiration Date">-->
+                                            <!--<option value = "1">Jan</option>-->
+                                            <!--<option value = "2">Feb</option>-->
+                                            <!--<option value = "3">Mar</option>-->
+                                            <!--<option value = "4">Apr</option>-->
+                                            <!--<option value = "5">May</option>-->
+                                            <!--<option value = "6">Jun</option>-->
+                                            <!--<option value = "7">Jul</option>-->
+                                            <!--<option value = "8">Aug</option>-->
+                                            <!--<option value = "9">Sep</option>-->
+                                            <!--<option value = "10">Oct</option>-->
+                                            <!--<option value = "11">Nov</option>-->
+                                            <!--<option value = "12">Dec</option>-->
+                                        <!--</select>-->
+                                    <!--</div>-->
+                                    <!--<div class="year_select">-->
+                                        <!--<select name="exp_year" value="" id="exp_year" placeholder="" data-trigger="change" data-type="name" data-required="true" data-error-message="Enter Your Credit Card Expiration Date">-->
+
+                                            <!--<option value = "1">17</option>-->
+                                            <!--<option value = "2">18</option>-->
+                                            <!--<option value = "3">19</option>-->
+                                            <!--<option value = "4">20</option>-->
+                                            <!--<option value = "5">22</option>-->
+                                            <!--<option value = "6">23</option>-->
+                                            <!--<option value = "7">24</option>-->
+                                            <!--<option value = "8">25</option>-->
+                                            <!--<option value = "9">26</option>-->
+                                        <!--</select>-->
+                                    <!--</div>-->
+                                    <!--<label class="exp_date" for="Exp_Date">Exp Date</label>-->
+                                <!--</div>-->
                             <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="totals">-->
-                            <!--<span class="subtitle">Subtotal <span id="sub_price">$17.79</span></span>-->
-                            <!--<span class="subtitle">Tax <span id="sub_tax">$0.94</span></span>-->
-                            <!--<span class="subtitle">Shipping <span id="sub_ship">$4.00</span></span>-->
-                        <!--</div>-->
-                        <!--<div class="final">-->
-                            <!--<span class="title">Total <span id="calculated_total">$18.73</span></span>-->
-                        <!--</div>-->
+                            <!--<div class="sec_num">-->
+                                <!--<div>-->
+                                    <!--<input type="text" name="ccv" value="" id="ccv" placeholder="123" data-trigger="change" data-validation-minlength="3" data-type="name" data-required="true" data-error-message="Enter Your Card Security Code"/><label for="ccv">Security Code</label>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</form>-->
                     <!--</div>-->
+                <!--</div>-->
+
+            <!--</div>-->
+
+            <!--<div class="column column3">-->
+                <!--<div class="step" id="step3">-->
+                    <!--<div class="number">-->
+                        <!--<span>3</span>-->
+                    <!--</div>-->
+                    <!--<div class="title">-->
+                        <!--<h1>Billing Information</h1>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="content" id="address">-->
+                    <!--<form class="go-right">-->
+                        <!--<div>-->
+                            <!--<input type="checkbox"/>-->
+                            <!--<label class="same" for="same_as_shipping">Same As Shipping Address</label><span></span>-->
+                        <!--</div>-->
+                        <!--<div>-->
+                            <!--<input type="name" name="first_name" value="" id="first_name" placeholder="First Name" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your First Name"/><label for="first_name">First Name</label>-->
+                        <!--</div>-->
+
+                        <!--<div>-->
+                            <!--<input type="name" name="last_name" value="" id="last_name" placeholder="Last Name" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="true" data-error-message="Enter Your Last Name"/><label for="last_name">Last Name</label>-->
+                        <!--</div>-->
+                        <!--<div>-->
+                            <!--<input type="phone" name="telephone" value="" id="telephone" placeholder="Phone(555)-555-5555" data-trigger="change" data-validation-minlength="1" data-type="number" data-required="true" data-error-message="Enter Your Telephone Number"/><label for="telephone">Telephone</label>-->
+                        <!--</div>-->
+                        <!--<div>-->
+                            <!--<input type="text" name="company" value="" id="company" placeholder="Company" data-trigger="change" data-validation-minlength="1" data-type="name" data-required="false"/>-->
+                            <!--<label for="Company">Company</label>-->
+                        <!--</div>-->
+                        <!--<div>-->
+                            <!--<input type="text" name="address" value="" id="address" placeholder="Address" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing Address"/><label for="Address">Address</label>-->
+                        <!--</div>-->
+                        <!--<div>-->
+                            <!--<input type="text" name="city" value="" id="city" placeholder="City" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing City"/><label for="city">City</label>-->
+                        <!--</div>-->
+                        <!--<div>-->
+                            <!--<div class="state_options">-->
+                                <!--<div class="select">-->
+                                    <!--<select id="state">-->
+                                        <!--<option value="AL">Alabama</option>-->
+                                        <!--<option value="AK">Alaska</option>-->
+                                        <!--<option value="AZ">Arizona</option>-->
+                                        <!--<option value="AR">Arkansas</option>-->
+                                        <!--<option value="CA">California</option>-->
+                                        <!--<option value="CO">Colorado</option>-->
+                                        <!--<option value="CT">Connecticut</option>-->
+                                        <!--<option value="DE">Delaware</option>-->
+                                        <!--<option value="DC">District Of Columbia</option>-->
+                                        <!--<option value="FL">Florida</option>-->
+                                        <!--<option value="GA">Georgia</option>-->
+                                        <!--<option value="HI">Hawaii</option>-->
+                                        <!--<option value="ID">Idaho</option>-->
+                                        <!--<option value="IL">Illinois</option>-->
+                                        <!--<option value="IN">Indiana</option>-->
+                                        <!--<option value="IA">Iowa</option>-->
+                                        <!--<option value="KS">Kansas</option>-->
+                                        <!--<option value="KY">Kentucky</option>-->
+                                        <!--<option value="LA">Louisiana</option>-->
+                                        <!--<option value="ME">Maine</option>-->
+                                        <!--<option value="MD">Maryland</option>-->
+                                        <!--<option value="MA">Massachusetts</option>-->
+                                        <!--<option value="MI">Michigan</option>-->
+                                        <!--<option value="MN">Minnesota</option>-->
+                                        <!--<option value="MS">Mississippi</option>-->
+                                        <!--<option value="MO">Missouri</option>-->
+                                        <!--<option value="MT">Montana</option>-->
+                                        <!--<option value="NE">Nebraska</option>-->
+                                        <!--<option value="NV">Nevada</option>-->
+                                        <!--<option value="NH">New Hampshire</option>-->
+                                        <!--<option value="NJ">New Jersey</option>-->
+                                        <!--<option value="NM">New Mexico</option>-->
+                                        <!--<option value="NY">New York</option>-->
+                                        <!--<option value="NC">North Carolina</option>-->
+                                        <!--<option value="ND">North Dakota</option>-->
+                                        <!--<option value="OH">Ohio</option>-->
+                                        <!--<option value="OK">Oklahoma</option>-->
+                                        <!--<option value="OR">Oregon</option>-->
+                                        <!--<option value="PA">Pennsylvania</option>-->
+                                        <!--<option value="RI">Rhode Island</option>-->
+                                        <!--<option value="SC">South Carolina</option>-->
+                                        <!--<option value="SD">South Dakota</option>-->
+                                        <!--<option value="TN">Tennessee</option>-->
+                                        <!--<option value="TX">Texas</option>-->
+                                        <!--<option value="UT">Utah</option>-->
+                                        <!--<option value="VT">Vermont</option>-->
+                                        <!--<option value="VA">Virginia</option>-->
+                                        <!--<option value="WA">Washington</option>-->
+                                        <!--<option value="WV">West Virginia</option>-->
+                                        <!--<option value="WI">Wisconsin</option>-->
+                                        <!--<option value="WY">Wyoming</option>-->
+                                    <!--</select>-->
+                                <!--</div>-->
+                                <!--<label class="state" for="state">State</label>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div>-->
+                            <!--<input type="text" name="zip" value="" id="zip" placeholder="Zip Code" data-trigger="change" data-validation-minlength="1" data-type="text" data-required="true" data-error-message="Enter Your Billing Zip Code"/><label for="zip">Zip Code</label>-->
+                        <!--</div>-->
+                        <!--<div>-->
+                            <!--<div class="country_options">-->
+                                <!--<div class="select">-->
+                                    <!--<select id="country">-->
+                                        <!--<option value = "1">United States</option>-->
+                                        <!--<option value = "2">United Kingdom</option>-->
+                                        <!--<option value = "3">Uganda</option>-->
+                                        <!--<option value = "4">Etc.</option>-->
+                                    <!--</select>-->
+                                <!--</div>-->
+                                <!--<label class="country" for="country">Country</label>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</form>-->
                     <!--<div class="right" id="reviewed">-->
-                        <!--<div class="billing">-->
-                            <!--<span class="title">Billing:</span>-->
-                            <!--<div class="address_reviewed">-->
-                                <!--<span class="name">John Micheal</span>-->
-                                <!--<span class="address">123 Centre Avenue</span>-->
-                                <!--<span class="location">Pittsburgh, USA, 15213</span>-->
-                                <!--<span class="phone">(123)123-4567</span>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="shipping">-->
-                            <!--<span class="title">Shipping:</span>-->
-                            <!--<div class="address_reviewed">-->
-                                <!--<span class="name">John Micheal</span>-->
-                                <!--<span class="address">123 Centre Avenue</span>-->
-                                <!--<span class="location">Pittsburgh, USA, 15213</span>-->
-                                <!--<span class="phone">(123)123-4567</span>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="payment">-->
-                            <!--<span class="title">Payment:</span>-->
-                            <!--<div class="payment_reviewed">-->
-                                <!--<span class="method">Visa</span>-->
-                                <!--<span class="number_hidden">xxxx-xxxx-xxxx-1111</span>-->
-                            <!--</div>-->
-                        <!--</div>-->
                         <!--<div id="complete">-->
-                            <!--<a class="big_button" id="complete" href="#">Complete Order</a>-->
-                            <!--<span class="sub">By selecting this button you agree to the purchase and subsequent payment for this order.</span>-->
+                            <!--<a class="big_button" id="complete" href="order-review.html">Review Order</a>-->
+                            <!--&lt;!&ndash;<span class="sub">By selecting this button you agree to the purchase and subsequent payment for this order.</span>&ndash;&gt;-->
                         <!--</div>-->
                     <!--</div>-->
                 <!--</div>-->
             <!--</div>-->
-        </div>
-    </div>
-    <div class="clear"></div>
+
+            <!--&lt;!&ndash;<div class="column column3">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="step" id="step4">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="number">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<span>4</span>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="title">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<h1>Summary</h1>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="modify">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<i class="fa fa-plus-circle"></i>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="content" id="final_products">&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="left" id="ordered">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="products">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="product_image">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<img src="https://www.cvs.com//bizcontent/merchandising/productimages/large/3160401170.jpg"/>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="product_details">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span class="product_name">Natural Made Vitamin E</span>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span class="quantity">1</span>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span class="price">$17.79</span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="totals">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<span class="subtitle">Subtotal <span id="sub_price">$17.79</span></span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<span class="subtitle">Tax <span id="sub_tax">$0.94</span></span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<span class="subtitle">Shipping <span id="sub_ship">$4.00</span></span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="final">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<span class="title">Total <span id="calculated_total">$18.73</span></span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;<div class="right" id="reviewed">&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="billing">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<span class="title">Billing:</span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="address_reviewed">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span class="name">John Micheal</span>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span class="address">123 Centre Avenue</span>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span class="location">Pittsburgh, USA, 15213</span>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span class="phone">(123)123-4567</span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="shipping">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<span class="title">Shipping:</span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="address_reviewed">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span class="name">John Micheal</span>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span class="address">123 Centre Avenue</span>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span class="location">Pittsburgh, USA, 15213</span>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span class="phone">(123)123-4567</span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="payment">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<span class="title">Payment:</span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<div class="payment_reviewed">&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span class="method">Visa</span>&ndash;&gt;-->
+                                <!--&lt;!&ndash;<span class="number_hidden">xxxx-xxxx-xxxx-1111</span>&ndash;&gt;-->
+                            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div id="complete">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<a class="big_button" id="complete" href="#">Complete Order</a>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<span class="sub">By selecting this button you agree to the purchase and subsequent payment for this order.</span>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="clear"></div>-->
 </main>
 
 <footer class="footer">
@@ -672,9 +772,40 @@
         var log = localStorage.getItem("logged");
         if(log){
             $('#account-notice').hide();
+
         } else {
             $('#switch-account-notice').hide();
         }
     }
+
+    $('#same-address').click(function(e){
+        if(document.getElementById('same-address').checked){
+            $('.bill-address').hide();
+        } else {
+            $('.bill-address').show();
+        }
+    });
+
+    $('.sectionHead a').click(function () {
+        var open = $(this).attr('href');
+        event.preventDefault();
+        $(open).slideToggle(500);
+    });
+
+    $('input.btn').click(function () {
+        var open = $(this).parent().parent('ul');
+        var next = $(this).attr('data-id');
+        console.log("next: "+next);
+        console.log($( '#' + next ).offset().top);
+        event.preventDefault();
+//        $('div.almost').slideUp( 500 );
+        $( open ).slideUp( 500, function(){
+            $( '#' + next ).slideDown(500, function() {
+                $('body').animate({
+                    scrollTop:  $( '#' + next ).offset().top
+                }, 1000);
+            });
+        });
+    });
 </script>
 </html>

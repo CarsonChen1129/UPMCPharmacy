@@ -89,7 +89,7 @@ header{
     top:0;
     bottom: 0;
     display: table-cell;
-    padding-right:0.5em;
+    /*padding-right:0.5em;*/
 }
 
 .header-right-nav li a span {
@@ -128,7 +128,7 @@ header{
     top:0;
     bottom: 0;
     display: table-cell;
-    padding-right:0.5em;
+    /*padding-right:0.5em;*/
 }
 
 .header-list li:hover .dropdown-content {
