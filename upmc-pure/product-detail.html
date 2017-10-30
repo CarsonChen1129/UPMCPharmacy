@@ -203,14 +203,18 @@
             <div class="medium-6 large-5 columns">
                 <h3>Breathe Right Extra Nasal Strips</h3>
                 <p>$ 13.49</p>
-
-                <label> Buy Once/Subscribe
-                    <select>
-                        <option value="1">Buy Once</option>
-                        <option value="2">Buy One Every Week</option>
-                        <option value="3">Buy One Every Two Weeks</option>
-                        <option value="4">Buy One Every Three Weeks</option>
-                        <option value="5">Buy One Every Month</option>
+                <form id="purchase-option">
+                    <input class="radios" id="one-time" type="radio" name="one" value="one" checked>One-time purchase:<br>
+                    <input class="radios" id="subscribe" type="radio" name="many" value="many">Subscribe:
+                    <a onclick="document.getElementById('subscription-description').style.display='block'" style="text-decoration: underline">Learn More</a>
+                </form>
+                <label> Deliver every:
+                    <select id="subscribe-options">
+                        <option value="1">1 week</option>
+                        <option value="2">2 weeks</option>
+                        <option value="3">3 weeks</option>
+                        <option value="4" selected>1 month (Most common)</option>
+                        <option value="5">3 months</option>
                     </select>
                 </label>
 
@@ -223,7 +227,7 @@
                     </div>
                 </div>
 
-                <a onclick="document.getElementById('add-to-cart-model').style.display='block'" class="button large expanded">Add to Cart</a>
+                <a id="add-to-cart-btn" onclick="document.getElementById('add-to-cart-model').style.display='block'" class="button large expanded">Add to Cart</a>
 
                 <div class="small secondary expanded button-group">
                     <p>Share to:</p>
@@ -255,6 +259,28 @@
                     <a href="cart.html">
                         <button class="w3-button w3-right w3-purple w3-border main-font">Go to my Shopping Cart</button>
                     </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="subscription-description" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="width: 40%">
+                <div class="w3-container w3-purple w3-large w3-margin-top">
+                            <span onclick="document.getElementById('subscription-description').style.display='none'"
+                                  class="w3-button w3-purple w3-large w3-right">&times;
+                            </span>
+                </div>
+                <div class="w3-container">
+                    <h3 class="main-font">Subscribe</h3>
+                    <h5 class="main-font">Save time and money and receive FREE shipping on selected products.</h5>
+                    <p class="main-font">Set up regularly scheduled deliveries and earn savings with Subscribe. Unlock extra savings on eligible subscriptions when you subscribe to five or more products at one address on your monthly delivery day.</p>
+                    <p class="main-font" style="color:#424242;font-size:smaller">Note:</p>
+                    <p class="main-font" style="color:#424242;font-size:smaller">In advance of each delivery, we will send you a reminder email showing the item price and any applicable discount for your upcoming delivery. The price of the item may decrease or increase from delivery to delivery, depending on the UPMC Online Pharmacy price of the item at the time we process your order.</p>
+                </div>
+
+                <div class="w3-container w3-light-grey w3-padding">
+                    <button class="w3-button w3-left w3-white w3-border main-font"
+                            onclick="document.getElementById('subscription-description').style.display='none'">OK</button>
                 </div>
             </div>
         </div>
@@ -1538,5 +1564,16 @@
 
 <script>
     $(document).foundation();
+    $('#one-time').on('click',function(e) {
+        document.getElementById('subscribe').checked = false;
+        document.getElementById('add-to-cart-btn').innerText = "Add to Cart";
+        document.getElementById('subscribe-options').disabled = true;
+    });
+
+    $('#subscribe').on('click', function(e) {
+        document.getElementById('one-time').checked = false;
+        document.getElementById('add-to-cart-btn').innerText = "Subscribe";
+        document.getElementById('subscribe-options').disabled = false;
+    });
 </script>
 </html>

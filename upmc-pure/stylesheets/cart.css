@@ -237,7 +237,7 @@ ul {
 
 li {
   color: #111;
-  display: inline-block;
+  /*display: inline-block;*/
   padding: 0.625rem 0;
 }
 
