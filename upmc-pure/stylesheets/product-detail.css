@@ -32,6 +32,25 @@
 }
 
 
+.quantity-button {
+    float:left;
+}
+.quantity-button button {
+    width:2rem;
+    height:2rem;
+    background-color:#771B61;
+    color:#FAFAFA;
+}
+
+.quantity-button input {
+    width:3rem;
+    height:2rem;
+    padding:0;
+    margin: 0 0.5rem;
+    display:inline;
+    text-align:center;
+}
+
 
 button,
 img,

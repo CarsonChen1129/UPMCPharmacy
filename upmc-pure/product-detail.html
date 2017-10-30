@@ -222,8 +222,10 @@
                     <div class="small-3 columns">
                         <label for="middle-label" class="middle">Quantity</label>
                     </div>
-                    <div class="small-9 columns">
+                    <div class="small-9 columns quantity-button">
+                        <button type="button" onclick="document.getElementById('middle-label').value--">-</button>
                         <input type="text" id="middle-label" placeholder="1">
+                        <button type="button" onclick="document.getElementById('middle-label').value++">+</button>
                     </div>
                 </div>
 
