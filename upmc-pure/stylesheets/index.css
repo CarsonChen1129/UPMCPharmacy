@@ -13,7 +13,7 @@ a {
     text-decoration: none;
 }
 
-.ui-autocomplete { position: absolute; cursor: default;z-index:9 !important;}
+/*.ui-autocomplete { position: absolute; cursor: default;z-index:9 !important;}*/
 
 header{
     /*height:20vh;*/
