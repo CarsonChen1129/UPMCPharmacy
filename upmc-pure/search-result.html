@@ -38,7 +38,8 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" type="image/x-icon" href="assets/icons/upmc-icons/favicon.ico">
-    <link rel="stylesheet" href="stylesheets/result.css"> <!--Need to put at the first-->
+    <link rel="stylesheet" href="stylesheets/result.css">
+    <!--Need to put at the first-->
     <link rel="stylesheet" href="stylesheets/dropdown.css">
     <link rel="stylesheet" href="stylesheets/w3.css">
     <link rel="stylesheet" href="stylesheets/w3-theme-purple.css">
@@ -51,7 +52,6 @@
     <script src="js/index.js"></script>
 </head>
 <body>
-
 <!--Side Filter-->
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -66,7 +66,6 @@
     <a href="#">New Arrival</a>
     <a href="#">Online Only</a>
 </div>
-
 <script type="text/javascript">
     /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
     function openNav() {
@@ -81,7 +80,6 @@
     }
 
 </script>
-
 <div id="main">
     <!--Header-->
     <header>
@@ -120,7 +118,8 @@
                             <img class="cart-icon" src="assets/icons/shopping-cart.png"/>
                             <span>Shopping Bag</span>
                             <ul class="dropdown-content">
-                                <li><a href="cart.html">View Cart</a></li>
+                                <li>
+                                    <a href="cart.html">View Cart</a></li>
                                 <li><a href="cart.html">Check Out</a></li>
                             </ul>
                         </a>
@@ -215,23 +214,22 @@
             </div>
         </section>
     </nav>
-
     <main>
         <!--Path-->
         <!--     <nav>
-                <ul style ="display: inline-block;list-style-type: none;">
-                    <li style ="display: inline-block;list-style-type: none;">
-                        <a href="index.html">
-                            <p class="w3-medium w3-padding-16 main-font w3-hover-opacity">Home</p>
-                        </a>
-                    </li>
-                    <li style ="display: inline-block;list-style-type: none;">
-                        <a href="category.html">
-                            <p class="w3-medium w3-padding-16 main-font w3-hover-opacity"> > Search Result for "Nasal"</p>
-                        </a>
-                    </li>
-                </ul>
-            </nav> -->
+           <ul style ="display: inline-block;list-style-type: none;">
+               <li style ="display: inline-block;list-style-type: none;">
+                   <a href="index.html">
+                       <p class="w3-medium w3-padding-16 main-font w3-hover-opacity">Home</p>
+                   </a>
+               </li>
+               <li style ="display: inline-block;list-style-type: none;">
+                   <a href="category.html">
+                       <p class="w3-medium w3-padding-16 main-font w3-hover-opacity"> > Search Result for "Nasal"</p>
+                   </a>
+               </li>
+           </ul>
+           </nav> -->
         <!--For consistency-->
         <div class="row columns">
             <nav aria-label="You are here:" role="navigation">
@@ -243,30 +241,24 @@
                 </ul>
             </nav>
         </div>
-
         <!-- Result-->
         <div class = "w3-center">
             <h3 class="w3-medium main-font">39 products</h3>
         </div>
-
-
-
         <!--Sort by-->
         <div>
             <!-- Use any element to open the sidenav -->
             <button class="advance-filter-button w3-left w3-small main-font" onclick="openNav()">Advanced Filter</button>
-
             <span class="custom-dropdown custom-dropdown--emerald w3-right">
-            <select class="custom-dropdown__select custom-dropdown__select--emerald main-font w3-small">
-                <option>Relevance</option>
-                <option>Price: Low to High</option>
-                <option>Price: High to Low</option>
-                <option>Average Customer Review</option>
-            </select>
-        </span>
+                  <select class="custom-dropdown__select custom-dropdown__select--emerald main-font w3-small">
+                     <option>Relevance</option>
+                     <option>Price: Low to High</option>
+                     <option>Price: High to Low</option>
+                     <option>Average Customer Review</option>
+                  </select>
+               </span>
             <p class="w3-right w3-medium w3-margin-top">Sort By</p>
         </div>
-
         <script>
             (function(){
                 var customSelects = document.querySelectorAll(".custom-dropdown__select");
@@ -277,7 +269,6 @@
                 }
             })()
         </script>
-
         <!--Products-->
         <!--row1-->
         <div class="w3-row-padding">
@@ -301,15 +292,14 @@
                     <div class = "w3-center w3-margin">
                         <button onclick="document.getElementById('add-to-cart-model').style.display='block'" class="add-to-cart-button main-font add-to-cart-margin-bottom">Add to Cart</button>
                     </div>
-
                     <!-- The Modal -->
                     <!-- Modal content -->
                     <div id="add-to-cart-model" class="w3-modal">
                         <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="width: 40%">
                             <div class="w3-container modal-color w3-large w3-margin-top">
-                            <span onclick="document.getElementById('add-to-cart-model').style.display='none'"
-                                  class="w3-button modal-color w3-large w3-right">&times;
-                            </span>
+                              <span onclick="document.getElementById('add-to-cart-model').style.display='none'"
+                                    class="w3-button modal-color w3-large w3-right">&times;
+                              </span>
                             </div>
                             <div class="w3-container">
                                 <h3 class="main-font">Successfully add to your shopping cart.</h3>
@@ -318,7 +308,6 @@
                                 <p class="main-font">Quantity: 1</p>
                                 <p class="main-font">Product Name: Breath Right Extra Nasal Strips</p>
                             </div>
-
                             <div class="w3-container w3-light-grey w3-padding">
                                 <button class="w3-button w3-left w3-white w3-border main-font"
                                         onclick="document.getElementById('add-to-cart-model').style.display='none'">Continue to Shopping</button>
@@ -329,9 +318,7 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
             <div class="w3-quarter">
                 <div class="w3-card-2 pic-margin">
                     <a href="product-detail.html">
@@ -354,7 +341,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="w3-quarter">
                 <div class="w3-card-2 pic-margin">
                     <a href="product-detail.html">
@@ -377,7 +363,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="w3-quarter">
                 <div class="w3-card-2 pic-margin">
                     <a href="product-detail.html">
@@ -402,7 +387,6 @@
             </div>
         </div>
         <div class="w3-padding-16"></div>
-
         <!--row2-->
         <div class="w3-row-padding">
             <div class="w3-quarter">
@@ -427,7 +411,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="w3-quarter">
                 <div class="w3-card-2 pic-margin">
                     <a href="product-detail.html">
@@ -450,7 +433,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="w3-quarter">
                 <div class="w3-card-2 pic-margin">
                     <a href="product-detail.html">
@@ -473,7 +455,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="w3-quarter">
                 <div class="w3-card-2 pic-margin">
                     <a href="product-detail.html">
@@ -498,7 +479,6 @@
             </div>
         </div>
         <div class="w3-padding-16"></div>
-
         <!--row3-->
         <div class="w3-row-padding">
             <div class="w3-quarter">
@@ -523,7 +503,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="w3-quarter">
                 <div class="w3-card-2 pic-margin">
                     <a href="product-detail.html">
@@ -546,7 +525,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="w3-quarter">
                 <div class="w3-card-2 pic-margin">
                     <a href="product-detail.html">
@@ -569,7 +547,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="w3-quarter">
                 <div class="w3-card-2 pic-margin">
                     <a href="product-detail.html">
@@ -594,7 +571,6 @@
             </div>
         </div>
         <div class="w3-padding-16"></div>
-
         <!--Pages-->
         <hr>
         <div class="w3-center">
@@ -625,18 +601,14 @@
                     </div>
                     <button class="button">Subscribe</button>
                 </form>
-
                 <div class="footer-legal">
                     <p> By subscribing to our newsletter, you agree that your data will be processed in compliance with our <a href="">General Terms and Conditions of Use</a> and our <a href="">Privacy Policy</a>.          </p>
                 </div>
-
             </div>
-
             <div class="block block-footer-menus first odd" data-personalize-entity-id="block/146">
                 <nav class="footer-nav">
                     <div class="footer-nav-col">
                         <h3 class="title-small">Services</h3>
-
                         <ul>
                             <li>
                                 <a href="http://www.upmc.com/contact/Pages/default.aspx" data-tray-trigger="tray-help">Contact Us</a>
@@ -657,7 +629,6 @@
                     </div>
                     <div class="footer-nav-col">
                         <h3 class="title-small">Orders</h3>
-
                         <ul>
                             <li>
                                 <a href="policy.html">Payment</a>
@@ -678,7 +649,6 @@
                     </div>
                     <div class="footer-nav-col">
                         <h3 class="title-small">University of Pittsburgh Medical Center(UPMC)</h3>
-
                         <ul>
                             <li>
                                 <a href="http://www.upmc.com/Services/Pages/default.aspx">Our Clinical Services</a>
@@ -696,7 +666,6 @@
                     </div>
                     <div class="footer-nav-col">
                         <h3 class="title-small">Legal</h3>
-
                         <ul>
                             <li>
                                 <a href="http://www.upmc.com/patients-visitors/privacy-info/Pages/terms-of-use.aspx">Terms and conditions</a>
@@ -716,13 +685,13 @@
                         </ul>
                     </div>
                 </nav>
-
             </div>
             <div class="block block-footer-social last even" data-personalize-entity-id="block/151">
                 <div class="footer-copyright">
                     <div class="footer-rights">
                         <p>
-                            United States University of Pittsburgh Medical Center(UPMC) 2017. All rights reserved.    </p>
+                            United States University of Pittsburgh Medical Center(UPMC) 2017. All rights reserved.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -734,4 +703,3 @@
 </body>
 </div>
 </html>
-

@@ -453,49 +453,23 @@
 </footer>
 </body>
 <script>
-  $('.table-remove').click(function () {
-    $(".modal").addClass("modal-shown");
-    var removeId = $(this).attr("data-tcin");
-    $(".remove-btn-modal").setAttribute("data-tcin", value.set(removeId));
-  });
+    $('.table-remove').click(function () {
+        $(".modal").addClass("modal-shown");
+        var removeId = $(this).attr("data-tcin");
+        $(".remove-btn-modal").setAttribute("data-tcin", value.set(removeId));
+    });
 
-  $('.cancel-modal').click(function () {
-    $(".modal").removeClass("modal-shown");
-  });
-  var days = ['Sun', 'Mon', 'Tues', 'Wed', 'Thu', 'Fri', 'Sat'];
-  var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-      "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-  ];
-  var date = new Date();
-  date.setDate(date.getDate() + 3);
-  var nameOfDay = days[date.getDay()];
-  var nameOfMonth = months[date.getMonth()];
-  document.getElementById("ship-date").innerHTML = nameOfDay+", "+nameOfMonth+" "+(date.getDate());
+    $('.cancel-modal').click(function () {
+        $(".modal").removeClass("modal-shown");
+    });
+    var days = ['Sun', 'Mon', 'Tues', 'Wed', 'Thu', 'Fri', 'Sat'];
+    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ];
+    var date = new Date();
+    date.setDate(date.getDate() + 3);
+    var nameOfDay = days[date.getDay()];
+    var nameOfMonth = months[date.getMonth()];
+    document.getElementById("ship-date").innerHTML = nameOfDay+", "+nameOfMonth+" "+(date.getDate());
 </script>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Lobster");
 @import url("https://fonts.googleapis.com/css?family=Muli");
-
 .main-font-style {
   font-family: 'Muli', sans-serif;
   font-size: 120% !important;
@@ -8,29 +7,21 @@
   margin: 15px 0px 15px 0px;
   font-weight: normal !important;
 }
-
 .banner-font {
   font-family: "Lobster", serif;
 }
-
 .banner-background-color {
   background-color: aqua;
 }
-
 .main-font {
   font-family: 'Muli', sans-serif;
 }
-
 .path-margin-left {
   margin-left: 128px;
 }
-
 .product-margin-left {
   margin-left: 96px;
 }
-
 .product-margin-right {
   margin-right: 96px;
 }
-
-

@@ -2,56 +2,46 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 #descriptionContentPlaceHolder ul {
-    padding-left:2rem;
+    padding-left: 2rem;
 }
-
 #warningsContentPlaceHolder ul {
-    padding-left:2rem;
+    padding-left: 2rem;
 }
-
 .wc-text-wrap {
-    margin-top:2rem;
-    padding-left:2rem;
+    margin-top: 2rem;
+    padding-left: 2rem;
 }
-
 .desc-heading {
-    font-size:xx-large;
+    font-size: xx-large;
 }
-
 .panel-body strong {
-    font-size:x-large;
+    font-size: x-large;
 }
-
 /*.body-text1 {*/
-    /*padding-left:2rem;*/
+/*padding-left:2rem;*/
 /*}*/
 
-#purchase-option input{
-    width:auto !important;
-    margin-right:0.5rem;
+#purchase-option input {
+    width: auto !important;
+    margin-right: 0.5rem;
 }
-
-
 .quantity-button {
-    float:left;
+    float: left;
 }
 .quantity-button button {
-    width:2rem;
-    height:2rem;
-    background-color:#771B61;
-    color:#FAFAFA;
+    width: 2rem;
+    height: 2rem;
+    background-color: #771B61;
+    color: #FAFAFA;
 }
-
 .quantity-button input {
-    width:3rem;
-    height:2rem;
-    padding:0;
+    width: 3rem;
+    height: 2rem;
+    padding: 0;
     margin: 0 0.5rem;
-    display:inline;
-    text-align:center;
+    display: inline;
+    text-align: center;
 }
-
-
 button,
 img,
 legend {
@@ -1192,8 +1182,7 @@ ul {
     margin-bottom: 1rem
 }
 p {
-    font-size: inherit
-    color: #720a74;
+    font-size: inherit color: #720a74;
 }
 h1,
 h2,
@@ -1230,7 +1219,6 @@ h2 {
 }
 h3 {
     font-size: 1.8rem
-
 }
 h4 {
     font-size: 1.125rem
@@ -1250,7 +1238,6 @@ h6 {
     }
     h3 {
         font-size: 1.8rem
-
     }
     h4 {
         font-size: 1.5625rem
@@ -1265,7 +1252,6 @@ h6 {
         text-align: left
     }
 }
-
 hr {
     box-sizing: content-box;
     max-width: 75rem;
@@ -1289,7 +1275,6 @@ ol ol,
 ol ul,
 ul ol,
 ul ul {
-
     margin-bottom: 0;
     list-style-type: inherit
 }
@@ -3010,26 +2995,27 @@ html {
     transform: translateX(-50%)
 }
 /*.sticky-container {*/
-    /*position: relative*/
+/*position: relative*/
 /*}*/
 /*.sticky {*/
-    /*position: absolute;*/
-    /*z-index: 0;*/
-    /*-webkit-transform: translate3d(0, 0, 0);*/
-    /*transform: translate3d(0, 0, 0)*/
+/*position: absolute;*/
+/*z-index: 0;*/
+/*-webkit-transform: translate3d(0, 0, 0);*/
+/*transform: translate3d(0, 0, 0)*/
 /*}*/
 /*.sticky.is-stuck {*/
-    /*position: fixed;*/
-    /*z-index: 5*/
+/*position: fixed;*/
+/*z-index: 5*/
 /*}*/
 /*.sticky.is-stuck.is-at-top {*/
-    /*top: 0*/
+/*top: 0*/
 /*}*/
 /*.sticky.is-anchored {*/
-    /*position: absolute;*/
-    /*left: auto;*/
-    /*right: auto*/
+/*position: absolute;*/
+/*left: auto;*/
+/*right: auto*/
 /*}*/
+
 .reveal-overlay {
     display: none;
     position: fixed;
@@ -3359,10 +3345,9 @@ table.hover tr:nth-of-type(even):hover {
 .thumbnail:hover {
     box-shadow: 0 0 6px 1px rgba(33, 153, 232, .5)
 }
-
 #sample-imgs img {
-    width:6rem !important;
-    height:6rem !important;
+    width: 6rem !important;
+    height: 6rem !important;
 }
 .title-bar {
     background: #0a0a0a;
